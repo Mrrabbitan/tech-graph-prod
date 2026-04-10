@@ -1,0 +1,273 @@
+# fireworks-tech-graph
+
+> **Stop drawing diagrams by hand.** Describe your system in English or Chinese — get publication-ready SVG + PNG technical diagrams in seconds.
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Claude Code Skill](https://img.shields.io/badge/Claude%20Code-Skill-blue)](https://claude.ai/code)
+[![5 Visual Styles](https://img.shields.io/badge/Styles-5-purple)]()
+[![8 Diagram Types](https://img.shields.io/badge/Diagram%20Types-8-green)]()
+
+---
+
+## Overview
+
+`fireworks-tech-graph` turns natural language descriptions into polished SVG diagrams, then exports them as high-resolution PNG via `rsvg-convert`. It ships with **5 visual styles** and deep knowledge of AI/Agent domain patterns (RAG, Agentic Search, Mem0, Multi-Agent, Tool Call flows).
+
+```
+User: "画一张 Mem0 的架构图，暗黑风格"
+  → Skill classifies: Memory Architecture Diagram, Style 2
+  → Generates SVG with swim lanes, cylinders, semantic arrows
+  → Exports 1920px PNG
+  → Reports: mem0-architecture.svg / mem0-architecture.png
+```
+
+---
+
+## Showcase
+
+| Style | Sample |
+|-------|--------|
+| **Style 1** — Flat Icon (default) | ![](assets/samples/sample-style1-flat.png) |
+| **Style 2** — Dark Terminal | ![](assets/samples/sample-style2-dark.png) |
+| **Style 3** — Blueprint | ![](assets/samples/sample-style3-blueprint.png) |
+| **Style 4** — Notion Clean | ![](assets/samples/sample-style4-notion.png) |
+| **Style 5** — Glassmorphism | ![](assets/samples/sample-style5-glass.png) |
+| **AI Domain** — Mem0 Architecture | ![](assets/samples/sample-mem0.png) |
+
+---
+
+## Features
+
+- **5 visual styles** — from clean white docs to dark neon to frosted glass
+- **8 diagram types** — Architecture, Data Flow, Flowchart, Agent, Memory, Sequence, Comparison, Mind Map
+- **AI/Agent domain patterns** — RAG, Agentic Search, Mem0, Multi-Agent, Tool Call, and more built-in
+- **Semantic shape vocabulary** — LLM = double-border rect, Agent = hexagon, Vector Store = ringed cylinder
+- **Semantic arrow system** — color + dash pattern encode meaning (write vs read vs async vs loop)
+- **Product icons** — 40+ products with brand colors: OpenAI, Anthropic, Pinecone, Weaviate, Kafka, PostgreSQL…
+- **Swim lane grouping** — automatic layer labeling for complex architectures
+- **SVG + PNG output** — SVG for editing, 1920px PNG for embedding
+- **rsvg-convert compatible** — no external font fetching, pure inline SVG
+
+---
+
+## Installation
+
+```bash
+claude skills install fireworks-tech-graph
+```
+
+Or clone directly:
+
+```bash
+git clone https://github.com/yizhiyanhua-ai/fireworks-tech-graph.git ~/.claude/skills/fireworks-tech-graph
+```
+
+---
+
+## Requirements
+
+```bash
+# macOS
+brew install librsvg
+
+# Ubuntu/Debian
+sudo apt install librsvg2-bin
+
+# Verify
+rsvg-convert --version
+```
+
+---
+
+## Why Not Mermaid or draw.io?
+
+| | Mermaid | draw.io | **fireworks-tech-graph** |
+|--|---------|---------|--------------------------|
+| Natural language input | ✗ | ✗ | ✅ |
+| AI/Agent domain patterns | ✗ | ✗ | ✅ |
+| Multiple visual styles | ✗ | manual | ✅ 5 built-in |
+| High-res PNG export | ✗ | manual | ✅ auto 1920px |
+| Semantic arrow colors | ✗ | manual | ✅ auto |
+| No online tool needed | ✅ | ✗ | ✅ |
+
+Mermaid is great for quick inline diagrams in markdown. draw.io is great for manual polishing. `fireworks-tech-graph` is optimized for **describing a system and getting a polished diagram immediately**, without writing DSL syntax or clicking around a GUI.
+
+---
+
+## Usage
+
+### Trigger phrases
+
+The skill auto-triggers on:
+
+```
+画图 / 帮我画 / 生成图 / 做个图 / 架构图 / 流程图 / 可视化一下 / 出图
+generate diagram / draw diagram / create chart / visualize
+```
+
+### Basic usage
+
+```
+画一张 RAG 流程图
+```
+
+```
+Generate an Agentic Search architecture diagram
+```
+
+### Specify style
+
+```
+画一张微服务架构图，风格2（暗黑极客风）
+```
+
+```
+Draw a multi-agent collaboration diagram --style glassmorphism
+```
+
+### Specify output path
+
+```
+生成 Mem0 架构图，输出到 ~/Desktop/
+```
+
+```
+Create a tool call flow diagram --output /tmp/diagrams/
+```
+
+---
+
+## Styles
+
+| # | Name | Background | Font | Best For |
+|---|------|-----------|------|----------|
+| 1 | **Flat Icon** *(default)* | `#ffffff` | Helvetica | Blogs, slides, docs |
+| 2 | **Dark Terminal** | `#0f0f1a` | SF Mono / Fira Code | GitHub README, dev articles |
+| 3 | **Blueprint** | `#0a1628` | Courier New | Architecture docs, engineering |
+| 4 | **Notion Clean** | `#ffffff` | system-ui | Notion, Confluence, wikis |
+| 5 | **Glassmorphism** | `#0d1117` gradient | Inter | Product sites, keynotes |
+
+Each style has a dedicated reference file in `references/` with exact color tokens, SVG patterns, and templates.
+
+---
+
+## Diagram Types
+
+| Type | Description | Key Layout Rule |
+|------|-------------|-----------------|
+| **Architecture** | Services, components, cloud infra | Horizontal layers top→bottom |
+| **Data Flow** | What data moves where | Label every arrow with data type |
+| **Flowchart** | Decisions, process steps | Diamond = decision, top→bottom |
+| **Agent Architecture** | LLM + tools + memory | 5-layer model: Input/Agent/Memory/Tool/Output |
+| **Memory Architecture** | Mem0, MemGPT-style | Separate read/write paths, memory tiers |
+| **Sequence** | API call chains, time-ordered | Vertical lifelines, horizontal messages |
+| **Comparison** | Feature matrix, side-by-side | Column = system, row = attribute |
+| **Mind Map** | Concept maps, radial | Central node, bezier branches |
+
+---
+
+## AI/Agent Domain Patterns
+
+Built-in pattern knowledge:
+
+```
+RAG Pipeline         → Query → Embed → VectorSearch → Retrieve → LLM → Response
+Agentic RAG          → adds Agent loop + Tool use
+Agentic Search       → Query → Planner → [Search/Calc/Code] → Synthesizer
+Mem0 Memory Layer    → Input → Memory Manager → [VectorDB + GraphDB] → Context
+Agent Memory Types   → Sensory → Working → Episodic → Semantic → Procedural
+Multi-Agent          → Orchestrator → [SubAgent×N] → Aggregator → Output
+Tool Call Flow       → LLM → Tool Selector → Execution → Parser → LLM (loop)
+```
+
+---
+
+## Shape Vocabulary
+
+Shapes encode semantic meaning consistently across all styles:
+
+| Concept | Shape |
+|---------|-------|
+| User / Human | Circle + body |
+| LLM / Model | Rounded rect, double border, ⚡ |
+| Agent / Orchestrator | Hexagon |
+| Memory (short-term) | Dashed-border rounded rect |
+| Memory (long-term) | Solid cylinder |
+| Vector Store | Cylinder with inner rings |
+| Graph DB | 3-circle cluster |
+| Tool / Function | Rect with ⚙ |
+| API / Gateway | Hexagon (single border) |
+| Queue / Stream | Horizontal pipe/tube |
+| Document / File | Folded-corner rect |
+| Browser / UI | Rect with 3-dot titlebar |
+| Decision | Diamond |
+| External Service | Dashed-border rect |
+
+---
+
+## Arrow Semantics
+
+| Flow Type | Stroke | Dash | Meaning |
+|-----------|--------|------|---------|
+| Primary data flow | 2px solid | — | Main request/response |
+| Control / trigger | 1.5px solid | — | System A triggers B |
+| Memory read | 1.5px solid | — | Retrieve from store |
+| Memory write | 1.5px | `5,3` | Write/store operation |
+| Async / event | 1.5px | `4,2` | Non-blocking |
+| Feedback / loop | 1.5px curved | — | Iterative reasoning |
+
+---
+
+## File Structure
+
+```
+fireworks-tech-graph/
+├── SKILL.md                      # Main skill — diagram types, layout rules, shape vocab
+├── README.md                     # This file (English)
+├── README.zh.md                  # Chinese version
+├── references/
+│   ├── style-1-flat-icon.md      # White background, colored accents
+│   ├── style-2-dark-terminal.md  # Dark bg, neon accents, monospace
+│   ├── style-3-blueprint.md      # Blueprint grid, cyan lines
+│   ├── style-4-notion-clean.md   # Minimal, white, single arrow color
+│   ├── style-5-glassmorphism.md  # Dark gradient, frosted glass cards
+│   └── icons.md                  # 40+ product icons + semantic shapes
+└── assets/
+    └── samples/                  # Showcase diagram PNGs
+```
+
+---
+
+## Product Icon Coverage
+
+**AI/ML:** OpenAI, Anthropic/Claude, Google Gemini, Meta LLaMA, Mistral, Cohere, Groq, Hugging Face
+
+**AI Frameworks:** Mem0, LangChain, LlamaIndex, LangGraph, CrewAI, AutoGen, DSPy, Haystack
+
+**Vector DBs:** Pinecone, Weaviate, Qdrant, Chroma, Milvus, pgvector, Faiss
+
+**Databases:** PostgreSQL, MySQL, MongoDB, Redis, Elasticsearch, Neo4j, Cassandra
+
+**Messaging:** Kafka, RabbitMQ, NATS, Pulsar
+
+**Cloud:** AWS, GCP, Azure, Cloudflare, Vercel, Docker, Kubernetes
+
+**Observability:** Grafana, Prometheus, Datadog, LangSmith, Langfuse, Arize
+
+---
+
+## Troubleshooting
+
+| Symptom | Cause | Fix |
+|---------|-------|-----|
+| PNG is blank or all-black | `@import url()` in SVG — rsvg-convert can't fetch fonts | Remove `@import`, use system font stack |
+| PNG not generated | `rsvg-convert` not installed | `brew install librsvg` (macOS) or `apt install librsvg2-bin` |
+| Diagram cut off at bottom | ViewBox height too short | Increase `height` in `viewBox="0 0 960 <height>"` |
+| Text overflowing boxes | Labels too long | Add `text-anchor="middle"` + `<clipPath>` or shorten label |
+| Icons not rendering | External CDN URL in rsvg-convert context | Use inline SVG paths from `references/icons.md` |
+
+---
+
+## License
+
+MIT © 2025 fireworks-tech-graph contributors
