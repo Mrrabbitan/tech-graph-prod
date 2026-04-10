@@ -16,7 +16,7 @@
 `fireworks-tech-graph` turns natural language descriptions into polished SVG diagrams, then exports them as high-resolution PNG via `rsvg-convert`. It ships with **5 visual styles** and deep knowledge of AI/Agent domain patterns (RAG, Agentic Search, Mem0, Multi-Agent, Tool Call flows).
 
 ```
-User: "画一张 Mem0 的架构图，暗黑风格"
+User: "Generate a Mem0 memory architecture diagram, dark style"
   → Skill classifies: Memory Architecture Diagram, Style 2
   → Generates SVG with swim lanes, cylinders, semantic arrows
   → Exports 1920px PNG
@@ -120,14 +120,14 @@ Mermaid is great for quick inline diagrams in markdown. draw.io is great for man
 The skill auto-triggers on:
 
 ```
-画图 / 帮我画 / 生成图 / 做个图 / 架构图 / 流程图 / 可视化一下 / 出图
 generate diagram / draw diagram / create chart / visualize
+architecture diagram / flowchart / sequence diagram / data flow
 ```
 
 ### Basic usage
 
 ```
-画一张 RAG 流程图
+Draw a RAG pipeline flowchart
 ```
 
 ```
@@ -137,7 +137,7 @@ Generate an Agentic Search architecture diagram
 ### Specify style
 
 ```
-画一张微服务架构图，风格2（暗黑极客风）
+Draw a microservices architecture diagram, style 2 (dark terminal)
 ```
 
 ```
@@ -147,7 +147,7 @@ Draw a multi-agent collaboration diagram --style glassmorphism
 ### Specify output path
 
 ```
-生成 Mem0 架构图，输出到 ~/Desktop/
+Generate a Mem0 architecture diagram, output to ~/Desktop/
 ```
 
 ```
@@ -161,80 +161,80 @@ Create a tool call flow diagram --output /tmp/diagrams/
 ### AI/Agent Systems
 
 ```
-画一张 Agentic RAG 和普通 RAG 的对比图，用 Notion 极简风
+Compare Agentic RAG vs standard RAG in a feature matrix, Notion clean style
 ```
 → Comparison matrix: RAG vs Agentic RAG, covering retrieval strategy, agent loop, tool use
 
 ```
-生成一张 Mem0 记忆架构图，包含向量库、图数据库、KV 存储和记忆管理器
+Generate a Mem0 memory architecture diagram with vector store, graph DB, KV store, and memory manager
 ```
 → Memory Architecture with swim lanes: Input → Memory Manager → Storage tiers → Retrieval
 
 ```
-画一张 Multi-Agent 协作图：Orchestrator 调度 3 个 SubAgent（搜索/计算/代码执行），最后汇聚到 Aggregator
+Draw a Multi-Agent diagram: Orchestrator dispatches 3 SubAgents (search / compute / code execution), results aggregated
 ```
 → Agent Architecture with hexagons, tool layers, and result aggregation
 
 ```
-可视化一下 Tool Call 的执行流程：LLM → Tool Selector → Execution → Parser → 回到 LLM
+Visualize the Tool Call execution flow: LLM → Tool Selector → Execution → Parser → back to LLM
 ```
 → Flowchart with decision loop showing tool invocation cycle
 
 ```
-画一张 Agent 的 5 种记忆类型图：感知记忆、工作记忆、情景记忆、语义记忆、程序记忆
+Draw the 5 agent memory types: Sensory, Working, Episodic, Semantic, Procedural
 ```
 → Mind map or layered architecture showing memory tiers from sensory to procedural
 
 ### Infrastructure & Cloud
 
 ```
-帮我画一张微服务架构图：Client → API Gateway → [用户服务 / 订单服务 / 支付服务] → PostgreSQL + Redis
+Draw a microservices architecture: Client → API Gateway → [User Service / Order Service / Payment Service] → PostgreSQL + Redis
 ```
 → Architecture diagram with horizontal layers, swim lanes per service cluster
 
 ```
-生成一张数据管道图：Kafka 消费数据 → Spark 处理 → 写入 S3 → Athena 查询
+Generate a data pipeline diagram: Kafka → Spark processing → write to S3 → Athena query
 ```
 → Data flow diagram with labeled arrows (stream / batch / query)
 
 ```
-画一张 Kubernetes 部署架构：Ingress → Service → [Pod × 3] → ConfigMap + PersistentVolume
+Draw a Kubernetes deployment: Ingress → Service → [Pod × 3] → ConfigMap + PersistentVolume
 ```
 → Architecture with dashed containers per namespace, solid arrows for traffic flow
 
 ### API & Sequence Flows
 
 ```
-画一张 OAuth2 授权码流程的序列图：用户 → 客户端 → 授权服务器 → 资源服务器
+Draw an OAuth2 authorization code flow sequence diagram: User → Client → Auth Server → Resource Server
 ```
 → Sequence diagram with vertical lifelines and activation boxes
 
 ```
-帮我画一张 ChatGPT Plugin 的调用时序图
+Draw the ChatGPT Plugin call sequence diagram
 ```
 → Sequence: User → ChatGPT → Plugin Manifest → API → Response chain
 
 ### Decision & Process Flows
 
 ```
-画一张 AI 应用上线前的质检流程图：代码审查 → 安全扫描 → 性能测试 → 人工审核 → 发布
+Draw a pre-launch QA flowchart for an AI app: Code Review → Security Scan → Performance Test → Manual Approval → Deploy
 ```
 → Flowchart with diamond decision nodes and parallel branches
 
 ```
-生成一张 RAG vs Fine-tuning vs Prompt Engineering 的功能对比图
+Generate a feature comparison matrix: RAG vs Fine-tuning vs Prompt Engineering
 ```
 → Comparison matrix with checked/unchecked cells across cost, latency, accuracy, flexibility
 
 ### Concept Maps
 
 ```
-帮我可视化一下 LLM 应用的技术栈：从底层模型到 SDK 到应用框架到部署层
+Visualize the LLM application tech stack: from foundation model to SDK to app framework to deployment
 ```
 → Layered architecture or mind map from model layer to product layer
 
 ```
-画一张 AI Agent 的核心能力地图：感知 / 记忆 / 推理 / 行动 / 学习
+Draw an AI Agent capability map: Perception / Memory / Reasoning / Action / Learning
 ```
 → Mind map with central "AI Agent" node and 5 radial branches
 
