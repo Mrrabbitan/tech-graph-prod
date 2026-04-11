@@ -6,14 +6,15 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Claude Code Skill](https://img.shields.io/badge/Claude%20Code-Skill-blue)](https://claude.ai/code)
-[![5 Visual Styles](https://img.shields.io/badge/Styles-5-purple)]()
-[![8 Diagram Types](https://img.shields.io/badge/Diagram%20Types-8-green)]()
+[![7 Visual Styles](https://img.shields.io/badge/Styles-7-purple)]()
+[![14 Diagram Types](https://img.shields.io/badge/Diagram%20Types-14-green)]()
+[![UML Support](https://img.shields.io/badge/UML-Full%20Support-orange)]()
 
 ---
 
 ## Overview
 
-`fireworks-tech-graph` turns natural language descriptions into polished SVG diagrams, then exports them as high-resolution PNG via `rsvg-convert`. It ships with **5 visual styles** and deep knowledge of AI/Agent domain patterns (RAG, Agentic Search, Mem0, Multi-Agent, Tool Call flows).
+`fireworks-tech-graph` turns natural language descriptions into polished SVG diagrams, then exports them as high-resolution PNG via `rsvg-convert`. It ships with **7 visual styles** and deep knowledge of AI/Agent domain patterns (RAG, Agentic Search, Mem0, Multi-Agent, Tool Call flows), plus full support for all 14 UML diagram types.
 
 ```
 User: "Generate a Mem0 memory architecture diagram, dark style"
@@ -57,8 +58,8 @@ User: "Generate a Mem0 memory architecture diagram, dark style"
 
 ## Features
 
-- **5 visual styles** — from clean white docs to dark neon to frosted glass
-- **8 diagram types** — Architecture, Data Flow, Flowchart, Agent, Memory, Sequence, Comparison, Mind Map
+- **7 visual styles** — from clean white docs to dark neon to frosted glass to official brand styles
+- **14 diagram types** — Full UML support (Class, Component, Deployment, Package, Composite Structure, Object, Use Case, Activity, State Machine, Sequence, Communication, Timing, Interaction Overview, ER Diagram) plus AI/Agent domain diagrams
 - **AI/Agent domain patterns** — RAG, Agentic Search, Mem0, Multi-Agent, Tool Call, and more built-in
 - **Semantic shape vocabulary** — LLM = double-border rect, Agent = hexagon, Vector Store = ringed cylinder
 - **Semantic arrow system** — color + dash pattern encode meaning (write vs read vs async vs loop)
@@ -246,11 +247,35 @@ Draw an AI Agent capability map: Perception / Memory / Reasoning / Action / Lear
 |---|------|-----------|------|----------|
 | 1 | **Flat Icon** *(default)* | `#ffffff` | Helvetica | Blogs, slides, docs |
 | 2 | **Dark Terminal** | `#0f0f1a` | SF Mono / Fira Code | GitHub README, dev articles |
-| 3 | **Blueprint** | `#0a1628` | Courier New | Architecture docs, engineering |
+| 3 | **Blueprint** | `#0a1628` | Courier Newure docs, engineering |
 | 4 | **Notion Clean** | `#ffffff` | system-ui | Notion, Confluence, wikis |
 | 5 | **Glassmorphism** | `#0d1117` gradient | Inter | Product sites, keynotes |
+| 6 | **Claude Official** | `#f8f6f3` | system-ui | Anthro diagrams, warm aesthetic |
+| 7 | **OpenAI Official** | `#ffffff` | system-ui | OpenAI-style diagrams, clean modern look |
 
 Each style has a dedicated reference file in `references/` with exact color tokens, SVG patterns, and templates.
+
+### Style Selection Guide
+
+**For UML Diagrams:**
+- **Class/Component/Package**: Style 1 (Flat Icon) or Style 4 (Notion Clean) — clear structure, easy to read
+- **Sequence/Timing**: Style 2 (Dark Terminal) — monospace fonts help with alignment
+- **State Machine/Activity**: Style 3 (Blueprint) — engineering aesthetic fits process flows
+- **Use Case/Interview**: Style 1 (Flat Icon) — colorful, accessible
+
+**For AI/Agent Diagrams:**
+- **RAG/Agentic Search**: Style 2 (Dark Terminal) or Style 5 (Glassmorphism) — tech-forward aesthetic
+- **Memory Architecture**: Style 3 (Blueprint) — emphasizes layered storage tiers
+- **Multi-Agent**: Style 5 (Glassmorphism) — frosted cards distinguish agent boundaries
+
+**For Documentation:**
+- **Internal docs**: Style 4 (Notion Clean) — minimal, wiki-frieng posts**: Style 1 (Flat Icon) — colorful, engaging
+- **GitHub README**: Style 2 (Dark Terminal) — matches dark theme
+- **Presentations**: Style 5 (Glassmorphism) or Style 6 (Claude Official) — polished
+
+**Brand-Specific:**
+- **Anthropic/Claude projects**: Style 6 (Claude Official) — warm cream background, brand colors
+- **OpenAI projects**: Style 7 (OpenAI Official) — clean white, OpenAI palette
 
 ---
 
@@ -266,6 +291,25 @@ Each style has a dedicated reference file in `references/` with exact color toke
 | **Sequence** | API call chains, time-ordered | Vertical lifelines, horizontal messages |
 | **Comparison** | Feature matrix, side-by-side | Column = system, row = attribute |
 | **Mind Map** | Concept maps, radial | Central node, bezier branches |
+
+### UML Diagram Support (14 Types)
+
+| UML Type | Description | Best Style |
+|----------|-------------|------------|
+| **Class Diagram** | Classes, attributes, methods, relationships | Style 1, 4 |
+| **Component Diagram** | Software components and dependencies | Style 1, 3 |
+| **Deployment Diagram** | Hardware nodes and software deployment | Style 3 |
+| **Package Diagram** | Package organization and dependencies | Style 1, 4 |
+| **Composite Structure** | Internal structure of classes/components | Style 1, 3 |
+| **Object Diagram** | Object instances and relationships | Style 1, 4 |
+| **Use Case Diagram** | Actors, use cases, system boundaries | Style 1 |
+| **Activity Diagram** | Workflows, parallel processes | Sty3 |
+| **State Machine** | State transitions and events | Style 2, 3 |
+| **Sequence Diagram** | Message exchanges over time | Style 2 |
+| **Communication Diagram** | Object interactions and messages | Style 1, 2 |
+| **Timing Diagram** | State changes over time | Style 2 |
+| **Interaction Overview** | High-level interaction flow | Style 1, 2 |
+| **ER Diagram** | Entity-relationship data models | Style 1, 3 |
 
 ---
 
@@ -334,7 +378,13 @@ fireworks-tech-graph/
 │   ├── style-3-blueprint.md      # Blueprint grid, cyan lines
 │   ├── style-4-notion-clean.md   # Minimal, white, single arrow color
 │   ├── style-5-glassmorphism.md  # Dark gradient, frosted glass cards
+│   ├── style-6-claude-official.md # Warm cream background, Anthropic brand
+│   ├── style-7-openai-official.md # Clean white, OpenAI brand palette
 │   └── icons.md                  # 40+ product icons + semantic shapes
+├── scripts/
+│   ├── generate-diagram.sh       # Generate SVG + PNG with validation
+│   ├── validate-svg.sh           # Validate SVG syntax
+│   └── test-all-styles.sh        # Batch test all styles
 └── assets/
     └── samples/                  # Showcase diagram PNGs
 ```
