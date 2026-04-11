@@ -6,12 +6,13 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Claude Code Skill](https://img.shields.io/badge/Claude%20Code-Skill-blue)](https://claude.ai/code)
-[![5 种视觉风格](https://img.shields.io/badge/风格-5种-purple)]()
-[![8 种图类型](https://img.shields.io/badge/图类型-8种-green)]()
+[![7 种视觉风格](https://img.shields.io/badge/风格-7种-purple)]()
+[![14 种图类型](https://img.shields.io/badge/图类型-14种-green)]()
+[![UML ��持](https://img.shields.io/badge/UML-完整支持-orange)]()
 
 ## 概述
 
-`fireworks-tech-graph` 将自然语言描述转化为精美的 SVG 技术图，并通过 `rsvg-convert` 导出高分辨率 PNG。内置 **5 种视觉风格**，深度覆盖 AI/Agent 领域常见图类型（RAG、Agentic Search、Mem0、Multi-Agent、Tool Call 流程等）。
+`fireworks-tech-graph` 将自然语言描述转化为精美的 SVG 技术图，并通过 `rsvg-convert` 导出高分辨率 PNG。内置 **7 种视觉风格**，深度覆盖 AI/Agent 领域常见图类型（RAG、Agentic Search、Mem0、Multi-Agent、Tool Call 流程等），并完整支持全部 14 种 UML 图类型。
 
 ```
 用户: "画一张 Mem0 的架构图，暗黑风格"
@@ -47,6 +48,14 @@
 *Multi-Agent 协作图 — 深色渐变底，磨砂玻璃卡片*
 ![风格 5 — 玻璃态卡片风](assets/samples/sample-style5-glass.png)
 
+### 风格 6 — Claude 官方风格
+*系统架构图 — 温暖奶油色背景 (#f8f6f3)，Anthropic 品牌色，简洁专业美学*
+![风格 6 — Claude 官方风格](assets/samples/sample-style6-claude.png)
+
+### 风格 7 — OpenAI 官方风格
+*API 集成流程图 — 纯白背景，OpenAI 品牌配色，现代极简设计*
+![风格 7 — OpenAI 官方风格](assets/samples/sample-style7-openai.png)
+
 ### AI 领域 — Mem0 记忆架构图
 *完整记忆架构，含泳道、圆柱体存储、读写语义箭头*
 ![Mem0 架构图](assets/samples/sample-mem0.png)
@@ -55,8 +64,8 @@
 
 ## 功能特性
 
-- **5 种视觉风格** — 从白底极简到暗黑 Neon 再到磨砂玻璃
-- **8 种图类型** — 架构图、数据流图、流程图、Agent 图、记忆图、序列图、对比图、思维导图
+- **7 种视觉风格** — 从白底极简到暗黑 Neon 再到磨砂玻璃，再到官方品牌风格
+- **14 种图类型** — 完整支持全部 UML 图类型（类图、组件图、部署图、包图、复合结构图、对象图、用例图、活动图、状态机图、序列图、通信图、时序图、交互概览图、ER 图）以及 AI/Agent 领域图
 - **AI/Agent 领域内建知识** — RAG、Agentic Search、Mem0、Multi-Agent、Tool Call 等常见 Pattern 开箱即用
 - **语义形状词汇表** — LLM = 双边框圆角矩形，Agent = 六边形，Vector Store = 带内环圆柱
 - **语义箭头系统** — 颜色 + 虚线样式编码含义（写入/读取/异步/循环）
@@ -223,7 +232,7 @@ generate diagram / draw diagram / create chart / visualize
 
 ---
 
-## 5 种风格
+## 7 种风格
 
 | # | 名称 | 背景色 | 字体 | 适用场景 |
 |---|------|--------|------|----------|
@@ -232,8 +241,33 @@ generate diagram / draw diagram / create chart / visualize
 | 3 | **工程蓝图风** | `#0a1628` | Courier New | 架构设计文档、工程规范 |
 | 4 | **Notion 极简风** | `#ffffff` | system-ui | Notion、Confluence、内部 Wiki |
 | 5 | **玻璃态卡片风** | `#0d1117` 渐变 | Inter | 产品官网、演讲 Keynote |
+| 6 | **Claude 官方风格** | `#f8f6f3` | system-ui | Anthropic 风格图表，温暖专业美学 |
+| 7 | **OpenAI 官方风格** | `#ffffff` | system-ui | OpenAI 风格图表，简洁现代设计 |
 
 每种风格在 `references/` 目录下都有专属参考文件，包含精确的颜色 Token、SVG 模板和使用规范。
+
+### 风格选择指南
+
+**UML 图类型：**
+- **类图/组件图/包图**：风格 1（扁平图标风）或风格 4（Notion 极简风）— 结构清晰，易于阅读
+- **序列图/时序图**：风格 2（暗黑极客风）— 等宽字体有助于对齐
+- **状态机图/活动图**：风格 3（工程蓝图风）— 工程美学适合流程图
+- **用例图/交互图**：风格 1（扁平图标风）— 彩色，易于理解
+
+**AI/Agent 图类型：**
+- **RAG/Agentic Search**：风格 2（暗黑极客风）或风格 5（玻璃态卡片风）— 科技感强
+- **记忆架构**：风格 3（工程蓝图风）— 强调分层存储结构
+- **Multi-Agent**：风格 5（玻璃态卡片风）— 磨砂卡片区分 Agent 边界
+
+**文档类型：**
+- **内部文档**：风格 4（Notion 极简风）— 极简，适合 Wiki
+- **技术博客**：风格 1（扁平图标风）— 彩色，吸引眼球
+- **GitHub README**：风格 2（暗黑极客风）— 匹配暗色主题
+- **演示文稿**：风格 5（玻璃态卡片风）或风格 6（Claude 官方风格）— 精致专业
+
+**品牌特定：**
+- **Anthropic/Claude 项目**：风格官方风格）— 温暖奶油色背景，品牌色
+- **OpenAI 项目**：风格 7（OpenAI 官方风格）— 简洁白色，OpenAI 配色
 
 ---
 
@@ -249,6 +283,25 @@ generate diagram / draw diagram / create chart / visualize
 | **序列图** | API 调用链、时序交互 | 垂直生命线，水平消息箭头 |
 | **对比图** | 功能矩阵、方案比较 | 列 = 系统，行 = 属性 |
 | **思维导图** | 概念地图、发散思维 | 中心节点，贝塞尔曲线分支 |
+
+### UML 图类型支持（14 种）
+
+| UML 类型 | 描述 | 推荐风格 |
+|----------|------|----------|
+| **类图** | 类、属性、方法、关系 | 风格 1, 4 |
+| **组件图** | 软件组件和依赖关系 | 风格 1, 3 |
+| **部署图** | 硬件节点和软件部署 | 风格 3 |
+| **包图** | 包组织和依赖关系 | 风格 1, 4 |
+| **复合结构图** | 类/组件的内部结构 | 风格 1, 3 |
+| **对象图** | 对象实例和关系 | 风格 1, 4 |
+| **用例图** | 参与者、用例、系统边界 | 风格 1 |
+| **活动图** | 工作流、并行流程 | 风格 3 |
+| **状态机图** | 状态转换和事件 | 风格 2, 3 |
+| **序列图** | 时间顺序的消息交换 | 风格 2 |
+| **通信图** | 对象交互和消息 | 风格 1, 2 |
+| **时序图** | 状态随时间的变化 | 风格 2 |
+| **交互概览图** | 高层交互流程 | 风格 1, 2 |
+| **ER 图** | 实体关系数据模型 | 风格 1, 3 |
 
 ---
 
@@ -317,7 +370,13 @@ fireworks-tech-graph/
 │   ├── style-3-blueprint.md      # 蓝图风格 — 网格底纹，青色线条
 │   ├── style-4-notion-clean.md   # 极简风格 — 白底，单色箭头
 │   ├── style-5-glassmorphism.md  # 玻璃态风格 — 深色渐变，磨砂卡片
+│   ├── style-6-claude-official.md # Claude 官方风格 — 温暖奶油色，Anthropic 品牌
+│   ├── style-7-openai-official.md # OpenAI 官方风格 — 简洁白色，OpenAI 品牌配色
 │   └── icons.md                  # 40+ 产品图标 + 语义形状模板
+├── scripts/
+│   ├── generate-diagram.sh       # SVG + PNG 生成与验证
+│   ├── validate-svg.sh           # SVG 语法校验
+│   └── test-all-styles.sh        # 批量测试所有风格
 └── assets/
     └── samples/                  # 示例图 PNG
 ```
