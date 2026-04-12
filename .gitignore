@@ -33,5 +33,4 @@ agentloture.svg
 
 # Node (if any)
 node_modules/
-package.json
 package-lock.json
