@@ -108,9 +108,9 @@ echo "Output: $SVG_FILE"
 
 # Load style reference
 SKILL_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-STYLE_FILE="${SKILL_DIR}/references/style-${STYLE}.md"
+STYLE_FILE=$(find "${SKILL_DIR}/references" -maxdepth 1 -type f -name "style-${STYLE}-*.md" | head -n 1)
 
-if [ ! -f "$STYLE_FILE" ]; then
+if [ -z "${STYLE_FILE:-}" ] || [ ! -f "$STYLE_FILE" ]; then
     echo -e "${RED}Error: Style file not found: ${STYLE_FILE}${NC}"
     echo "Available styles: 1-7"
     exit 1
@@ -137,7 +137,7 @@ if [ -f "$SVG_FILE" ]; then
     # Export PNG
     echo -e "\n${BLUE}Exporting PNG (width: ${WIDTH}px)...${NC}"
     if command -v rsvg-convert &> /dev/null; then
-        if rsvg-convert -w "$WIDTH" "$SVG_FILE" -o "$PNG_FILE" 2>&1; then
+        if rsvg-convert -w "$WIDTH" "$SVG_FILE" -o "$PNG_FILE" 2>/dev/null; then
             PNG_SIZE=$(du -h "$PNG_FILE" | cut -f1)
             echo -e "${GREEN}PNG exported: $PNG_FILE (${PNG_SIZE})${NC}"
         else

@@ -8,7 +8,7 @@
 [![Claude Code Skill](https://img.shields.io/badge/Claude%20Code-Skill-blue)](https://claude.ai/code)
 [![7 种视觉风格](https://img.shields.io/badge/风格-7种-purple)]()
 [![14 种图类型](https://img.shields.io/badge/图类型-14种-green)]()
-[![UML ��持](https://img.shields.io/badge/UML-完整支持-orange)]()
+[![UML 支持](https://img.shields.io/badge/UML-完整支持-orange)]()
 
 ## 概述
 
@@ -29,7 +29,7 @@
 > 所有示例图均以 1920px 宽度（2× 视网膜分辨率）通过 `rsvg-convert` 导出为 **PNG 格式**。技术图应选 PNG（无损），JPG 有损压缩会在文字和线条边缘产生噪点。
 
 ### 风格 1 — 扁平图标风（默认）
-*Agentic RAG 流程图 — 白底，语义色箭头*
+*Mem0 记忆架构图 — 白底，语义箭头，分层记忆系统*
 ![风格 1 — 扁平图标风](assets/samples/sample-style1-flat.png)
 
 ### 风格 2 — 暗黑极客风
@@ -56,15 +56,72 @@
 *API 集成流程图 — 纯白背景，OpenAI 品牌配色，现代极简设计*
 ![风格 7 — OpenAI 官方风格](assets/samples/sample-style7-openai.png)
 
-### AI 领域 — Mem0 记忆架构图
-*完整记忆架构，含泳道、圆柱体存储、读写语义箭头*
-![Mem0 架构图](assets/samples/sample-mem0.png)
+---
+
+## 稳定输出提示词样例
+
+下面这 7 组提示词都更贴近当前仓库里回归测试最稳定的输出方式：
+
+### 风格 1 — 扁平图标风
+```text
+画一张 style 1（Flat Icon）的 Mem0 记忆架构图。
+分成四个横向区域：Input Layer、Memory Manager、Storage Layer、Output / Retrieval。
+包含 User、AI App / Agent、LLM、mem0 Client、Memory Manager、Vector Store、Graph DB、Key-Value Store、History Store、Context Builder、Ranked Results、Personalized Response。
+使用 read、write、control、data 四类语义箭头，整体保持产品文档风格的清晰布局。
+```
+
+### 风格 2 — 暗黑极客风
+```text
+画一张 style 2（Dark Terminal）的 tool call flow 图。
+包含 User query、Retrieve chunks、Generate answer、Knowledge base、Agent、Terminal、Source documents、Grounded answer。
+使用终端窗口 chrome、Neon 强调色、等宽字体，以及 retrieval、answer synthesis、embedding update 三类语义箭头。
+```
+
+### 风格 3 — 工程蓝图风
+```text
+画一张 style 3（Blueprint）的微服务架构图。
+使用带编号的工程分区标题，例如 01 // EDGE、02 // APPLICATION SERVICES、03 // DATA + EVENT INFRA、04 // OBSERVABILITY。
+包含 Client Apps、API Gateway、Auth / Policy、三个业务服务、Event Router、Postgres、Redis Cache、Warehouse、Metrics / Traces。
+使用蓝图网格、青色描边，并在右下角加入工程 title block。
+```
+
+### 风格 4 — Notion 极简风
+```text
+画一张 style 4（Notion Clean）的 agent memory types 图。
+以中间的 Agent Core 为中心，对比 Sensory Memory、Working Memory、Episodic Memory、Semantic Memory、Procedural Memory。
+使用极简白底、浅边框、单一强调色箭头，并给每种 memory 补充简短的存储标签。
+```
+
+### 风格 5 — 玻璃态卡片风
+```text
+画一张 style 5（Glassmorphism）的 multi-agent collaboration 图。
+分成 Mission Control、Specialist Agents、Synthesis 三个区域。
+包含 User brief、Coordinator Agent、Research Agent、Coding Agent、Review Agent、Shared Memory、Synthesis Engine、Final response。
+使用 frosted glass 卡片、轻微 glow，以及 delegation、shared memory write、synthesis output 三类语义箭头。
+```
+
+### 风格 6 — Claude 官方风格
+```text
+画一张 style 6（Claude Official）的 system architecture 图。
+使用左侧 layer label：Interface Layer、Core Layer、Foundation Layer。
+包含 Client Surface、Gateway、Task Planner、Model Runtime、Policy Guardrails、Memory Store、Tool Runtime、Observability、Registry。
+使用温暖奶油色背景、克制的品牌感配色、足够留白，并在右下角放 legend。
+```
+
+### 风格 7 — OpenAI 官方风格
+```text
+画一张 style 7（OpenAI Official）的 API integration flow 图。
+分成 Entry、Model + Tools、Delivery 三个区域。
+包含 Application、OpenAI SDK Layer、Prompt Builder、Model Runtime、Tool Calls、Response Formatter、Observability、Release Control。
+整体保持纯白、精确、现代、极简，并使用干净的绿色语义箭头。
+```
 
 ---
 
 ## 功能特性
 
 - **7 种视觉风格** — 从白底极简到暗黑 Neon 再到磨砂玻璃，再到官方品牌风格
+- **可执行风格系统** — 风格约束不仅写在文档里，也真正进入生成器逻辑
 - **14 种图类型** — 完整支持全部 UML 图类型（类图、组件图、部署图、包图、复合结构图、对象图、用例图、活动图、状态机图、序列图、通信图、时序图、交互概览图、ER 图）以及 AI/Agent 领域图
 - **AI/Agent 领域内建知识** — RAG、Agentic Search、Mem0、Multi-Agent、Tool Call 等常见 Pattern 开箱即用
 - **语义形状词汇表** — LLM = 双边框圆角矩形，Agent = 六边形，Vector Store = 带内环圆柱
@@ -245,6 +302,14 @@ generate diagram / draw diagram / create chart / visualize
 | 7 | **OpenAI 官方风格** | `#ffffff` | system-ui | OpenAI 风格图表，简洁现代设计 |
 
 每种风格在 `references/` 目录下都有专属参考文件，包含精确的颜色 Token、SVG 模板和使用规范。
+生成器现在还会直接消费风格相关结构字段，例如 `containers`、语义化 `nodes[].kind`、`arrows[].flow` 以及显式端口锚点，以便更稳定地逼近样图级布局质量。
+
+几个很有用的增强字段：
+- `style_overrides`：在不复制整套 style 的前提下微调标题对齐或配色 token
+- `containers[].header_prefix` / `containers[].header_text`：用于 style 3 这种 `01 // EDGE` 的工程编号分区标题
+- `containers[].side_label`：用于 style 6 这类左侧 Layer Label
+- `window_controls`、`meta_left`、`meta_center`、`meta_right`：用于终端 / 文档风格的顶部 chrome
+- `blueprint_title_block`：用于 style 3 的蓝图标题信息框
 
 ### 风格选择指南
 
@@ -266,7 +331,7 @@ generate diagram / draw diagram / create chart / visualize
 - **演示文稿**：风格 5（玻璃态卡片风）或风格 6（Claude 官方风格）— 精致专业
 
 **品牌特定：**
-- **Anthropic/Claude 项目**：风格官方风格）— 温暖奶油色背景，品牌色
+- **Anthropic/Claude 项目**：风格 6（Claude 官方风格）— 温暖奶油色背景，品牌感强且克制
 - **OpenAI 项目**：风格 7（OpenAI 官方风格）— 简洁白色，OpenAI 配色
 
 ---
@@ -371,14 +436,26 @@ fireworks-tech-graph/
 │   ├── style-4-notion-clean.md   # 极简风格 — 白底，单色箭头
 │   ├── style-5-glassmorphism.md  # 玻璃态风格 — 深色渐变，磨砂卡片
 │   ├── style-6-claude-official.md # Claude 官方风格 — 温暖奶油色，Anthropic 品牌
-│   ├── style-7-openai-official.md # OpenAI 官方风格 — 简洁白色，OpenAI 品牌配色
+│   ├── style-7-openai.md        # OpenAI 官方风格 — 简洁白色，OpenAI 品牌配色
 │   └── icons.md                  # 40+ 产品图标 + 语义形状模板
+├── agents/
+│   └── openai.yaml              # 兼容运行时使用的 Agent 元数据
+├── fixtures/
+│   ├── mem0-style1.json         # Style 1 回归样例
+│   ├── tool-call-style2.json    # Style 2 回归样例
+│   └── ...                      # 各风格样图级 fixture
 ├── scripts/
-│   ├── generate-diagram.sh       # SVG + PNG 生成与验证
+│   ├── generate-diagram.sh       # SVG 校验与 PNG 导出
+│   ├── generate-from-template.py # 基于模板生成 SVG 起始文件
 │   ├── validate-svg.sh           # SVG 语法校验
 │   └── test-all-styles.sh        # 批量测试所有风格
-└── assets/
-    └── samples/                  # 示例图 PNG
+├── assets/
+│   └── samples/                  # 示例图 PNG
+├── templates/
+│   ├── architecture.svg         # 架构图模板
+│   ├── data-flow.svg            # 数据流模板
+│   └── ...                      # 其他图类型模板
+└── agentloop-core.svg           # 仓库自带示例 SVG
 ```
 
 ---

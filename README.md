@@ -31,7 +31,7 @@ User: "Generate a Mem0 memory architecture diagram, dark style"
 > All samples exported at 1920px width (2× retina) via `rsvg-convert`. PNG is lossless and the right choice for technical diagrams — sharp edges, no JPEG compression artifacts on text/lines.
 
 ### Style 1 — Flat Icon (default)
-*Agentic RAG Pipeline — white background, colorful semantic arrows*
+*Mem0 Memory Architecture — white background, semantic arrows, layered memory system*
 ![Style 1 — Flat Icon](assets/samples/sample-style1-flat.png)
 
 ### Style 2 — Dark Terminal
@@ -47,7 +47,7 @@ User: "Generate a Mem0 memory architecture diagram, dark style"
 ![Style 4 — Notion Clean](assets/samples/sample-style4-notion.png)
 
 ### Style 5 — Glassmorphism
-*Multi-Agent Collaboration — dark gradient background, s cards*
+*Multi-Agent Collaboration — dark gradient background, frosted glass cards*
 ![Style 5 — Glassmorphism](assets/samples/sample-style5-glass.png)
 
 ### Style 6 — Claude Official
@@ -58,15 +58,72 @@ User: "Generate a Mem0 memory architecture diagram, dark style"
 *API Integration Flow — pure white background, OpenAI brand palette, modern minimalist design*
 ![Style 7 — OpenAI Official](assets/samples/sample-style7-openai.png)
 
-### AI Domain — Mem0 Memory Architecture
-*Full memory architecture with swim lanes, cylinders, and semantic read/write arrows*
-![Mem0 Architecture](assets/samples/sample-mem0.png)
+---
+
+## Stable Prompt Recipes
+
+Use prompts like these when you want the model to stay close to the repo's strongest regression-tested outputs:
+
+### Style 1 — Flat Icon
+```text
+Draw a Mem0 memory architecture diagram in style 1 (Flat Icon).
+Use four horizontal sections: Input Layer, Memory Manager, Storage Layer, Output / Retrieval.
+Include User, AI App / Agent, LLM, mem0 Client, Memory Manager, Vector Store, Graph DB, Key-Value Store, History Store, Context Builder, Ranked Results, Personalized Response.
+Use semantic arrows for read, write, control, and data flow. Keep the layout clean and product-doc friendly.
+```
+
+### Style 2 — Dark Terminal
+```text
+Draw a tool call flow diagram in style 2 (Dark Terminal).
+Show User query, Retrieve chunks, Generate answer, Knowledge base, Agent, Terminal, Source documents, and Grounded answer.
+Use terminal chrome, neon accents, monospace typography, and semantic arrows for retrieval, synthesis, and embedding update.
+```
+
+### Style 3 — Blueprint
+```text
+Draw a microservices architecture diagram in style 3 (Blueprint).
+Create numbered engineering sections like 01 // EDGE, 02 // APPLICATION SERVICES, 03 // DATA + EVENT INFRA, 04 // OBSERVABILITY.
+Include Client Apps, API Gateway, Auth / Policy, three services, Event Router, Postgres, Redis Cache, Warehouse, and Metrics / Traces.
+Use blueprint grid, cyan strokes, and a bottom-right title block.
+```
+
+### Style 4 — Notion Clean
+```text
+Draw an agent memory types diagram in style 4 (Notion Clean).
+Compare Sensory Memory, Working Memory, Episodic Memory, Semantic Memory, and Procedural Memory around a central Agent core.
+Use a minimal white layout, neutral borders, one accent color for arrows, and short storage tags for each memory type.
+```
+
+### Style 5 — Glassmorphism
+```text
+Draw a multi-agent collaboration diagram in style 5 (Glassmorphism).
+Use three sections: Mission Control, Specialist Agents, and Synthesis.
+Include User brief, Coordinator Agent, Research Agent, Coding Agent, Review Agent, Shared Memory, Synthesis Engine, and Final response.
+Use frosted cards, soft glow, and semantic arrows for delegation, shared memory writes, and synthesis output.
+```
+
+### Style 6 — Claude Official
+```text
+Draw a system architecture diagram in style 6 (Claude Official).
+Use left-side layer labels: Interface Layer, Core Layer, Foundation Layer.
+Include Client Surface, Gateway, Task Planner, Model Runtime, Policy Guardrails, Memory Store, Tool Runtime, Observability, and Registry.
+Use warm cream background, restrained brand-like palette, generous whitespace, and a bottom-right legend.
+```
+
+### Style 7 — OpenAI Official
+```text
+Draw an API integration flow diagram in style 7 (OpenAI Official).
+Use three sections: Entry, Model + Tools, and Delivery.
+Include Application, OpenAI SDK Layer, Prompt Builder, Model Runtime, Tool Calls, Response Formatter, Observability, and Release Control.
+Keep the look minimal, white, precise, and modern with clean green-accented arrows.
+```
 
 ---
 
 ## Features
 
 - **7 visual styles** — from clean white docs to dark neon to frosted glass to official brand styles
+- **Executable style system** — style guides are encoded into the generator, not only documented in markdown
 - **14 diagram types** — Full UML support (Class, Component, Deployment, Package, Composite Structure, Object, Use Case, Activity, State Machine, Sequence, Communication, Timing, Interaction Overview, ER Diagram) plus AI/Agent domain diagrams
 - **AI/Agent domain patterns** — RAG, Agentic Search, Mem0, Multi-Agent, Tool Call, and more built-in
 - **Semantic shape vocabulary** — LLM = double-border rect, Agent = hexagon, Vector Store = ringed cylinder
@@ -255,13 +312,21 @@ Draw an AI Agent capability map: Perception / Memory / Reasoning / Action / Lear
 |---|------|-----------|------|----------|
 | 1 | **Flat Icon** *(default)* | `#ffffff` | Helvetica | Blogs, slides, docs |
 | 2 | **Dark Terminal** | `#0f0f1a` | SF Mono / Fira Code | GitHub README, dev articles |
-| 3 | **Blueprint** | `#0a1628` | Courier Newure docs, engineering |
+| 3 | **Blueprint** | `#0a1628` | Courier New | Architecture docs, engineering |
 | 4 | **Notion Clean** | `#ffffff` | system-ui | Notion, Confluence, wikis |
 | 5 | **Glassmorphism** | `#0d1117` gradient | Inter | Product sites, keynotes |
-| 6 | **Claude Official** | `#f8f6f3` | system-ui | Anthro diagrams, warm aesthetic |
+| 6 | **Claude Official** | `#f8f6f3` | system-ui | Anthropic-style diagrams, warm aesthetic |
 | 7 | **OpenAI Official** | `#ffffff` | system-ui | OpenAI-style diagrams, clean modern look |
 
 Each style has a dedicated reference file in `references/` with exact color tokens, SVG patterns, and templates.
+The generator also consumes style-aware structure fields such as `containers`, semantic `nodes[].kind`, `arrows[].flow`, and explicit port anchors so sample-grade layouts can be reproduced more consistently.
+
+Useful high-leverage fields for style-specific polish:
+- `style_overrides` to nudge title alignment or palette tokens without forking a full style
+- `containers[].header_prefix` / `containers[].header_text` for blueprint-style numbered section headers such as `01 // EDGE`
+- `containers[].side_label` for Claude-style left layer labels
+- `window_controls`, `meta_left`, `meta_center`, `meta_right` for terminal / document chrome
+- `blueprint_title_block` for engineering title boxes in style 3
 
 ### Style Selection Guide
 
@@ -277,7 +342,8 @@ Each style has a dedicated reference file in `references/` with exact color toke
 - **Multi-Agent**: Style 5 (Glassmorphism) — frosted cards distinguish agent boundaries
 
 **For Documentation:**
-- **Internal docs**: Style 4 (Notion Clean) — minimal, wiki-frieng posts**: Style 1 (Flat Icon) — colorful, engaging
+- **Internal docs**: Style 4 (Notion Clean) — minimal, wiki-friendly
+- **Blog posts**: Style 1 (Flat Icon) — colorful, engaging
 - **GitHub README**: Style 2 (Dark Terminal) — matches dark theme
 - **Presentations**: Style 5 (Glassmorphism) or Style 6 (Claude Official) — polished
 
@@ -311,7 +377,7 @@ Each style has a dedicated reference file in `references/` with exact color toke
 | **Composite Structure** | Internal structure of classes/components | Style 1, 3 |
 | **Object Diagram** | Object instances and relationships | Style 1, 4 |
 | **Use Case Diagram** | Actors, use cases, system boundaries | Style 1 |
-| **Activity Diagram** | Workflows, parallel processes | Sty3 |
+| **Activity Diagram** | Workflows, parallel processes | Style 3 |
 | **State Machine** | State transitions and events | Style 2, 3 |
 | **Sequence Diagram** | Message exchanges over time | Style 2 |
 | **Communication Diagram** | Object interactions and messages | Style 1, 2 |
@@ -387,14 +453,26 @@ fireworks-tech-graph/
 │   ├── style-4-notion-clean.md   # Minimal, white, single arrow color
 │   ├── style-5-glassmorphism.md  # Dark gradient, frosted glass cards
 │   ├── style-6-claude-official.md # Warm cream background, Anthropic brand
-│   ├── style-7-openai-official.md # Clean white, OpenAI brand palette
+│   ├── style-7-openai.md      # Clean white, OpenAI brand palette
 │   └── icons.md                  # 40+ product icons + semantic shapes
+├── agents/
+│   └── openai.yaml              # Agent metadata for compatible runtimes
+├── fixtures/
+│   ├── mem0-style1.json         # Style 1 regression fixture
+│   ├── tool-call-style2.json    # Style 2 regression fixture
+│   └── ...                      # Additional sample-grade fixtures per style
 ├── scripts/
-│   ├── generate-diagram.sh       # Generate SVG + PNG with validation
+│   ├── generate-diagram.sh       # Validate SVG + export PNG
+│   ├── generate-from-template.py # Create starter SVGs from templates
 │   ├── validate-svg.sh           # Validate SVG syntax
 │   └── test-all-styles.sh        # Batch test all styles
-└── assets/
-    └── samples/                  # Showcase diagram PNGs
+├── assets/
+│   └── samples/                  # Showcase diagram PNGs
+├── templates/
+│   ├── architecture.svg         # Architecture starter template
+│   ├── data-flow.svg            # Data-flow starter template
+│   └── ...                      # Additional diagram templates
+└── agentloop-core.svg           # Included sample SVG
 ```
 
 ---

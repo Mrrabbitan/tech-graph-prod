@@ -32,12 +32,12 @@ SVG 图表生成脚本，提供自动验证和 PNG 导出。
 
 **用法：**
 ```bash
-./gegram.sh [OPTIONS]
+./generate-diagram.sh [OPTIONS]
 ```
 
 **选项：**
-- `-t, --type TYPE` - 图表类型（architecture|flowchart|sequence|agent|memory）
-- `-s, --style STYLE` - 风格编号（1-8，默认：1）
+- `-t, --type TYPE` - 图表类型（见脚本帮助）
+- `-s, --style STYLE` - 风格编号（1-7，默认：1）
 - `-o, --output PATH` - 输出路径（默认：当前目录）
 - `-w, --width WIDTH` - PNG 宽度（像素，默认：1920）
 - `--no-validate` - 跳过验证
@@ -52,11 +52,51 @@ SVG 图表生成脚本，提供自动验证和 PNG 导出。
 ./generate-diagram.sh -t flowchart -s 2 -w 2400
 ```
 
-**注���：** SVG 内容生成需要 Claude Code，此脚本提供验证和导出功能。
+**注意：** SVG 内容需要先准备好；这个脚本只负责验证与导出。
 
-### 3. test-all-styles.sh
+### 3. generate-from-template.py
 
-批量测试脚本，测8 种风格的样例图表。
+基于风格配置和 JSON 数据生成 SVG。当前版本不再只是简单塞入 `nodes/arrows`，
+而是会执行 style guide 中的部分可计算规则，例如：
+
+- `style` - 风格编号（1-7）
+- `containers` - 泳道 / 分组容器
+- `containers[].header_prefix` / `containers[].header_text` - 工程编号式分区标题
+- `containers[].side_label` - 左侧 layer label
+- `nodes[].kind` - 语义组件类型，例如 `double_rect`、`cylinder`、`document`、`terminal`、`circle_cluster`
+- `arrows[].flow` - 语义箭头类型，例如 `control`、`write`、`read`、`data`
+- `source_port` / `target_port` - 指定端口锚点
+- `route_points` / `corridor_x` / `corridor_y` - 控制复杂图的走线质量
+- `style_overrides` - 对现有 style 做局部覆盖
+- `window_controls` / `meta_*` - 顶部终端 chrome
+- `blueprint_title_block` - 工程蓝图右下角 title block
+
+**用法：**
+```bash
+python3 ./generate-from-template.py architecture ./output/arch.svg '{"style":1,"title":"My Diagram","containers":[],"nodes":[],"arrows":[]}'
+```
+
+**示例：**
+```bash
+python3 ./generate-from-template.py memory ./output/mem0.svg '{
+  "style": 1,
+  "title": "Mem0 Memory Architecture",
+  "containers": [
+    {"x":30,"y":90,"width":900,"height":90,"label":"Input Layer","header_prefix":"01"}
+  ],
+  "nodes": [
+    {"id":"manager","kind":"double_rect","x":360,"y":220,"width":300,"height":72,"label":"Memory Manager"},
+    {"id":"vector","kind":"cylinder","x":90,"y":360,"width":140,"height":110,"label":"Vector Store"}
+  ],
+  "arrows": [
+    {"source":"manager","target":"vector","flow":"write","dashed":true}
+  ]
+}'
+```
+
+### 4. test-all-styles.sh
+
+批量测试脚本，测试 7 种风格的回归样例图。
 
 **用法：**
 ```bash
@@ -65,7 +105,8 @@ SVG 图表生成脚本，提供自动验证和 PNG 导出。
 
 **功能：**
 - 检查所有风格的参考文件
-- 验证现有的 SVG 样例文件
+- 渲染 `fixtures/*.json` 回归样例
+- 验证生成出的 SVG 文件
 - 导出 PNG 文件到 `test-output/` 目录
 - 生成测试报告
 
@@ -99,11 +140,16 @@ fireworks-tech-graph/
 │   ├── style-1-flat-icon.md
 │   ├── style-2-dark-terminal.md
 │   └── ...
+├── fixtures/                   # 回归测试样例（JSON）
+│   ├── mem0-style1.json
+│   ├── tool-call-style2.json
+│   └── ...
 ├── scripts/                    # 辅助脚本（本目录）
 │   ├── README.md              # 本文档
 │   ├── validate-svg.sh        # SVG 验证
-│   ├── generate-diagram.sh    # 图表生成
-│   └── test-all-styl.sh     # 批量测试
+│   ├── generate-diagram.sh    # SVG 验证与 PNG 导出
+│   ├── generate-from-template.py # 模板化生成 SVG
+│   └── test-all-styles.sh     # 批量测试
 └── test-output/               # 测试输出目录（自动创建）
 ```
 
@@ -130,6 +176,12 @@ cd ~/.claude/skills/fireworks-tech-graph/scripts
 cd ~/.claude/skills/fireworks-tech-graph/scripts
 ./test-all-styles.sh
 ```
+
+测试脚本会自动：
+1. 读取 `../fixtures/*.json`
+2. 按 `template_type + style` 调用 `generate-from-template.py`
+3. 运行 `validate-svg.sh`
+4. 导出 PNG 到 `../test-output/`
 
 查看测试输出：
 ```bash
@@ -178,7 +230,7 @@ fi
 
 ### 扩展支持的图表类型
 
-编辑 `generate-diagra，在 `--type` 参数处理中添加新类型。
+编辑 `generate-diagram.sh`，在 `--type` 参数处理中添加新类型。
 
 ## 版本历史
 

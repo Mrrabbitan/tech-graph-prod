@@ -1,6 +1,6 @@
 #!/bin/bash
 # Batch Test Script
-# Tests all 8 styles with sample diagrams
+# Renders regression fixtures, validates SVGs, and exports PNGs
 
 set -euo pipefail
 
@@ -32,6 +32,8 @@ TOTAL=0
 PASSED=0
 FAILED=0
 
+FIXTURES_DIR="${SKILL_DIR}/fixtures"
+
 echo -e "${BLUE}Testing all styles...${NC}"
 echo "----------------------------------------"
 
@@ -42,8 +44,8 @@ for i in "${!STYLES[@]}"; do
     echo -e "\n${YELLOW}Style $STYLE: $STYLE_NAME${NC}"
     
     # Check if style reference exists
-    STYLE_FILE="${SKILL_DIR}/references/style-${STYLE}.md"
-    if [ ! -f "$STYLE_FILE" ]; then
+    STYLE_FILE=$(find "${SKILL_DIR}/references" -maxdepth 1 -type f -name "style-${STYLE}-*.md" | head -n 1)
+    if [ -z "${STYLE_FILE:-}" ] || [ ! -f "$STYLE_FILE" ]; then
         echo -e "${RED}✗ Style file not found: $STYLE_FILE${NC}"
         FAILED=$((FAILED + 1))
         TOTAL=$((TOTAL + 1))
@@ -52,40 +54,65 @@ for i in "${!STYLES[@]}"; do
     
     echo -e "${GREEN}✓ Style file found${NC}"
     
-    # Check for sample SVG files
-    SAMPLE_FILES=$(find "$SKILL_DIR" -name "*style${STYLE}*.svg" -o -name "*style-${STYLE}*.svg" 2>/dev/null || true)
-    
-    if [ -z "$SAMPLE_FILES" ]; then
-        echo -e "${YELLOW}⚠ No sample SVG files found for style $STYLE${NC}"
+    if [ ! -d "$FIXTURES_DIR" ]; then
+        echo -e "${YELLOW}⚠ Fixtures directory not found: $FIXTURES_DIR${NC}"
         continue
     fi
-    
-    # Validate each sample file
-    for SVG_FILE in $SAMPLE_FILES; do
-        BASENAME=$(basename "$SVG_FILE")
-        echo -n "  Testing $BASENAME... "
-        
+
+    FIXTURE_FILES=$(find "$FIXTURES_DIR" -maxdepth 1 -type f -name "*.json" | sort || true)
+    MATCHED_FIXTURES=()
+    for FIXTURE in $FIXTURE_FILES; do
+        FIXTURE_STYLE=$(python3 - "$FIXTURE" <<'PY'
+import json
+import sys
+from pathlib import Path
+data = json.loads(Path(sys.argv[1]).read_text(encoding='utf-8'))
+print(data.get("style", ""))
+PY
+)
+        if [ "$FIXTURE_STYLE" = "$STYLE" ]; then
+            MATCHED_FIXTURES+=("$FIXTURE")
+        fi
+    done
+
+    if [ "${#MATCHED_FIXTURES[@]}" -eq 0 ]; then
+        echo -e "${YELLOW}⚠ No regression fixtures found for style $STYLE${NC}"
+        continue
+    fi
+
+    # Render, validate, and export each fixture
+    for FIXTURE in "${MATCHED_FIXTURES[@]}"; do
+        BASENAME=$(basename "$FIXTURE" .json)
+        SVG_FILE="${TEST_DIR}/${BASENAME}_${TIMESTAMP}.svg"
+        PNG_FILE="${TEST_DIR}/${BASENAME}_${TIMESTAMP}.png"
+        TEMPLATE_TYPE=$(python3 - "$FIXTURE" <<'PY'
+import json
+import sys
+from pathlib import Path
+data = json.loads(Path(sys.argv[1]).read_text(encoding='utf-8'))
+print(data.get("template_type", "architecture"))
+PY
+)
+
+        echo -n "  Rendering $BASENAME... "
         TOTAL=$((TOTAL + 1))
-        
-        # Run validation
-        if "${SKILL_DIR}/scripts/validate-svg.sh" "$SVG_FILE" > /dev/null 2>&1; then
-            echo -e "${GREEN}✓ Pass${NC}"
-            PASSED=$((PASSED + 1))
-            
-            # Try to export PNG
-            PNG_FILE="${TEST_DIR}/${BASENAME%.svg}_${TIMESTAMP}.png"
-            if command -v rsvg-convert &> /dev/null; then
-                if rsvg-convert -w 1920 "$SVG_FILE" -o "$PNG_FILE" 2>/dev/null; then
-                    PNG_SIZE=$(du -h "$PNG_FILE" | cut -f1)
-                    echo "    PNG exported: ${PNG_SIZE}"
-                fi
+
+        if python3 "${SKILL_DIR}/scripts/generate-from-template.py" "$TEMPLATE_TYPE" "$SVG_FILE" "$(cat "$FIXTURE")" > /dev/null 2>&1 \
+            && "${SKILL_DIR}/scripts/validate-svg.sh" "$SVG_FILE" > /dev/null 2>&1; then
+            if command -v rsvg-convert &> /dev/null \
+                && rsvg-convert -w 1920 "$SVG_FILE" -o "$PNG_FILE" 2>/dev/null; then
+                PNG_SIZE=$(du -h "$PNG_FILE" | cut -f1)
+                echo -e "${GREEN}✓ Pass${NC} (${PNG_SIZE})"
+            else
+                echo -e "${GREEN}✓ Pass${NC}"
             fi
+            PASSED=$((PASSED + 1))
         else
             echo -e "${RED}✗ Fail${NC}"
             FAILED=$((FAILED + 1))
-            
-            # Show validation errors
-            "${SKILL_DIR}/scripts/validate-svg.sh" "$SVG_FILE" 2>&1 | grep -E "✗|Error" | sed 's/^/    /'
+            if [ -f "$SVG_FILE" ]; then
+                "${SKILL_DIR}/scripts/validate-svg.sh" "$SVG_FILE" 2>&1 | grep -E "✗|Error" | sed 's/^/    /' || true
+            fi
         fi
     done
 done

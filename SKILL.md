@@ -14,29 +14,37 @@ Generate production-quality SVG technical diagrams exported as PNG via `rsvg-con
 
 ## Helper Scripts (Recommended)
 
-Three bash scripts in `scripts/` directory provide stable SVG generation and validation:
+Four helper scripts in `scripts/` directory provide stable SVG generation and validation:
 
-### 1. `generate-diagram.sh` - Generate SVG + PNG
+### 1. `generate-diagram.sh` - Validate SVG + export PNG
 ```bash
-./scripts/generate-diagram.sh <output-name> [width] [height] [output-dir]
+./scripts/generate-diagram.sh -t architecture -s 1 -o ./output/arch.svg
 ```
-- Generates SVG with predefined template
-- Validates syntax with xmllint
-- Exports PNG at 2x resolution
-- Example: `./scripts/generate-diagram.sh my-arch 960 800`
+- Validates an existing SVG file
+- Exports PNG after validation
+- Example: `./scripts/generate-diagram.sh -t architecture -s 1 -o ./output/arch.svg`
 
-### 2. `validate-svg.sh` - Validate SVG syntax
+### 2. `generate-from-template.py` - Create starter SVG from template
+```bash
+python3 ./scripts/generate-from-template.py architecture ./output/arch.svg '{"title":"My Diagram","nodes":[],"arrows":[]}'
+```
+- Loads a built-in SVG template
+- Renders nodes, arrows, and legend entries from JSON input
+- Escapes text content to keep output XML-valid
+
+### 3. `validate-svg.sh` - Validate SVG syntax
 ```bash
 ./scripts/validate-svg.sh <svg-file>
 ```
 - Checks XML syntax
-- Verifies tag c- Validates marker references
+- Verifies tag balance
+- Validates marker references
 - Checks attribute completeness
 - Validates path data
 
-### 3. `test-all-styles.sh` - Batch test all styles
+### 4. `test-all-styles.sh` - Batch test all styles
 ```bash
-./scripts/test-all-styles.sh [output-dir]
+./scripts/test-all-styles.sh
 ```
 - Tests multiple diagram sizes
 - Validates all generated SVGs
@@ -63,7 +71,7 @@ Three bash scripts in `scripts/` directory provide stable SVG generation and val
 7. **Write SVG** with adaptive strategy (see SVG Generation Strategy below)
 8. **Validate**: Run `rsvg-convert file.svg -o /dev/null 2>&1` to check syntax
 9. **Export PNG**: `rsvg-convert -w 1920 file.svg -o file.png`
-10. **Report** be paths
+10. **Report** the generated file paths
 
 ## Diagram Types & Layout Rules
 
@@ -290,6 +298,7 @@ Always include a **legend** when 2+ arrow types are used.
 
 **Arrow Routing**:
 - Prefer orthogonal (L-shaped) paths to minimize crossings
+- Anchor arrows on component edges, not geometric centers
 - Route around dense node clusters, use different y-offsets for parallel arrows
 - Jump-over arcs (5px radius) for unavoidable crossings
 
@@ -297,6 +306,7 @@ Always include a **legend** when 2+ arrow types are used.
 1. **Arrow-Component Collision**: Arrows MUST NOT pass through component interiors (route around with orthogonal paths)
 2. **Text Overflow**: All text MUST fit with 8px padding (estimate: `text.length × 7px ≤ shape_width - 16px`)
 3. **Arrow-Text Alignment**: Arrow endpoints MUST connect to shape edges (not floating); all arrow labels MUST have background rects
+4. **Container Discipline**: Prefer arrows entering and leaving section containers through open gaps between components, not through inner component bodies
 
 ## SVG Technical Rules
 
@@ -346,6 +356,11 @@ EOF
 rsvg-convert file.svg -o /tmp/test.png 2>&1 && echo "✓ Valid" && rm /tmp/test.png
 ```
 
+**If using `generate-from-template.py`**:
+- Prefer `source` / `target` node ids in arrow JSON so the generator can snap to node edges
+- Keep `x1,y1,x2,y2` as hints or fallback coordinates, not the main routing primitive
+- Let the generator choose orthogonal routes; avoid hardcoding center-to-center straight lines unless the path is guaranteed clear
+
 **Common Syntax Errors to Avoid**:
 - ❌ `yt-anchor` → ✅ `y="60" text-anchor="middle"`
 - ❌ `x="390` (missing y) → ✅ `x="390" y="250"`
@@ -387,4 +402,3 @@ These patterns appear frequently — internalize them:
 **Agent Memory Types**: Sensory (raw input) → Working (context window) → Episodic (past interactions) → Semantic (facts) → Procedural (skills)
 **Multi-Agent**: Orchestrator → [SubAgent A / SubAgent B / SubAgent C] → Aggregator → Output
 **Tool Call Flow**: LLM → Tool Selector → Tool Execution → Result Parser → LLM (loop)
-
