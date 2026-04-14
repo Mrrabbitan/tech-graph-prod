@@ -324,6 +324,13 @@ Always include a **legend** when 2+ arrow types are used.
 - Route around dense node clusters, use different y-offsets for parallel arrows
 - Jump-over arcs (5px radius) for unavoidable crossings
 
+**Line Overlap Prevention** (CRITICAL - most common bug on Codex):
+When two arrows must cross each other, ALWAYS use jump-over arcs to prevent visual overlap:
+- Crossing horizontal arrows: add a small semicircle arc (radius 5px, stroke same color as arrow, fill none) that "jumps over" the other line
+- SVG pattern for jump-over: use a white/matching-background arc on the lower layer, then draw the upper arc on top
+- Multiple crossings: stagger arc radii (5px, 7px, 9px) so arcs don't overlap each other
+- Never let two arrows' straight-line segments cross without a jump-over arc
+
 **Validation Checklist** (run before finalizing):
 1. **Arrow-Component Collision**: Arrows MUST NOT pass through component interiors (route around with orthogonal paths)
 2. **Text Overflow**: All text MUST fit with 8px padding (estimate: `text.length × 7px ≤ shape_width - 16px`)
