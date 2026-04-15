@@ -1,5 +1,5 @@
 {
-  "name": "@mrrabbitan/tech-graph-prod",
+  "name": "@anzpnavy/tech-graph-prod",
   "version": "1.0.5",
   "description": "Generate production-quality SVG technical diagrams (architecture, flowchart, UML, ER, sequence, etc.) with 7 built-in styles. Export as SVG+PNG via rsvg-convert.",
   "main": "SKILL.md",
@@ -19,12 +19,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Mrrabbitan/tech-graph-prod.git"
+    "url": "git+https://github.com/anzpnavy/tech-graph-prod.git"
   },
   "bugs": {
-    "url": "https://github.com/Mrrabbitan/tech-graph-prod/issues"
+    "url": "https://github.com/anzpnavy/tech-graph-prod/issues"
   },
-  "homepage": "https://github.com/Mrrabbitan/tech-graph-prod#readme",
+  "homepage": "https://github.com/anzpnavy/tech-graph-prod#readme",
   "files": [
     "SKILL.md",
     "README.md",
