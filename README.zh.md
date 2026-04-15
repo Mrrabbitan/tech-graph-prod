@@ -136,13 +136,13 @@
 ## 安装
 
 ```bash
-npx skills add anzpnavy/fireworks-tech-graph
+npx skills add Mrrabbitan/tech-graph-prod
 ```
 
 这个 Skill 的 `skills add` 安装源是 GitHub 仓库。npm 页面用于公开展示、版本分发和 README 浏览：
 
 ```text
-https://www.npmjs.com/package/@anzpnavy/fireworks-tech-graph
+https://www.npmjs.com/package/@mrrabbitan/tech-graph-prod
 ```
 
 不要把 npm 包名直接写进 `skills add`，因为 CLI 会把安装源解析为 GitHub 路径或本地路径。
@@ -150,7 +150,7 @@ https://www.npmjs.com/package/@anzpnavy/fireworks-tech-graph
 ## 更新
 
 ```bash
-npx skills add anzpnavy/fireworks-tech-graph --force -g -y
+npx skills add Mrrabbitan/tech-graph-prod --force -g -y
 ```
 
 用户后续要升级时，直接重新执行一次 `add --force` 即可拉取最新版本。
@@ -158,7 +158,7 @@ npx skills add anzpnavy/fireworks-tech-graph --force -g -y
 或直接克隆：
 
 ```bash
-git clone https://github.com/anzpnavy/fireworks-tech-graph.git ~/.claude/skills/fireworks-tech-graph
+git clone https://github.com/Mrrabbitan/tech-graph-prod.git ~/.claude/skills/tech-graph-prod
 ```
 
 ---

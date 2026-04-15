@@ -1,6 +1,6 @@
 {
-  "name": "@anzpnavy/fireworks-tech-graph",
-  "version": "1.0.4",
+  "name": "@mrrabbitan/tech-graph-prod",
+  "version": "1.0.5",
   "description": "Generate production-quality SVG technical diagrams (architecture, flowchart, UML, ER, sequence, etc.) with 7 built-in styles. Export as SVG+PNG via rsvg-convert.",
   "main": "SKILL.md",
   "keywords": [
@@ -19,12 +19,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anzpnavy/fireworks-tech-graph.git"
+    "url": "git+https://github.com/Mrrabbitan/tech-graph-prod.git"
   },
   "bugs": {
-    "url": "https://github.com/anzpnavy/fireworks-tech-graph/issues"
+    "url": "https://github.com/Mrrabbitan/tech-graph-prod/issues"
   },
-  "homepage": "https://github.com/anzpnavy/fireworks-tech-graph#readme",
+  "homepage": "https://github.com/Mrrabbitan/tech-graph-prod#readme",
   "files": [
     "SKILL.md",
     "README.md",
