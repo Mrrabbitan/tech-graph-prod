@@ -1,5 +1,5 @@
 {
-  "name": "@yizhiyanhua-ai/fireworks-tech-graph",
+  "name": "@anzpnavy/fireworks-tech-graph",
   "version": "1.0.4",
   "description": "Generate production-quality SVG technical diagrams (architecture, flowchart, UML, ER, sequence, etc.) with 7 built-in styles. Export as SVG+PNG via rsvg-convert.",
   "main": "SKILL.md",
@@ -15,16 +15,16 @@
     "er-diagram",
     "visualization"
   ],
-  "author": "yizhiyanhua-ai",
+  "author": "anzpnavy <anzpnavy@163.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yizhiyanhua-ai/fireworks-tech-graph.git"
+    "url": "git+https://github.com/anzpnavy/fireworks-tech-graph.git"
   },
   "bugs": {
-    "url": "https://github.com/yizhiyanhua-ai/fireworks-tech-graph/issues"
+    "url": "https://github.com/anzpnavy/fireworks-tech-graph/issues"
   },
-  "homepage": "https://github.com/yizhiyanhua-ai/fireworks-tech-graph#readme",
+  "homepage": "https://github.com/anzpnavy/fireworks-tech-graph#readme",
   "files": [
     "SKILL.md",
     "README.md",

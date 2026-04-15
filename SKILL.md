@@ -17,21 +17,21 @@ Generate production-quality SVG technical diagrams exported as PNG via `rsvg-con
 Install this skill from GitHub:
 
 ```bash
-npx skills add yizhiyanhua-ai/fireworks-tech-graph
+npx skills add anzpnavy/fireworks-tech-graph
 ```
 
 Public package page:
 
 ```text
-https://www.npmjs.com/package/@yizhiyanhua-ai/fireworks-tech-graph
+https://www.npmjs.com/package/@anzpnavy/fireworks-tech-graph
 ```
 
-Do not pass `@yizhiyanhua-ai/fireworks-tech-graph` directly to `skills add`, because the CLI expects a GitHub or local repository source.
+Do not pass `@anzpnavy/fireworks-tech-graph` directly to `skills add`, because the CLI expects a GitHub or local repository source.
 
 Update command:
 
 ```bash
-npx skills add yizhiyanhua-ai/fireworks-tech-graph --force -g -y
+npx skills add anzpnavy/fireworks-tech-graph --force -g -y
 ```
 
 ## Helper Scripts (Recommended)
