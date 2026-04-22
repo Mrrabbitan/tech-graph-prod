@@ -1,0 +1,232 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900">
+<style>
+  text { font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Microsoft YaHei", sans-serif; }
+  .title { font-size: 20px; font-weight: 700; fill: #111827; }
+  .subtitle { font-size: 11px; fill: #6b7280; letter-spacing: 0.04em; }
+  .layer-label { font-size: 10px; font-weight: 600; fill: #9ca3af; letter-spacing: 0.08em; }
+  .box-title { font-size: 13px; font-weight: 600; fill: #111827; }
+  .box-sub { font-size: 10.5px; fill: #6b7280; }
+  .container-title { font-size: 15px; font-weight: 700; fill: #312e81; }
+  .module-title { font-size: 11.5px; font-weight: 600; fill: #1e3a5f; }
+  .module-sub { font-size: 9.5px; fill: #6b7280; }
+  .arrow-label { font-size: 10px; fill: #374151; font-weight: 500; }
+  .legend-text { font-size: 10.5px; fill: #6b7280; }
+  .phase-text { font-size: 8.5px; fill: #374151; font-weight: 500; }
+</style>
+<defs>
+  <marker id="arrow-blue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+    <polygon points="0 0, 10 3.5, 0 7" fill="#2563eb"/>
+  </marker>
+  <marker id="arrow-green" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+    <polygon points="0 0, 10 3.5, 0 7" fill="#059669"/>
+  </marker>
+  <marker id="arrow-orange" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+    <polygon points="0 0, 10 3.5, 0 7" fill="#ea580c"/>
+  </marker>
+  <marker id="arrow-purple" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+    <polygon points="0 0, 10 3.5, 0 7" fill="#7c3aed"/>
+  </marker>
+  <marker id="arrow-gray" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+    <polygon points="0 0, 10 3.5, 0 7" fill="#9ca3af"/>
+  </marker>
+  <filter id="shadow" x="-4%" y="-4%" width="108%" height="112%">
+    <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000000" flood-opacity="0.06"/>
+  </filter>
+  <linearGradient id="hub-grad" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#4f46e5" stop-opacity="0.10"/>
+    <stop offset="100%" stop-color="#7c3aed" stop-opacity="0.06"/>
+  </linearGradient>
+</defs>
+<rect width="1200" height="900" fill="#ffffff"/>
+<text x="600" y="30" text-anchor="middle" class="title">智能采集决策中枢系统架构</text>
+<text x="600" y="46" text-anchor="middle" class="subtitle">四层松耦合架构 · MCP 协议标准化交互 · 端到端全自动化执行</text>
+<rect x="0" y="56" width="1200" height="72" fill="#f0f9ff" opacity="0.5"/>
+<text x="18" y="72" class="layer-label">用户交互层</text>
+<rect x="0" y="143" width="1200" height="425" fill="#faf5ff" opacity="0.2"/>
+<text x="18" y="160" class="layer-label">智能体协同层</text>
+<rect x="0" y="593" width="1200" height="100" fill="#f0fdf4" opacity="0.3"/>
+<text x="18" y="610" class="layer-label">基础设施层</text>
+<rect x="460" y="64" width="280" height="52" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5" filter="url(#shadow)"/>
+<rect x="460" y="64" width="280" height="18" rx="8" fill="#f3f4f6"/>
+<rect x="460" y="76" width="280" height="6" fill="#f3f4f6"/>
+<circle cx="474" cy="73" r="3" fill="#ef4444" opacity="0.7"/>
+<circle cx="484" cy="73" r="3" fill="#f59e0b" opacity="0.7"/>
+<circle cx="494" cy="73" r="3" fill="#10b981" opacity="0.7"/>
+<text x="600" y="101" text-anchor="middle" class="box-title">用户 / 前端交互</text>
+<text x="600" y="114" text-anchor="middle" class="box-sub">任务发起 · 进度查看 · 日志追踪</text>
+<rect x="295" y="153" width="610" height="405" rx="12" fill="#ffffff" stroke="#a78bfa" stroke-width="2" filter="url(#shadow)"/>
+<rect x="295" y="153" width="610" height="30" rx="12" fill="url(#hub-grad)"/>
+<rect x="295" y="171" width="610" height="12" fill="url(#hub-grad)"/>
+<text x="600" y="174" text-anchor="middle" class="container-title">决策中枢智能体（核心调度层）</text>
+<rect x="315" y="193" width="175" height="68" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.2"/>
+<circle cx="478" cy="205" r="9" fill="#2563eb" opacity="0.15"/>
+<text x="478" y="209" text-anchor="middle" font-size="9" font-weight="700" fill="#2563eb">1</text>
+<text x="327" y="219" class="module-title">任务生命周期管理</text>
+<text x="327" y="237" class="module-sub">新建·启动·停止·重试</text>
+<rect x="504" y="193" width="175" height="68" rx="8" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="1.2"/>
+<circle cx="667" cy="205" r="9" fill="#7c3aed" opacity="0.15"/>
+<text x="667" y="209" text-anchor="middle" font-size="9" font-weight="700" fill="#7c3aed">2</text>
+<text x="516" y="219" class="module-title">智能流程编排引擎</text>
+<text x="516" y="237" class="module-sub">状态机·依赖管理·自动推进</text>
+<rect x="693" y="193" width="175" height="68" rx="8" fill="#fff7ed" stroke="#fdba74" stroke-width="1.2"/>
+<circle cx="856" cy="205" r="9" fill="#ea580c" opacity="0.15"/>
+<text x="856" y="209" text-anchor="middle" font-size="9" font-weight="700" fill="#ea580c">3</text>
+<text x="705" y="219" class="module-title">参数解析与转换</text>
+<text x="705" y="237" class="module-sub">结构化提取·校验·映射</text>
+<rect x="315" y="275" width="175" height="68" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1.2"/>
+<circle cx="478" cy="287" r="9" fill="#059669" opacity="0.15"/>
+<text x="478" y="291" text-anchor="middle" font-size="9" font-weight="700" fill="#059669">4</text>
+<text x="327" y="301" class="module-title">执行调度与状态管控</text>
+<text x="327" y="319" class="module-sub">指令下发·幂等·断点续执行</text>
+<rect x="504" y="275" width="175" height="68" rx="8" fill="#fef2f2" stroke="#fca5a5" stroke-width="1.2"/>
+<circle cx="667" cy="287" r="9" fill="#dc2626" opacity="0.15"/>
+<text x="667" y="291" text-anchor="middle" font-size="9" font-weight="700" fill="#dc2626">5</text>
+<text x="516" y="301" class="module-title">全链路监控可视化</text>
+<text x="516" y="319" class="module-sub">进度展示·日志追踪·告警</text>
+<rect x="693" y="275" width="175" height="68" rx="8" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.2"/>
+<circle cx="856" cy="287" r="9" fill="#0d9488" opacity="0.15"/>
+<text x="856" y="291" text-anchor="middle" font-size="9" font-weight="700" fill="#0d9488">6</text>
+<text x="705" y="301" class="module-title">异常处理与运维</text>
+<text x="705" y="319" class="module-sub">重试·熔断·故障恢复</text>
+<text x="315" y="365" font-size="10" font-weight="600" fill="#4b5563">端到端 8 阶段执行流程</text>
+<rect x="317.0" y="375" width="67.25" height="20" rx="10" fill="#dbeafe"/>
+<text x="350.625" y="389" text-anchor="middle" class="phase-text">需求录入</text>
+<path d="M 383.25,385 L 389.25,385" stroke="#94a3b8" stroke-width="1" marker-end="url(#arrow-gray)"/>
+<rect x="388.25" y="375" width="67.25" height="20" rx="10" fill="#c7d2fe"/>
+<text x="421.875" y="389" text-anchor="middle" class="phase-text">AI解析</text>
+<path d="M 454.5,385 L 460.5,385" stroke="#94a3b8" stroke-width="1" marker-end="url(#arrow-gray)"/>
+<rect x="459.5" y="375" width="67.25" height="20" rx="10" fill="#fed7aa"/>
+<text x="493.125" y="389" text-anchor="middle" class="phase-text">参数转换</text>
+<path d="M 525.75,385 L 531.75,385" stroke="#94a3b8" stroke-width="1" marker-end="url(#arrow-gray)"/>
+<rect x="530.75" y="375" width="67.25" height="20" rx="10" fill="#bbf7d0"/>
+<text x="564.375" y="389" text-anchor="middle" class="phase-text">BDI执行</text>
+<path d="M 597.0,385 L 603.0,385" stroke="#94a3b8" stroke-width="1" marker-end="url(#arrow-gray)"/>
+<rect x="602.0" y="375" width="67.25" height="20" rx="10" fill="#bae6fd"/>
+<text x="635.625" y="389" text-anchor="middle" class="phase-text">状态跟踪</text>
+<path d="M 668.25,385 L 674.25,385" stroke="#94a3b8" stroke-width="1" marker-end="url(#arrow-gray)"/>
+<rect x="673.25" y="375" width="67.25" height="20" rx="10" fill="#fecaca"/>
+<text x="706.875" y="389" text-anchor="middle" class="phase-text">异常处理</text>
+<path d="M 739.5,385 L 745.5,385" stroke="#94a3b8" stroke-width="1" marker-end="url(#arrow-gray)"/>
+<rect x="744.5" y="375" width="67.25" height="20" rx="10" fill="#d9f99d"/>
+<text x="778.125" y="389" text-anchor="middle" class="phase-text">任务测试</text>
+<path d="M 810.75,385 L 816.75,385" stroke="#94a3b8" stroke-width="1" marker-end="url(#arrow-gray)"/>
+<rect x="815.75" y="375" width="67.25" height="20" rx="10" fill="#a7f3d0"/>
+<text x="849.375" y="389" text-anchor="middle" class="phase-text">上线调度</text>
+<rect x="315" y="407" width="570" height="46" rx="8" fill="#f5f3ff" stroke="#a78bfa" stroke-width="1.5"/>
+<text x="600" y="424" text-anchor="middle" font-size="12" font-weight="700" fill="#5b21b6">MCP 协议适配与能力接入层</text>
+<text x="386.25" y="443" text-anchor="middle" font-size="9.5" fill="#7c3aed">服务注册发现</text>
+<text x="528.75" y="443" text-anchor="middle" font-size="9.5" fill="#7c3aed">协议双向转换</text>
+<text x="671.25" y="443" text-anchor="middle" font-size="9.5" fill="#7c3aed">调用鉴权限流</text>
+<text x="813.75" y="443" text-anchor="middle" font-size="9.5" fill="#7c3aed">健康检查</text>
+<rect x="15" y="185" width="258" height="365" rx="10" fill="#ffffff" stroke="#86efac" stroke-width="1.5" stroke-dasharray="6,3" filter="url(#shadow)"/>
+<rect x="15" y="185" width="258" height="28" rx="10" fill="#dcfce7"/>
+<rect x="15" y="201" width="258" height="12" fill="#dcfce7"/>
+<text x="144" y="205" text-anchor="middle" font-size="12" font-weight="700" fill="#166534">上游 · AI 解析智能体</text>
+<rect x="29" y="235" width="230" height="44" rx="6" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
+<text x="144" y="253" text-anchor="middle" font-size="11" font-weight="600" fill="#166534">联通能开平台 API</text>
+<text x="144" y="269" text-anchor="middle" font-size="9" fill="#6b7280">POST /chat/stream/v1</text>
+<rect x="29" y="292" width="230" height="44" rx="6" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
+<text x="144" y="310" text-anchor="middle" font-size="11" font-weight="600" fill="#166534">MD5 签名鉴权</text>
+<text x="144" y="326" text-anchor="middle" font-size="9" fill="#6b7280">appId + timestamp + sk</text>
+<rect x="29" y="349" width="230" height="44" rx="6" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="1"/>
+<text x="144" y="367" text-anchor="middle" font-size="11" font-weight="600" fill="#166534">Qwen2.5-32B 大模型</text>
+<text x="144" y="383" text-anchor="middle" font-size="9" fill="#6b7280">非结构化 → 结构化解析</text>
+<rect x="29" y="406" width="230" height="44" rx="6" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
+<text x="144" y="424" text-anchor="middle" font-size="11" font-weight="600" fill="#166534">标准化参数输出</text>
+<text x="144" y="440" text-anchor="middle" font-size="9" fill="#6b7280">源端·目标端·FTP·表结构</text>
+<path d="M 144,279 L 144,292" stroke="#059669" stroke-width="1.2" marker-end="url(#arrow-green)"/>
+<path d="M 144,336 L 144,349" stroke="#059669" stroke-width="1.2" marker-end="url(#arrow-green)"/>
+<path d="M 144,393 L 144,406" stroke="#059669" stroke-width="1.2" marker-end="url(#arrow-green)"/>
+<rect x="927" y="185" width="258" height="365" rx="10" fill="#ffffff" stroke="#fdba74" stroke-width="1.5" stroke-dasharray="6,3" filter="url(#shadow)"/>
+<rect x="927" y="185" width="258" height="28" rx="10" fill="#fff7ed"/>
+<rect x="927" y="201" width="258" height="12" fill="#fff7ed"/>
+<text x="1056" y="205" text-anchor="middle" font-size="12" font-weight="700" fill="#9a3412">下游 · BDI 执行智能体</text>
+<rect x="941" y="238" width="230" height="50" rx="6" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+<text x="1056" y="260" text-anchor="middle" font-size="12" font-weight="600" fill="#9a3412">1  资源注册</text>
+<text x="1056" y="278" text-anchor="middle" font-size="9" fill="#6b7280">数据源·FTP·目标库注册</text>
+<rect x="941" y="310" width="230" height="50" rx="6" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+<text x="1056" y="332" text-anchor="middle" font-size="12" font-weight="600" fill="#9a3412">2  数据建模</text>
+<text x="1056" y="350" text-anchor="middle" font-size="9" fill="#6b7280">表结构·字段·分区定义</text>
+<rect x="941" y="382" width="230" height="50" rx="6" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+<text x="1056" y="404" text-anchor="middle" font-size="12" font-weight="600" fill="#9a3412">3  映射设计</text>
+<text x="1056" y="422" text-anchor="middle" font-size="9" fill="#6b7280">源 → 目标字段映射规则</text>
+<rect x="941" y="454" width="230" height="50" rx="6" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+<text x="1056" y="476" text-anchor="middle" font-size="12" font-weight="600" fill="#9a3412">4  流程管理</text>
+<text x="1056" y="494" text-anchor="middle" font-size="9" fill="#6b7280">调度·上线·测试验证</text>
+<path d="M 1056,288 L 1056,310" stroke="#ea580c" stroke-width="1.2" marker-end="url(#arrow-orange)"/>
+<path d="M 1056,360 L 1056,382" stroke="#ea580c" stroke-width="1.2" marker-end="url(#arrow-orange)"/>
+<path d="M 1056,432 L 1056,454" stroke="#ea580c" stroke-width="1.2" marker-end="url(#arrow-orange)"/>
+<ellipse cx="270" cy="618" rx="70" ry="8" fill="#336791" opacity="0.12" stroke="#336791" stroke-width="1.2"/>
+<rect x="200" y="618" width="140" height="44" fill="#ffffff" stroke="none"/>
+<line x1="200" y1="618" x2="200" y2="662" stroke="#336791" stroke-width="1.2"/>
+<line x1="340" y1="618" x2="340" y2="662" stroke="#336791" stroke-width="1.2"/>
+<ellipse cx="270" cy="662" rx="70" ry="8" fill="#336791" opacity="0.08" stroke="#336791" stroke-width="1.2"/>
+<text x="270" y="638" text-anchor="middle" font-size="12" font-weight="700" fill="#336791">MySQL / PG</text>
+<text x="270" y="654" text-anchor="middle" font-size="9" fill="#6b7280">任务元数据 · 配置</text>
+<ellipse cx="490" cy="618" rx="70" ry="8" fill="#DC382D" opacity="0.12" stroke="#DC382D" stroke-width="1.2"/>
+<rect x="420" y="618" width="140" height="44" fill="#ffffff" stroke="none"/>
+<line x1="420" y1="618" x2="420" y2="662" stroke="#DC382D" stroke-width="1.2"/>
+<line x1="560" y1="618" x2="560" y2="662" stroke="#DC382D" stroke-width="1.2"/>
+<ellipse cx="490" cy="662" rx="70" ry="8" fill="#DC382D" opacity="0.08" stroke="#DC382D" stroke-width="1.2"/>
+<text x="490" y="638" text-anchor="middle" font-size="12" font-weight="700" fill="#DC382D">Redis</text>
+<text x="490" y="654" text-anchor="middle" font-size="9" fill="#6b7280">分布式锁 · 缓存</text>
+<rect x="640" y="610" width="140" height="60" rx="8" fill="#ffffff" stroke="#059669" stroke-width="1.5" filter="url(#shadow)"/>
+<text x="710" y="638" text-anchor="middle" font-size="12" font-weight="700" fill="#059669">Nacos</text>
+<text x="710" y="654" text-anchor="middle" font-size="9" fill="#6b7280">服务注册 · 配置中心</text>
+<rect x="860" y="610" width="140" height="60" rx="8" fill="#ffffff" stroke="#7c3aed" stroke-width="1.5" filter="url(#shadow)"/>
+<text x="930" y="638" text-anchor="middle" font-size="12" font-weight="700" fill="#7c3aed">Flowable</text>
+<text x="930" y="654" text-anchor="middle" font-size="9" fill="#6b7280">流程引擎 · 状态机</text>
+<path d="M 600,116 L 600,153" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow-blue)"/>
+<rect x="610" y="126" width="68" height="14" rx="3" fill="#ffffff" opacity="0.95"/>
+<text x="644" y="137" text-anchor="middle" class="arrow-label" fill="#2563eb">RESTful API</text>
+<path d="M 295,305 L 273,305" stroke="#059669" stroke-width="2" marker-end="url(#arrow-green)"/>
+<rect x="240" y="288" width="76" height="13" rx="3" fill="#ffffff" opacity="0.95"/>
+<text x="278" y="298" text-anchor="middle" class="arrow-label" fill="#059669">MCP 解析请求</text>
+<path d="M 273,395 L 295,395" stroke="#059669" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrow-green)"/>
+<rect x="243" y="401" width="70" height="13" rx="3" fill="#ffffff" opacity="0.95"/>
+<text x="278" y="411" text-anchor="middle" class="arrow-label" fill="#059669">标准化参数</text>
+<path d="M 905,305 L 927,305" stroke="#ea580c" stroke-width="2" marker-end="url(#arrow-orange)"/>
+<rect x="884" y="288" width="78" height="13" rx="3" fill="#ffffff" opacity="0.95"/>
+<text x="922" y="298" text-anchor="middle" class="arrow-label" fill="#ea580c">MCP 执行指令</text>
+<path d="M 927,395 L 905,395" stroke="#ea580c" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrow-orange)"/>
+<rect x="898" y="401" width="56" height="13" rx="3" fill="#ffffff" opacity="0.95"/>
+<text x="922" y="411" text-anchor="middle" class="arrow-label" fill="#ea580c">状态回报</text>
+<path d="M 410,558 L 270,610" stroke="#9ca3af" stroke-width="1.2" stroke-dasharray="4,2" marker-end="url(#arrow-gray)"/>
+<path d="M 510,558 L 490,610" stroke="#9ca3af" stroke-width="1.2" stroke-dasharray="4,2" marker-end="url(#arrow-gray)"/>
+<path d="M 690,558 L 710,610" stroke="#9ca3af" stroke-width="1.2" stroke-dasharray="4,2" marker-end="url(#arrow-gray)"/>
+<path d="M 790,558 L 930,610" stroke="#9ca3af" stroke-width="1.2" stroke-dasharray="4,2" marker-end="url(#arrow-gray)"/>
+<rect x="20" y="710" width="520" height="68" rx="8" fill="#fafafa" stroke="#e5e7eb" stroke-width="1"/>
+<text x="32" y="726" font-size="11" font-weight="700" fill="#374151">图例</text>
+<line x1="32" y1="744" x2="62" y2="744" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow-blue)"/>
+<text x="70" y="748" class="legend-text">用户请求流 (RESTful)</text>
+<line x1="232" y1="744" x2="262" y2="744" stroke="#059669" stroke-width="2" marker-end="url(#arrow-green)"/>
+<text x="270" y="748" class="legend-text">MCP 解析调用 (上游)</text>
+<line x1="32" y1="762" x2="62" y2="762" stroke="#ea580c" stroke-width="2" marker-end="url(#arrow-orange)"/>
+<text x="70" y="766" class="legend-text">MCP 执行调度 (下游)</text>
+<line x1="232" y1="762" x2="262" y2="762" stroke="#9ca3af" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrow-gray)"/>
+<text x="270" y="766" class="legend-text">基础设施连接</text>
+<line x1="440" y1="744" x2="470" y2="744" stroke="#6b7280" stroke-width="1.5"/>
+<text x="476" y="748" font-size="9.5" fill="#6b7280">实线=请求</text>
+<line x1="440" y1="762" x2="470" y2="762" stroke="#6b7280" stroke-width="1.5" stroke-dasharray="5,3"/>
+<text x="476" y="766" font-size="9.5" fill="#6b7280">虚线=响应</text>
+<rect x="560" y="710" width="240" height="68" rx="8" fill="#fafafa" stroke="#e5e7eb" stroke-width="1"/>
+<text x="572" y="726" font-size="11" font-weight="700" fill="#374151">核心技术栈</text>
+<text x="572" y="742" font-size="9" fill="#6b7280">• Spring Boot 3.x + Spring AI</text>
+<text x="572" y="753" font-size="9" fill="#6b7280">• Flowable BPMN 2.0 流程引擎</text>
+<text x="572" y="764" font-size="9" fill="#6b7280">• MCP 协议 · Redis · Nacos</text>
+<text x="572" y="775" font-size="9" fill="#6b7280">• MD5 鉴权 · 幂等设计 · 熔断</text>
+<rect x="820" y="710" width="365" height="68" rx="8" fill="#fafafa" stroke="#e5e7eb" stroke-width="1"/>
+<text x="832" y="726" font-size="11" font-weight="700" fill="#374151">六大设计原则</text>
+<text x="832" y="746" font-size="10" font-weight="700" fill="#2563eb">解耦化</text>
+<text x="868" y="746" font-size="9" fill="#6b7280">MCP标准化</text>
+<text x="954" y="746" font-size="10" font-weight="700" fill="#059669">标准化</text>
+<text x="990" y="746" font-size="9" fill="#6b7280">统一API</text>
+<text x="1076" y="746" font-size="10" font-weight="700" fill="#ea580c">全自动</text>
+<text x="1112" y="746" font-size="9" fill="#6b7280">零人工</text>
+<text x="832" y="764" font-size="10" font-weight="700" fill="#dc2626">可观测</text>
+<text x="868" y="764" font-size="9" fill="#6b7280">全链路</text>
+<text x="954" y="764" font-size="10" font-weight="700" fill="#7c3aed">高可靠</text>
+<text x="990" y="764" font-size="9" fill="#6b7280">幂等·熔断</text>
+<text x="1076" y="764" font-size="10" font-weight="700" fill="#0d9488">易扩展</text>
+<text x="1112" y="764" font-size="9" fill="#6b7280">插件化</text>
+</svg>

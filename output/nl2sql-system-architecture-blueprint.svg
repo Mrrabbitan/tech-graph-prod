@@ -1,0 +1,316 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200" width="1600" height="1200">
+<defs>
+  <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+    <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#112240" stroke-width="0.5"/>
+  </pattern>
+  <marker id="ac" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+    <polygon points="0 0,8 3,0 6" fill="#00b4d8"/>
+  </marker>
+  <marker id="aw" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+    <polygon points="0 0,8 3,0 6" fill="#f77f00"/>
+  </marker>
+  <marker id="ag" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+    <polygon points="0 0,8 3,0 6" fill="#06d6a0"/>
+  </marker>
+  <marker id="ap" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+    <polygon points="0 0,8 3,0 6" fill="#a78bfa"/>
+  </marker>
+  <filter id="glow">
+    <feGaussianBlur stdDeviation="2" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<rect width="1600" height="1200" fill="#0a1628"/>
+<rect width="1600" height="1200" fill="url(#grid)" opacity="0.55"/>
+<style>
+  text { font-family: 'PingFang SC','Microsoft YaHei','Helvetica Neue',sans-serif; fill: #caf0f8; }
+  .T  { font-size:26px; font-weight:700; letter-spacing:2px; }
+  .ST { font-size:13px; fill:#90e0ef; }
+  .SH { font-size:14px; font-weight:700; fill:#00b4d8; letter-spacing:1px; }
+  .NL { font-size:13px; font-weight:700; fill:#ffffff; }
+  .NB { font-size:11px; fill:#90e0ef; }
+  .AN { font-size:10px; fill:#48cae4; }
+  .TB { font-size:10px; fill:#caf0f8; font-family:'Courier New',monospace; }
+  .agent { font-size:14px; font-weight:700; fill:#ffffff; }
+  .dim  { font-size:11px; fill:#48cae4; opacity:0.8; }
+</style>
+<text x="800" y="40" text-anchor="middle" class="T">NL2SQL 多 Agent 闭环系统架构图</text>
+<text x="800" y="62" text-anchor="middle" class="ST">快速通道优先 &#183; 双阶段生成核心 &#183; 多 Agent 协作管控 &#183; 全链路纠错兜底 &#183; 上下文精准适配</text>
+<rect x="36" y="80" width="1528" height="64" rx="4" fill="#0d1f3c" fill-opacity="0.4" stroke="#00b4d8" stroke-width="1.2"/>
+<text x="50" y="98" class="SH">01 // 用户接口层 USER INTERFACE</text>
+<circle cx="120" cy="112" r="10" fill="none" stroke="#caf0f8" stroke-width="1.2"/>
+<line x1="120" y1="122" x2="120" y2="136" stroke="#caf0f8" stroke-width="1.2"/>
+<line x1="108" y1="129" x2="132" y2="129" stroke="#caf0f8" stroke-width="1.2"/>
+<text x="148" y="120" class="NL">用户</text>
+<rect x="220" y="96" width="280" height="40" rx="3" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<text x="360" y="116" text-anchor="middle" class="NL">自然语言查询输入</text>
+<rect x="560" y="96" width="280" height="40" rx="3" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<text x="700" y="116" text-anchor="middle" class="NL">多轮会话上下文</text>
+<rect x="900" y="96" width="320" height="40" rx="3" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<text x="1060" y="116" text-anchor="middle" class="NL">业务场景（零售 / 制造 / 金融…）</text>
+<line x1="182" y1="116" x2="220" y2="116" stroke="#00b4d8" stroke-width="1.4" marker-end="url(#ac)"/>
+<line x1="500" y1="116" x2="560" y2="116" stroke="#00b4d8" stroke-width="1.4" marker-end="url(#ac)"/>
+<line x1="840" y1="116" x2="900" y2="116" stroke="#00b4d8" stroke-width="1.4" marker-end="url(#ac)"/>
+<rect x="36" y="158" width="1528" height="128" rx="4" fill="#0d1f3c" fill-opacity="0.4" stroke="#00b4d8" stroke-width="1.2"/>
+<text x="50" y="176" class="SH">02 // 意图识别与安全守门层 INTENT &amp; SECURITY GATE</text>
+<polygon points="176,251 140,272 104,251 104,209 140,188 176,209" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1.5" filter="url(#glow)"/>
+<text x="140" y="232" text-anchor="middle" class="agent">Intent</text>
+<text x="140" y="248" text-anchor="middle" class="dim">Agent</text>
+<rect x="230" y="196" width="220" height="72" rx="3" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<text x="340" y="216" text-anchor="middle" class="NL">规则通道</text>
+<text x="340" y="232" text-anchor="middle" class="NB">关键词 + 正则表达式</text>
+<text x="340" y="246" text-anchor="middle" class="NB">毫秒级意图快筛</text>
+<rect x="490" y="196" width="240" height="72" rx="3" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<text x="610" y="216" text-anchor="middle" class="NL">LLM 通道</text>
+<text x="610" y="232" text-anchor="middle" class="NB">微调领域大模型</text>
+<text x="610" y="246" text-anchor="middle" class="NB">闲聊 / 查询 / 非法分类</text>
+<rect x="770" y="196" width="240" height="72" rx="3" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<text x="890" y="216" text-anchor="middle" class="NL">规则守门单元</text>
+<text x="890" y="232" text-anchor="middle" class="NB">SQL 注入拦截</text>
+<text x="890" y="246" text-anchor="middle" class="NB">DDL / 越权阻断</text>
+<text x="890" y="260" text-anchor="middle" class="NB">冲突时规则优先</text>
+<rect x="1060" y="196" width="220" height="72" rx="3" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<text x="1170" y="216" text-anchor="middle" class="NL">意图输出</text>
+<text x="1170" y="232" text-anchor="middle" class="NB">合法数据查询</text>
+<text x="1170" y="246" text-anchor="middle" class="NB">拒绝 + 告警</text>
+<rect x="1330" y="196" width="200" height="72" rx="3" fill="#0d1f3c" stroke="#f77f00" stroke-width="1"/>
+<text x="1430" y="216" text-anchor="middle" class="NL">安全策略库</text>
+<text x="1430" y="232" text-anchor="middle" class="NB">拦截规则</text>
+<text x="1430" y="246" text-anchor="middle" class="NB">敏感词表</text>
+<text x="1430" y="260" text-anchor="middle" class="NB">权限矩阵</text>
+<line x1="182" y1="230" x2="230" y2="230" stroke="#00b4d8" stroke-width="1.4" marker-end="url(#ac)"/>
+<line x1="450" y1="232" x2="490" y2="232" stroke="#00b4d8" stroke-width="1.4" marker-end="url(#ac)"/>
+<line x1="730" y1="232" x2="770" y2="232" stroke="#00b4d8" stroke-width="1.4" marker-end="url(#ac)"/>
+<line x1="1010" y1="232" x2="1060" y2="232" stroke="#00b4d8" stroke-width="1.4" marker-end="url(#ac)"/>
+<line x1="1330" y1="232" x2="1280" y2="232" stroke="#f77f00" stroke-width="1.4" marker-end="url(#aw)"/>
+<rect x="1287" y="211" width="38" height="14" rx="2" fill="#0a1628" fill-opacity="0.92"/>
+<text x="1306" y="222" text-anchor="middle" class="AN" fill="#f77f00">策略供给</text>
+<rect x="36" y="298" width="1528" height="128" rx="4" fill="#0d1f3c" fill-opacity="0.4" stroke="#00b4d8" stroke-width="1.2"/>
+<text x="50" y="316" class="SH">03 // 快速通道层 FAST CHANNEL (三级加速)</text>
+<rect x="80" y="328" width="290" height="82" rx="3" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<text x="225" y="348" text-anchor="middle" class="NL">L1: 查询模板库</text>
+<text x="225" y="364" text-anchor="middle" class="NB">预构建高频查询模板</text>
+<text x="225" y="378" text-anchor="middle" class="NB">语义相似度匹配</text>
+<text x="225" y="392" text-anchor="middle" class="NB">槽位参数自动填充</text>
+<rect x="410" y="328" width="290" height="82" rx="3" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<text x="555" y="348" text-anchor="middle" class="NL">L2: 领域规则引擎</text>
+<text x="555" y="364" text-anchor="middle" class="NB">固定口径业务查询</text>
+<text x="555" y="378" text-anchor="middle" class="NB">触发条件 → 规则构建</text>
+<text x="555" y="392" text-anchor="middle" class="NB">业务规范 SQL 直出</text>
+<rect x="740" y="328" width="290" height="82" rx="3" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<text x="885" y="348" text-anchor="middle" class="NL">L3: SQL 缓存库</text>
+<text x="885" y="364" text-anchor="middle" class="NB">语义向量 Key 索引</text>
+<text x="885" y="378" text-anchor="middle" class="NB">相似度阈值匹配</text>
+<text x="885" y="392" text-anchor="middle" class="NB">已验证 SQL 直接命中</text>
+<ellipse cx="1170" cy="336" rx="70" ry="8" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<rect x="1100" y="336" width="140" height="64" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<line x1="1100" y1="336" x2="1100" y2="400" stroke="#00b4d8" stroke-width="1"/>
+<line x1="1240" y1="336" x2="1240" y2="400" stroke="#00b4d8" stroke-width="1"/>
+<ellipse cx="1170" cy="400" rx="70" ry="8" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<text x="1170" y="372" text-anchor="middle" class="NL">向量库</text>
+<text x="1170" y="386" text-anchor="middle" class="dim">语义索引</text>
+<rect x="1290" y="328" width="220" height="82" rx="3" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<text x="1400" y="348" text-anchor="middle" class="NL">快速通道调度器</text>
+<text x="1400" y="364" text-anchor="middle" class="NB">三级依次匹配</text>
+<text x="1400" y="378" text-anchor="middle" class="NB">命中 → 跳过生成</text>
+<text x="1400" y="392" text-anchor="middle" class="NB">未命中 → 生成链路</text>
+<line x1="370" y1="369" x2="410" y2="369" stroke="#00b4d8" stroke-width="1.4" marker-end="url(#ac)"/>
+<line x1="700" y1="369" x2="740" y2="369" stroke="#00b4d8" stroke-width="1.4" marker-end="url(#ac)"/>
+<line x1="1030" y1="369" x2="1100" y2="369" stroke="#00b4d8" stroke-width="1.4" marker-end="url(#ac)"/>
+<line x1="1240" y1="369" x2="1290" y2="369" stroke="#00b4d8" stroke-width="1.4" marker-end="url(#ac)"/>
+<path d="M 1400 410 L 1400 440 L 1520 440 L 1520 705" fill="none" stroke="#06d6a0" stroke-width="1.3" stroke-dasharray="5,3" marker-end="url(#ag)"/>
+<rect x="1494" y="449" width="52" height="14" rx="2" fill="#0a1628" fill-opacity="0.92"/>
+<text x="1520" y="460" text-anchor="middle" class="AN" fill="#06d6a0">命中直达评审</text>
+<rect x="36" y="438" width="1528" height="96" rx="4" fill="#0d1f3c" fill-opacity="0.4" stroke="#00b4d8" stroke-width="1.2"/>
+<text x="50" y="456" class="SH">04 // 上下文适配层 CONTEXT ADAPTATION</text>
+<rect x="80" y="462" width="300" height="60" rx="3" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<text x="230" y="482" text-anchor="middle" class="NL">上下文判定 LLM（轻量级）</text>
+<text x="230" y="498" text-anchor="middle" class="NB">follow-up 追问识别</text>
+<rect x="430" y="462" width="360" height="60" rx="3" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<text x="610" y="482" text-anchor="middle" class="NL">语义要素提取</text>
+<text x="610" y="498" text-anchor="middle" class="NB">表名 / 筛选条件 / 统计维度 / 时间范围</text>
+<rect x="840" y="462" width="380" height="60" rx="3" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<text x="1030" y="482" text-anchor="middle" class="NL">effective_question 构造</text>
+<text x="1030" y="498" text-anchor="middle" class="NB">追问: 历史语义 + 当前融合 | 独立: 原问题直出</text>
+<line x1="380" y1="492" x2="430" y2="492" stroke="#00b4d8" stroke-width="1.4" marker-end="url(#ac)"/>
+<line x1="790" y1="492" x2="840" y2="492" stroke="#00b4d8" stroke-width="1.4" marker-end="url(#ac)"/>
+<rect x="36" y="546" width="1528" height="164" rx="4" fill="#0d1f3c" fill-opacity="0.4" stroke="#00b4d8" stroke-width="1.2"/>
+<text x="50" y="564" class="SH">05 // 双阶段生成核心层 GENERATION CORE (Coder Agent)</text>
+<polygon points="156,653 120,674 84,653 84,611 120,590 156,611" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1.5" filter="url(#glow)"/>
+<text x="120" y="634" text-anchor="middle" class="agent">Coder</text>
+<text x="120" y="650" text-anchor="middle" class="dim">Agent</text>
+<rect x="200" y="572" width="300" height="66" rx="3" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<text x="350" y="592" text-anchor="middle" class="NL">阶段一: NL → DSL</text>
+<text x="350" y="608" text-anchor="middle" class="NB">effective_question + schema + 业务规则</text>
+<text x="350" y="622" text-anchor="middle" class="NB">输出结构化 DSL（6 大要素）</text>
+<rect x="540" y="572" width="250" height="66" rx="3" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<text x="665" y="592" text-anchor="middle" class="NL">DSL 前置校验</text>
+<text x="665" y="608" text-anchor="middle" class="NB">schema / join / where</text>
+<text x="665" y="622" text-anchor="middle" class="NB">聚合逻辑 ✓ or ✗</text>
+<rect x="830" y="572" width="300" height="66" rx="3" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<text x="980" y="592" text-anchor="middle" class="NL">阶段二: DSL → SQL</text>
+<text x="980" y="608" text-anchor="middle" class="NB">DSL + 方言适配</text>
+<text x="980" y="622" text-anchor="middle" class="NB">MySQL / PG / Oracle 参数化 SQL</text>
+<rect x="1170" y="572" width="260" height="66" rx="3" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<text x="1300" y="592" text-anchor="middle" class="NL">一致性校验</text>
+<text x="1300" y="608" text-anchor="middle" class="NB">字符串级 + 语义级</text>
+<text x="1300" y="622" text-anchor="middle" class="NB">DSL ↔ SQL 完全对齐</text>
+<rect x="200" y="648" width="580" height="50" rx="3" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<text x="490" y="668" text-anchor="middle" class="NL">DSL 中间表示（6 要素）: 表选择 | 字段映射 | 关联关系 | 筛选条件 | 分组排序 | 业务约束</text>
+<rect x="830" y="648" width="220" height="50" rx="3" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<text x="940" y="668" text-anchor="middle" class="NL">数据库 Schema</text>
+<text x="940" y="684" text-anchor="middle" class="NB">表结构 / 外键 / 索引</text>
+<rect x="1090" y="648" width="220" height="50" rx="3" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<text x="1200" y="668" text-anchor="middle" class="NL">业务规则库</text>
+<text x="1200" y="684" text-anchor="middle" class="NB">领域口径 / 计算规则</text>
+<line x1="162" y1="632" x2="200" y2="632" stroke="#00b4d8" stroke-width="1.4" marker-end="url(#ac)"/>
+<line x1="500" y1="605" x2="540" y2="605" stroke="#00b4d8" stroke-width="1.4" marker-end="url(#ac)"/>
+<line x1="790" y1="605" x2="830" y2="605" stroke="#00b4d8" stroke-width="1.4" marker-end="url(#ac)"/>
+<line x1="1130" y1="605" x2="1170" y2="605" stroke="#00b4d8" stroke-width="1.4" marker-end="url(#ac)"/>
+<path d="M 665 638 C 665 658, 350 658, 350 638" fill="none" stroke="#f77f00" stroke-width="1.2" stroke-dasharray="5,3" marker-end="url(#aw)"/>
+<rect x="481" y="647" width="59" height="14" rx="2" fill="#0a1628" fill-opacity="0.92"/>
+<text x="510" y="658" text-anchor="middle" class="AN" fill="#f77f00">校验失败重生成</text>
+<path d="M 1300 638 C 1300 658, 980 658, 980 638" fill="none" stroke="#f77f00" stroke-width="1.2" stroke-dasharray="5,3" marker-end="url(#aw)"/>
+<rect x="1111" y="647" width="59" height="14" rx="2" fill="#0a1628" fill-opacity="0.92"/>
+<text x="1140" y="658" text-anchor="middle" class="AN" fill="#f77f00">校验失败重转换</text>
+<rect x="36" y="722" width="1528" height="152" rx="4" fill="#0d1f3c" fill-opacity="0.4" stroke="#00b4d8" stroke-width="1.2"/>
+<text x="50" y="740" class="SH">06 // 多 Agent 评审与纠错层 REVIEW &amp; CORRECTION</text>
+<polygon points="156,821 120,842 84,821 84,779 120,758 156,779" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1.5" filter="url(#glow)"/>
+<text x="120" y="802" text-anchor="middle" class="agent">Reviewer</text>
+<text x="120" y="818" text-anchor="middle" class="dim">Agent</text>
+<rect x="200" y="756" width="280" height="100" rx="3" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<text x="340" y="776" text-anchor="middle" class="NL">Reviewer Agent 评审</text>
+<text x="340" y="792" text-anchor="middle" class="NB">EXPLAIN 执行计划预检</text>
+<text x="340" y="806" text-anchor="middle" class="NB">安全护栏 Guardrail</text>
+<text x="340" y="820" text-anchor="middle" class="NB">DSL-SQL 二次对齐</text>
+<text x="340" y="834" text-anchor="middle" class="NB">业务规则合规性</text>
+<polygon points="646,821 610,842 574,821 574,779 610,758 646,779" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1.5" filter="url(#glow)"/>
+<text x="610" y="802" text-anchor="middle" class="agent">Self-Fix</text>
+<text x="610" y="818" text-anchor="middle" class="dim">Agent</text>
+<rect x="680" y="756" width="280" height="100" rx="3" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<text x="820" y="776" text-anchor="middle" class="NL">Self-Correction Agent</text>
+<text x="820" y="792" text-anchor="middle" class="NB">根据评审意见定向修复</text>
+<text x="820" y="806" text-anchor="middle" class="NB">SQL / DSL 结构修正</text>
+<text x="820" y="820" text-anchor="middle" class="NB">修复后重新评审</text>
+<text x="820" y="834" text-anchor="middle" class="NB">总修正次数 ≤ 2 次</text>
+<rect x="1020" y="756" width="240" height="50" rx="3" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<text x="1140" y="776" text-anchor="middle" class="NL">评审通过</text>
+<text x="1140" y="792" text-anchor="middle" class="NB">全部校验通过 → 执行</text>
+<rect x="1020" y="816" width="240" height="40" rx="3" fill="#0d1f3c" stroke="#f77f00" stroke-width="1"/>
+<text x="1140" y="836" text-anchor="middle" class="NL">评审拒绝</text>
+<text x="1140" y="852" text-anchor="middle" class="NB">超上限 → 安全拒绝</text>
+<rect x="1310" y="756" width="220" height="100" rx="3" fill="#0d1f3c" stroke="#a78bfa" stroke-width="1"/>
+<text x="1420" y="776" text-anchor="middle" class="NL">Agent 状态机</text>
+<text x="1420" y="792" text-anchor="middle" class="NB">有向有环闭环</text>
+<text x="1420" y="806" text-anchor="middle" class="NB">Intent → Coder</text>
+<text x="1420" y="820" text-anchor="middle" class="NB">→ Reviewer ⇄ Self-Fix</text>
+<text x="1420" y="834" text-anchor="middle" class="NB">可回溯纠错</text>
+<line x1="162" y1="800" x2="200" y2="800" stroke="#00b4d8" stroke-width="1.4" marker-end="url(#ac)"/>
+<line x1="480" y1="800" x2="568" y2="800" stroke="#00b4d8" stroke-width="1.4" marker-end="url(#ac)"/>
+<line x1="652" y1="800" x2="680" y2="800" stroke="#00b4d8" stroke-width="1.4" marker-end="url(#ac)"/>
+<line x1="960" y1="780" x2="1020" y2="780" stroke="#00b4d8" stroke-width="1.4" marker-end="url(#ac)"/>
+<line x1="960" y1="836" x2="1020" y2="836" stroke="#f77f00" stroke-width="1.4" marker-end="url(#aw)"/>
+<path d="M 820 856 C 820 884, 340 884, 340 856" fill="none" stroke="#f77f00" stroke-width="1.2" stroke-dasharray="5,3" marker-end="url(#aw)"/>
+<rect x="551" y="873" width="59" height="14" rx="2" fill="#0a1628" fill-opacity="0.92"/>
+<text x="580" y="884" text-anchor="middle" class="AN" fill="#f77f00">修正后重新评审</text>
+<rect x="36" y="886" width="1528" height="108" rx="4" fill="#0d1f3c" fill-opacity="0.4" stroke="#00b4d8" stroke-width="1.2"/>
+<text x="50" y="904" class="SH">07 // 执行与语义增强层 EXECUTION &amp; ENRICHMENT</text>
+<rect x="80" y="910" width="300" height="70" rx="3" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<text x="230" y="930" text-anchor="middle" class="NL">数据库执行引擎</text>
+<text x="230" y="946" text-anchor="middle" class="NB">参数化 SQL 执行</text>
+<text x="230" y="960" text-anchor="middle" class="NB">返回结果集或错误信息</text>
+<rect x="430" y="910" width="320" height="70" rx="3" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<text x="590" y="930" text-anchor="middle" class="NL">结果语义增强模块</text>
+<text x="590" y="946" text-anchor="middle" class="NB">编码/ID → 业务语义名称</text>
+<text x="590" y="960" text-anchor="middle" class="NB">统计指标 → 结构化释义</text>
+<rect x="800" y="910" width="300" height="70" rx="3" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<text x="950" y="930" text-anchor="middle" class="NL">执行后兜底纠错（第三层）</text>
+<text x="950" y="946" text-anchor="middle" class="NB">失败 → Self-Correction Agent</text>
+<text x="950" y="960" text-anchor="middle" class="NB">修复计入总上限</text>
+<rect x="1160" y="910" width="200" height="70" rx="3" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<text x="1260" y="930" text-anchor="middle" class="NL">结果返回</text>
+<text x="1260" y="946" text-anchor="middle" class="NB">用户可理解的</text>
+<text x="1260" y="960" text-anchor="middle" class="NB">增强查询结果</text>
+<line x1="380" y1="945" x2="430" y2="945" stroke="#00b4d8" stroke-width="1.4" marker-end="url(#ac)"/>
+<line x1="750" y1="945" x2="800" y2="945" stroke="#00b4d8" stroke-width="1.4" marker-end="url(#ac)"/>
+<line x1="1100" y1="945" x2="1160" y2="945" stroke="#00b4d8" stroke-width="1.4" marker-end="url(#ac)"/>
+<path d="M 950 980 C 950 1010, 660 1010, 660 874" fill="none" stroke="#f77f00" stroke-width="1.3" stroke-dasharray="5,3" marker-end="url(#aw)"/>
+<rect x="777" y="999" width="66" height="14" rx="2" fill="#0a1628" fill-opacity="0.92"/>
+<text x="810" y="1010" text-anchor="middle" class="AN" fill="#f77f00">执行失败回流纠错</text>
+<path d="M 1260 980 L 1260 1000 L 1540 1000 L 1540 116 L 1220 116" fill="none" stroke="#06d6a0" stroke-width="1.2" stroke-dasharray="5,3" marker-end="url(#ag)"/>
+<rect x="1514" y="551" width="52" height="14" rx="2" fill="#0a1628" fill-opacity="0.92"/>
+<text x="1540" y="562" text-anchor="middle" class="AN" fill="#06d6a0">结果返回用户</text>
+<rect x="36" y="1010" width="1528" height="100" rx="4" fill="#0d1f3c" fill-opacity="0.4" stroke="#00b4d8" stroke-width="1.2"/>
+<text x="50" y="1028" class="SH">08 // 数据基础设施层 DATA INFRASTRUCTURE</text>
+<ellipse cx="145" cy="1046" rx="65" ry="8" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<rect x="80" y="1046" width="130" height="42" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<line x1="80" y1="1046" x2="80" y2="1088" stroke="#00b4d8" stroke-width="1"/>
+<line x1="210" y1="1046" x2="210" y2="1088" stroke="#00b4d8" stroke-width="1"/>
+<ellipse cx="145" cy="1088" rx="65" ry="8" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<text x="145" y="1071" text-anchor="middle" class="NL">MySQL</text>
+<ellipse cx="315" cy="1046" rx="75" ry="8" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<rect x="240" y="1046" width="150" height="42" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<line x1="240" y1="1046" x2="240" y2="1088" stroke="#00b4d8" stroke-width="1"/>
+<line x1="390" y1="1046" x2="390" y2="1088" stroke="#00b4d8" stroke-width="1"/>
+<ellipse cx="315" cy="1088" rx="75" ry="8" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<text x="315" y="1071" text-anchor="middle" class="NL">PostgreSQL</text>
+<ellipse cx="485" cy="1046" rx="65" ry="8" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<rect x="420" y="1046" width="130" height="42" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<line x1="420" y1="1046" x2="420" y2="1088" stroke="#00b4d8" stroke-width="1"/>
+<line x1="550" y1="1046" x2="550" y2="1088" stroke="#00b4d8" stroke-width="1"/>
+<ellipse cx="485" cy="1088" rx="65" ry="8" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<text x="485" y="1071" text-anchor="middle" class="NL">Oracle</text>
+<ellipse cx="660" cy="1046" rx="70" ry="8" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<rect x="590" y="1046" width="140" height="42" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<line x1="590" y1="1046" x2="590" y2="1088" stroke="#00b4d8" stroke-width="1"/>
+<line x1="730" y1="1046" x2="730" y2="1088" stroke="#00b4d8" stroke-width="1"/>
+<ellipse cx="660" cy="1088" rx="70" ry="8" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<text x="660" y="1071" text-anchor="middle" class="NL">向量数据库</text>
+<text x="660" y="1085" text-anchor="middle" class="dim">语义检索</text>
+<ellipse cx="840" cy="1046" rx="70" ry="8" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<rect x="770" y="1046" width="140" height="42" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<line x1="770" y1="1046" x2="770" y2="1088" stroke="#00b4d8" stroke-width="1"/>
+<line x1="910" y1="1046" x2="910" y2="1088" stroke="#00b4d8" stroke-width="1"/>
+<ellipse cx="840" cy="1088" rx="70" ry="8" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<text x="840" y="1071" text-anchor="middle" class="NL">知识图谱</text>
+<text x="840" y="1085" text-anchor="middle" class="dim">业务实体</text>
+<rect x="950" y="1042" width="200" height="52" rx="3" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<text x="1050" y="1062" text-anchor="middle" class="NL">Schema 元数据</text>
+<text x="1050" y="1078" text-anchor="middle" class="NB">表 / 字段 / 外键 / 索引</text>
+<rect x="1190" y="1042" width="180" height="52" rx="3" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<text x="1280" y="1062" text-anchor="middle" class="NL">SQL 审计日志</text>
+<text x="1280" y="1078" text-anchor="middle" class="NB">全链路可追溯</text>
+<rect x="1410" y="1042" width="120" height="52" rx="3" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<text x="1470" y="1062" text-anchor="middle" class="NL">监控告警</text>
+<text x="1470" y="1078" text-anchor="middle" class="NB">延迟 / 错误率</text>
+<line x1="300" y1="144" x2="300" y2="196" stroke="#00b4d8" stroke-width="1.4" marker-end="url(#ac)"/>
+<line x1="1170" y1="268" x2="1170" y2="328" stroke="#00b4d8" stroke-width="1.4" marker-end="url(#ac)"/>
+<line x1="700" y1="534" x2="700" y2="572" stroke="#00b4d8" stroke-width="1.4" marker-end="url(#ac)"/>
+<line x1="1140" y1="710" x2="1140" y2="756" stroke="#00b4d8" stroke-width="1.4" marker-end="url(#ac)"/>
+<line x1="230" y1="874" x2="230" y2="910" stroke="#00b4d8" stroke-width="1.4" marker-end="url(#ac)"/>
+<line x1="145" y1="980" x2="145" y2="1038" stroke="#00b4d8" stroke-width="1.4" stroke-dasharray="4,3" marker-end="url(#ac)"/>
+<line x1="315" y1="980" x2="315" y2="1038" stroke="#00b4d8" stroke-width="1.4" stroke-dasharray="4,3" marker-end="url(#ac)"/>
+<line x1="485" y1="980" x2="485" y2="1038" stroke="#00b4d8" stroke-width="1.4" stroke-dasharray="4,3" marker-end="url(#ac)"/>
+<rect x="36" y="1122" width="540" height="52" rx="3" fill="#0d1f3c" fill-opacity="0.6" stroke="#00b4d8" stroke-width="0.6"/>
+<text x="50" y="1140" class="SH">LEGEND</text>
+<line x1="110" y1="1136" x2="148" y2="1136" stroke="#00b4d8" stroke-width="1.5" marker-end="url(#ac)"/>
+<text x="158" y="1140" class="AN">主数据流</text>
+<line x1="218" y1="1136" x2="256" y2="1136" stroke="#f77f00" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#aw)"/>
+<text x="266" y="1140" class="AN">纠错回流</text>
+<line x1="328" y1="1136" x2="366" y2="1136" stroke="#06d6a0" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#ag)"/>
+<text x="376" y="1140" class="AN">快速通道 / 返回</text>
+<polygon points="456,1130 464,1126 472,1130 472,1138 464,1142 456,1138" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<text x="482" y="1140" class="AN">Agent</text>
+<ellipse cx="530" cy="1132" rx="12" ry="4" fill="#0d1f3c" stroke="#00b4d8" stroke-width="0.8"/>
+<text x="552" y="1140" class="AN">数据库</text>
+<rect x="50" y="1150" width="14" height="10" rx="1" fill="#0d1f3c" stroke="#00b4d8" stroke-width="0.8"/>
+<text x="74" y="1160" class="AN">功能模块</text>
+<rect x="140" y="1150" width="14" height="10" rx="1" fill="#0d1f3c" stroke="#f77f00" stroke-width="0.8"/>
+<text x="164" y="1160" class="AN">安全/告警模块</text>
+<rect x="260" y="1150" width="14" height="10" rx="1" fill="#0d1f3c" stroke="#a78bfa" stroke-width="0.8"/>
+<text x="284" y="1160" class="AN">协作管控模块</text>
+<rect x="1260" y="1140" width="300" height="48" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<line x1="1260" y1="1164" x2="1560" y2="1164" stroke="#00b4d8" stroke-width="0.5"/>
+<text x="1410" y="1158" text-anchor="middle" class="TB">NL2SQL SYSTEM ARCHITECTURE</text>
+<text x="1410" y="1180" text-anchor="middle" class="TB">STYLE 3: BLUEPRINT | GRID ON | REV A1</text>
+</svg>
