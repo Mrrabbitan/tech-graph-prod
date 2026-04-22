@@ -1,0 +1,130 @@
+<mxfile host="app.diagrams.net" type="device">
+  <diagram name="Skill知识单元自动生成流程图" id="patent-flow-1">
+    <mxGraphModel dx="1200" dy="920" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="920" math="0" shadow="0" background="#0a1628" backgroundImage="none">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0a1628;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="0" y="0" width="1200" height="920" as="geometry"/>
+        </mxCell>
+        <mxCell id="3" value="&lt;b style=&quot;font-size:18px;color:#ffffff;letter-spacing:0.06em&quot;&gt;SKILL 知识单元自动生成方法流程图&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px;color:#48cae4&quot;&gt;一种多格式文档的 Skill 知识单元自动生成方法与系统 — 专利技术交底&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=18;fontColor=#ffffff;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="300" y="0" width="600" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="4" value="PHASE 1  文档接入与识别" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0d1f3c;fillOpacity=20;strokeColor=#00b4d8;strokeWidth=0.6;dashed=1;dashPattern=8 4;fontFamily=Courier New;fontSize=9;fontColor=#00b4d8;fontStyle=1;verticalAlign=top;spacingTop=4;spacingLeft=6;align=left;opacity=50;" parent="1" vertex="1">
+          <mxGeometry x="68" y="55" width="1064" height="145" as="geometry"/>
+        </mxCell>
+        <mxCell id="5" value="PHASE 2  路由分发与分管道解析" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0d1f3c;fillOpacity=20;strokeColor=#00b4d8;strokeWidth=0.6;dashed=1;dashPattern=8 4;fontFamily=Courier New;fontSize=9;fontColor=#00b4d8;fontStyle=1;verticalAlign=top;spacingTop=4;spacingLeft=6;align=left;opacity=50;" parent="1" vertex="1">
+          <mxGeometry x="68" y="215" width="1064" height="225" as="geometry"/>
+        </mxCell>
+        <mxCell id="6" value="PHASE 3  检查清单双路径生成" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0d1f3c;fillOpacity=20;strokeColor=#00b4d8;strokeWidth=0.6;dashed=1;dashPattern=8 4;fontFamily=Courier New;fontSize=9;fontColor=#00b4d8;fontStyle=1;verticalAlign=top;spacingTop=4;spacingLeft=6;align=left;opacity=50;" parent="1" vertex="1">
+          <mxGeometry x="68" y="455" width="1064" height="195" as="geometry"/>
+        </mxCell>
+        <mxCell id="7" value="PHASE 4  Skill草稿生成与落地联动" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0d1f3c;fillOpacity=20;strokeColor=#00b4d8;strokeWidth=0.6;dashed=1;dashPattern=8 4;fontFamily=Courier New;fontSize=9;fontColor=#00b4d8;fontStyle=1;verticalAlign=top;spacingTop=4;spacingLeft=6;align=left;opacity=50;" parent="1" vertex="1">
+          <mxGeometry x="68" y="665" width="1064" height="190" as="geometry"/>
+        </mxCell>
+        <mxCell id="8" value="&lt;b&gt;① 多格式文档接入模块&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;color:#48cae4&quot;&gt;Markdown / Word / PDF / Excel&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0d1f3c;strokeColor=#00b4d8;strokeWidth=1;fontFamily=Courier New;fontSize=11;fontColor=#caf0f8;arcSize=4;" parent="1" vertex="1">
+          <mxGeometry x="420" y="70" width="320" height="46" as="geometry"/>
+        </mxCell>
+        <mxCell id="9" value="&lt;b&gt;② 文件扩展名识别模块&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;color:#48cae4&quot;&gt;识别校验文档格式类型&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0d1f3c;strokeColor=#00b4d8;strokeWidth=1;fontFamily=Courier New;fontSize=11;fontColor=#caf0f8;arcSize=4;" parent="1" vertex="1">
+          <mxGeometry x="420" y="145" width="320" height="46" as="geometry"/>
+        </mxCell>
+        <mxCell id="10" value="上传文档" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#00b4d8;strokeWidth=1.2;fontFamily=Courier New;fontSize=9;fontColor=#90e0ef;labelBackgroundColor=#0a1628;endArrow=block;endFill=1;" parent="1" edge="1" source="8" target="9">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="11" value="&lt;b&gt;③ 格式路由分支&lt;/b&gt;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#0d1f3c;strokeColor=#f77f00;strokeWidth=1.2;fontFamily=Courier New;fontSize=12;fontColor=#f77f00;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="480" y="230" width="200" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="12" value="格式信息+原始文档" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#00b4d8;strokeWidth=1.2;fontFamily=Courier New;fontSize=9;fontColor=#90e0ef;labelBackgroundColor=#0a1628;endArrow=block;endFill=1;" parent="1" edge="1" source="9" target="11">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="13" value="&lt;b&gt;④ Excel 解析模块&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;color:#48cae4&quot;&gt;必备Sheet合规校验&lt;br&gt;核心信息→Markdown&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0d1f3c;strokeWidth=1.2;fontFamily=Courier New;fontSize=11;fontColor=#caf0f8;arcSize=4;strokeColor=#06d6a0;" parent="1" vertex="1">
+          <mxGeometry x="82" y="320" width="210" height="68" as="geometry"/>
+        </mxCell>
+        <mxCell id="14" value="&lt;b&gt;⑤ Markdown 解析模块&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;color:#48cae4&quot;&gt;标题层级+标签映射&lt;br&gt;结构化解析&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0d1f3c;strokeWidth=1.2;fontFamily=Courier New;fontSize=11;fontColor=#caf0f8;arcSize=4;strokeColor=#00b4d8;" parent="1" vertex="1">
+          <mxGeometry x="322" y="320" width="210" height="68" as="geometry"/>
+        </mxCell>
+        <mxCell id="15" value="&lt;b&gt;⑥ Word 解析模块&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;color:#48cae4&quot;&gt;版式还原→Markdown&lt;br&gt;复用MD解析逻辑&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0d1f3c;strokeWidth=1.2;fontFamily=Courier New;fontSize=11;fontColor=#caf0f8;arcSize=4;strokeColor=#48cae4;" parent="1" vertex="1">
+          <mxGeometry x="562" y="320" width="210" height="68" as="geometry"/>
+        </mxCell>
+        <mxCell id="16" value="&lt;b&gt;⑦ PDF 解析模块&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;color:#48cae4&quot;&gt;文本提取→Markdown&lt;br&gt;复用MD解析逻辑&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0d1f3c;strokeWidth=1.2;fontFamily=Courier New;fontSize=11;fontColor=#caf0f8;arcSize=4;strokeColor=#90e0ef;" parent="1" vertex="1">
+          <mxGeometry x="802" y="320" width="210" height="68" as="geometry"/>
+        </mxCell>
+        <mxCell id="17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#f77f00;strokeWidth=1;fontFamily=Courier New;fontSize=9;fontColor=#90e0ef;labelBackgroundColor=#0a1628;endArrow=block;endFill=1;" parent="1" edge="1" source="11" target="13">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#f77f00;strokeWidth=1;fontFamily=Courier New;fontSize=9;fontColor=#90e0ef;labelBackgroundColor=#0a1628;endArrow=block;endFill=1;" parent="1" edge="1" source="11" target="14">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#f77f00;strokeWidth=1;fontFamily=Courier New;fontSize=9;fontColor=#90e0ef;labelBackgroundColor=#0a1628;endArrow=block;endFill=1;" parent="1" edge="1" source="11" target="15">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#f77f00;strokeWidth=1;fontFamily=Courier New;fontSize=9;fontColor=#90e0ef;labelBackgroundColor=#0a1628;endArrow=block;endFill=1;" parent="1" edge="1" source="11" target="16">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="21" value="&lt;b&gt;⑧ 规则化标签抽取模块&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;color:#48cae4&quot;&gt;6类核心标签·逐行扫描匹配&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0d2847;strokeColor=#06d6a0;strokeWidth=1.5;fontFamily=Courier New;fontSize=11;fontColor=#caf0f8;arcSize=4;" parent="1" vertex="1">
+          <mxGeometry x="100" y="480" width="320" height="46" as="geometry"/>
+        </mxCell>
+        <mxCell id="22" value="&lt;b&gt;⑨ 大模型增强检查模块&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;color:#48cae4&quot;&gt;Kimi LLM·补全纠错·标准化&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0d2847;strokeColor=#06d6a0;strokeWidth=1.5;fontFamily=Courier New;fontSize=11;fontColor=#caf0f8;arcSize=4;" parent="1" vertex="1">
+          <mxGeometry x="100" y="565" width="320" height="46" as="geometry"/>
+        </mxCell>
+        <mxCell id="23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#06d6a0;strokeWidth=1.2;fontFamily=Courier New;fontSize=9;fontColor=#06d6a0;labelBackgroundColor=#0a1628;endArrow=block;endFill=1;dashed=1;dashPattern=4 3;strokeWidth=0.8;" parent="1" edge="1" source="13" target="21">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#06d6a0;strokeWidth=1.2;fontFamily=Courier New;fontSize=9;fontColor=#06d6a0;labelBackgroundColor=#0a1628;endArrow=block;endFill=1;dashed=1;dashPattern=4 3;strokeWidth=0.8;" parent="1" edge="1" source="14" target="21">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#06d6a0;strokeWidth=1.2;fontFamily=Courier New;fontSize=9;fontColor=#06d6a0;labelBackgroundColor=#0a1628;endArrow=block;endFill=1;dashed=1;dashPattern=4 3;strokeWidth=0.8;" parent="1" edge="1" source="15" target="21">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#06d6a0;strokeWidth=1.2;fontFamily=Courier New;fontSize=9;fontColor=#06d6a0;labelBackgroundColor=#0a1628;endArrow=block;endFill=1;dashed=1;dashPattern=4 3;strokeWidth=0.8;" parent="1" edge="1" source="16" target="21">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="27" value="抽取结果" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#06d6a0;strokeWidth=1.2;fontFamily=Courier New;fontSize=9;fontColor=#06d6a0;labelBackgroundColor=#0a1628;endArrow=block;endFill=1;" parent="1" edge="1" source="21" target="22">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="28" value="&lt;b style=&quot;color:#06d6a0&quot;&gt;PATH-A 规则化抽取&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];strokeColor=none;fillColor=none;fontSize=9;fontColor=#06d6a0;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="100" y="448" width="140" height="16" as="geometry"/>
+        </mxCell>
+        <mxCell id="29" value="&lt;b style=&quot;color:#f77f00&quot;&gt;PATH-B 结构化内容&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];strokeColor=none;fillColor=none;fontSize=9;fontColor=#f77f00;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="730" y="448" width="140" height="16" as="geometry"/>
+        </mxCell>
+        <mxCell id="30" value="&lt;b&gt;⑩ 标准 Skill 草稿生成模块&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;color:#48cae4&quot;&gt;整合结构化信息+检查清单&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0d1f3c;strokeColor=#00b4d8;strokeWidth=1;fontFamily=Courier New;fontSize=11;fontColor=#caf0f8;arcSize=4;" parent="1" vertex="1">
+          <mxGeometry x="380" y="680" width="400" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="31" value="&lt;b&gt;⑪ 场景绑定模块&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;color:#48cae4&quot;&gt;绑定问数业务场景·Skill榜单&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0d1f3c;strokeColor=#00b4d8;strokeWidth=1;fontFamily=Courier New;fontSize=11;fontColor=#caf0f8;arcSize=4;" parent="1" vertex="1">
+          <mxGeometry x="200" y="780" width="280" height="46" as="geometry"/>
+        </mxCell>
+        <mxCell id="32" value="&lt;b&gt;⑫ 知识库关联模块&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;color:#48cae4&quot;&gt;创建关联知识库·企业联动&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0d1f3c;strokeColor=#00b4d8;strokeWidth=1;fontFamily=Courier New;fontSize=11;fontColor=#caf0f8;arcSize=4;" parent="1" vertex="1">
+          <mxGeometry x="680" y="780" width="280" height="46" as="geometry"/>
+        </mxCell>
+        <mxCell id="33" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#f77f00;strokeWidth=1.2;fontFamily=Courier New;fontSize=9;fontColor=#f77f00;labelBackgroundColor=#0a1628;endArrow=block;endFill=1;dashed=1;dashPattern=4 3;strokeWidth=0.8;" parent="1" edge="1" source="13" target="30">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="34" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#f77f00;strokeWidth=1.2;fontFamily=Courier New;fontSize=9;fontColor=#f77f00;labelBackgroundColor=#0a1628;endArrow=block;endFill=1;dashed=1;dashPattern=4 3;strokeWidth=0.8;" parent="1" edge="1" source="14" target="30">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="35" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#f77f00;strokeWidth=1.2;fontFamily=Courier New;fontSize=9;fontColor=#f77f00;labelBackgroundColor=#0a1628;endArrow=block;endFill=1;dashed=1;dashPattern=4 3;strokeWidth=0.8;" parent="1" edge="1" source="15" target="30">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="36" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#f77f00;strokeWidth=1.2;fontFamily=Courier New;fontSize=9;fontColor=#f77f00;labelBackgroundColor=#0a1628;endArrow=block;endFill=1;dashed=1;dashPattern=4 3;strokeWidth=0.8;" parent="1" edge="1" source="16" target="30">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="37" value="增强检查清单" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#06d6a0;strokeWidth=1.2;fontFamily=Courier New;fontSize=9;fontColor=#06d6a0;labelBackgroundColor=#0a1628;endArrow=block;endFill=1;" parent="1" edge="1" source="22" target="30">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="38" value="场景绑定" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#00b4d8;strokeWidth=1.2;fontFamily=Courier New;fontSize=9;fontColor=#90e0ef;labelBackgroundColor=#0a1628;endArrow=block;endFill=1;" parent="1" edge="1" source="30" target="31">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="39" value="知识库创建" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#00b4d8;strokeWidth=1.2;fontFamily=Courier New;fontSize=9;fontColor=#90e0ef;labelBackgroundColor=#0a1628;endArrow=block;endFill=1;" parent="1" edge="1" source="30" target="32">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="40" value="&lt;font style=&quot;font-size:9px;color:#90e0ef;letter-spacing:0.08em&quot;&gt;PATENT / 专利技术交底&lt;/font&gt;&lt;br&gt;&lt;b style=&quot;font-size:12px;color:#00b4d8&quot;&gt;Skill 知识单元自动生成&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0d1f3c;strokeColor=#00b4d8;strokeWidth=1;fontFamily=Courier New;fontSize=12;fontColor=#00b4d8;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="880" y="855" width="300" height="52" as="geometry"/>
+        </mxCell>
+        <mxCell id="41" value="&lt;b style=&quot;font-size:9px;color:#00b4d8;letter-spacing:0.1em&quot;&gt;LEGEND&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#00b4d8&quot;&gt;━━▶&lt;/font&gt; 主流程 &amp;nbsp;&amp;nbsp; &lt;font color=&quot;#06d6a0&quot;&gt;━━▶&lt;/font&gt; PATH-A 规则化+LLM增强 &amp;nbsp;&amp;nbsp; &lt;font color=&quot;#f77f00&quot;&gt;━━▶&lt;/font&gt; PATH-B 结构化直达" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0d1f3c;strokeColor=#00b4d8;strokeWidth=0.6;fontFamily=Courier New;fontSize=9;fontColor=#90e0ef;align=left;spacingLeft=8;verticalAlign=top;spacingTop=4;" parent="1" vertex="1">
+          <mxGeometry x="80" y="855" width="360" height="52" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

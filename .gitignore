@@ -34,3 +34,18 @@ agentloture.svg
 # Node (if any)
 node_modules/
 package-lock.json
+
+# Other AI tool caches (not relevant to this repo)
+/.claude/
+/.qwen/
+/.trae/
+/skills/
+/skills-lock.json
+
+# Proprietary source documents (do not publish to public repo)
+*.docx
+!.agents/**/*.docx
+!docs/**/*.docx
+
+# Skill distribution bundles (re-buildable from source)
+*.zip
