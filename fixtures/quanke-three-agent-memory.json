@@ -1,0 +1,119 @@
+{
+  "_meta": {
+    "description": "全客存量智能策略：决策/规划/执行 三智能体 + 五层记忆 + 语义箭头说明",
+    "svg_script": "scripts/generate-quanke-blueprint-svg.py",
+    "outputs": [
+      "output/quanke-three-agent-memory.svg",
+      "output/quanke-three-agent-memory.png",
+      "output/quanke-three-agent-memory.drawio"
+    ],
+    "arrow_semantics": [
+      {"id": "control", "color_hex": "#a78bfa", "label": "控制流 orchestrate", "path": "决策→规划→执行"},
+      {"id": "read", "color_hex": "#00b4d8", "label": "读记忆/知识 retrieve", "path": "智能体↔L1-L5/数据底座"},
+      {"id": "write", "color_hex": "#06d6a0", "label": "写情景记忆 feedback", "path": "执行→L3情景·效果库", "style": "dashed"},
+      {"id": "feedback", "color_hex": "#f77f00", "label": "重规划 loop", "path": "交付→输入/工作记忆"},
+      {"id": "data", "color_hex": "#ffffff", "label": "原始数据 ingest", "path": "触点→感知记忆"}
+    ],
+    "memory_tiers": [
+      {"id": "L1", "name": "感知 Sensory", "backing": "事件流·Kafka短窗"},
+      {"id": "L2", "name": "工作 Working", "backing": "Context·Redis会话槽"},
+      {"id": "L3", "name": "情景 Episodic", "backing": "W/C/O·A/B·历史方案向量"},
+      {"id": "L4", "name": "语义 Semantic", "backing": "标签库·Neo4j·意图·同义词"},
+      {"id": "L5", "name": "程序 Procedural", "backing": "MCP Schema·Prompt·档位规则"}
+    ],
+    "agents": [
+      {"role": "DECISION", "zh": "决策智能体", "maps_to_docx": ["智能决策层", "客群洞察意图路由", "INT-01~04"]},
+      {"role": "PLANNING", "zh": "规划智能体", "maps_to_docx": ["策略组装智能体", "RAG+KG", "MCP工具编排"]},
+      {"role": "EXECUTION", "zh": "执行智能体", "maps_to_docx": ["原子能力层", "策略写入全客", "触点下发"]}
+    ]
+  },
+  "title": "全客存量 · 三智能体 × 五层记忆 · 总架构",
+  "subtitle": "Decision / Planning / Execution  ·  RAG + Neo4j  ·  MCP 工具链  ·  效果闭环",
+  "page": {"width": 1440, "height": 1050},
+  "footer": "语义箭头图例：紫=控制流 · 青=检索 · 绿虚线=效果写入 · 橙=重规划回路 · 白=触点原始数据  |  材料依据：《A计划存量客户智能策略生成》+ 业务流程(3).pptx",
+  "arrows": [
+    "触点事件 / NLU / 画像快照 → 决策路由",
+    "结构化意图 → RAG·图谱召回 → 可执行 StrategyPlan",
+    "方案确认 → MCP 工具链 → 全客写入 / 触点推送",
+    "记忆 ⇄ 底座：向量切片 + Neo4j + 标签元数据 + 历史效果回流"
+  ],
+  "layers": [
+    {
+      "idx": "01",
+      "name": "触点与输入层",
+      "en": "Channels & Inputs",
+      "highlights": "CB智慧弹窗 · 10010来话ASR · 全客对话策划 · 标签集市实时画像 · 会话上下文",
+      "bg": "#eff6ff",
+      "border": "#93c5fd",
+      "accent": "#1d4ed8",
+      "components": [
+        {"title": "INPUT / 触点", "subtitle": "弹窗事件 · 语音文本 · 运营自然语言"},
+        {"title": "画像快照", "subtitle": "能开接口 · 标签集市 · 实时特征"},
+        {"title": "会话状态", "subtitle": "多轮槽位 · 澄清问句 · 采纳标记"}
+      ],
+      "chips": ["CB弹窗", "10010", "全客NLU", "Redis", "Kafka"]
+    },
+    {
+      "idx": "02",
+      "name": "三智能体编排层",
+      "en": "Decision · Planning · Execution",
+      "highlights": "意图/场景/槽位 · Top-K RAG + Neo4j 路径 · MCP 调用与策略落库",
+      "bg": "#fff7ed",
+      "border": "#fdba74",
+      "accent": "#c2410c",
+      "components": [
+        {"title": "决策智能体", "subtitle": "INT-01~04 · L1/L2 场景 · StrategyConfig 路由"},
+        {"title": "规划智能体", "subtitle": "客群/产品/触点/话术组装 · 档位排序 · 约束校验"},
+        {"title": "执行智能体", "subtitle": "客群创建 · 策略写入 · 触点下发 · W/C/O 回流"}
+      ],
+      "chips": ["DeepSeek", "Qwen", "FunctionCall", "MCP", "HITL"]
+    },
+    {
+      "idx": "03",
+      "name": "MCP 工具执行层",
+      "en": "Toolchain",
+      "highlights": "可组合原子工具：圈选、生成客群、推荐、话术、方案构建、写全客",
+      "bg": "#ecfdf5",
+      "border": "#6ee7b7",
+      "accent": "#047857",
+      "components": [
+        {"title": "客群工具", "subtitle": "圈选 · 生成 · 规模预估"},
+        {"title": "推荐工具", "subtitle": "产品 · 触点 · 卖点标题"},
+        {"title": "交付工具", "subtitle": "话术生成 · 策略JSON · 发布接口"}
+      ],
+      "chips": ["MCP Server", "全客API", "标签库API", "工单", "弹窗"]
+    },
+    {
+      "idx": "04",
+      "name": "五层记忆系统",
+      "en": "Layered Memory",
+      "highlights": "感知→工作→情景→语义→程序 · 读写分流 · 支撑检索与闭环",
+      "bg": "#eef2ff",
+      "border": "#a5b4fc",
+      "accent": "#4338ca",
+      "components": [
+        {"title": "L1 感知", "subtitle": "原始事件·ASR·Token"},
+        {"title": "L2 工作", "subtitle": "上下文·草稿·槽位"},
+        {"title": "L3 情景", "subtitle": "触达接触订购·A/B"},
+        {"title": "L4 语义", "subtitle": "标签·KG·意图库"},
+        {"title": "L5 程序", "subtitle": "工具Schema·Prompt·规则"}
+      ],
+      "chips": ["VectorDB", "Neo4j", "MySQL", "Observability"]
+    },
+    {
+      "idx": "05",
+      "name": "数据与知识底座",
+      "en": "Data & Knowledge Base",
+      "highlights": "全客历史策略与效果 · 省分产品规则语料 · 双引擎：向量切片 + 图谱关系",
+      "bg": "#f8fafc",
+      "border": "#94a3b8",
+      "accent": "#334155",
+      "components": [
+        {"title": "全客侧", "subtitle": "策略配置·W/C/O/D_CREATE·原子字段Schema"},
+        {"title": "省分侧", "subtitle": "产品特征·场景预设·热门话术·100+对话"},
+        {"title": "双引擎", "subtitle": "Embedding+RAG · 意图-场景-产品-约束图"}
+      ],
+      "chips": ["标签元数据", "场景最优库", "同义词", "合规审计"]
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+<mxfile host="Electron" agent="scripts/generate-scale-ai-diagrams.py" version="29.6.1">
+  <diagram name="Scale AI · 三种部署模式 8 维度对比" id="scale-ai-diagram">
+    <mxGraphModel dx="1566" dy="1071" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1440" pageHeight="1050" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c1001" parent="1" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=22;fontColor=#0f172a;fontFamily=PingFang SC,Helvetica,sans-serif;fontStyle=1;" value="企业级部署模式 · 8 维度对比矩阵" vertex="1">
+          <mxGeometry x="0" y="22" width="1440" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="c1002" parent="1" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=12;fontColor=#64748b;fontFamily=PingFang SC,Helvetica,sans-serif;" value="&lt;span style=&quot;font-style:italic;&quot;&gt;Standard Cloud · Private VPC · Sovereign AI / On-Prem · 决定合规边界与成本结构&lt;/span&gt;" vertex="1">
+          <mxGeometry x="0" y="56" width="1440" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="c1003" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0f172a;strokeColor=#0f172a;strokeWidth=0;arcSize=4;fontSize=12;fontColor=#0f172a;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;fontColor=#ffffff;" value="&lt;b style=&quot;color:#ffffff;font-size:14px;&quot;&gt;对比维度&lt;/b&gt;" vertex="1">
+          <mxGeometry x="60" y="130" width="220" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="c1004" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1d4ed8;strokeColor=#1d4ed8;strokeWidth=0;arcSize=4;fontSize=12;fontColor=#0f172a;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;fontColor=#ffffff;" value="&lt;b style=&quot;color:#ffffff;font-size:14px;&quot;&gt;标准云&lt;br/&gt;Standard Cloud&lt;/b&gt;" vertex="1">
+          <mxGeometry x="280" y="130" width="360" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="c1005" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#047857;strokeColor=#047857;strokeWidth=0;arcSize=4;fontSize=12;fontColor=#0f172a;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;fontColor=#ffffff;" value="&lt;b style=&quot;color:#ffffff;font-size:14px;&quot;&gt;私有 VPC&lt;br/&gt;Private VPC&lt;/b&gt;" vertex="1">
+          <mxGeometry x="640" y="130" width="360" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="c1006" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#334155;strokeColor=#334155;strokeWidth=0;arcSize=4;fontSize=12;fontColor=#0f172a;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;fontColor=#ffffff;" value="&lt;b style=&quot;color:#ffffff;font-size:14px;&quot;&gt;主权 AI / On-Prem&lt;br/&gt;Sovereign AI&lt;/b&gt;" vertex="1">
+          <mxGeometry x="1000" y="130" width="360" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="c1007" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e2e8f0;strokeWidth=0.8;arcSize=0;fontSize=12;fontColor=#0f172a;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=left;spacingTop=4;spacingLeft=8;spacingRight=8;spacingLeft=14;spacingRight=10;" value="&lt;b style=&quot;font-size:13px;color:#0f172a;&quot;&gt;数据驻留&lt;/b&gt;" vertex="1">
+          <mxGeometry x="60" y="194" width="220" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="c1008" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e2e8f0;strokeWidth=0.8;arcSize=0;fontSize=11.5;fontColor=#0f172a;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;spacingLeft=8;spacingRight=8;" value="&lt;span style=&quot;font-size:12px;color:#1e293b;font-weight:normal;line-height:1.5;&quot;&gt;供应商控制&lt;/span&gt;" vertex="1">
+          <mxGeometry x="280" y="194" width="360" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="c1009" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e2e8f0;strokeWidth=0.8;arcSize=0;fontSize=11.5;fontColor=#0f172a;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;spacingLeft=8;spacingRight=8;" value="&lt;span style=&quot;font-size:12px;color:#1e293b;font-weight:normal;line-height:1.5;&quot;&gt;企业选择特定区域&lt;/span&gt;" vertex="1">
+          <mxGeometry x="640" y="194" width="360" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="c1010" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e2e8f0;strokeWidth=0.8;arcSize=0;fontSize=11.5;fontColor=#0f172a;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;spacingLeft=8;spacingRight=8;" value="&lt;span style=&quot;font-size:12px;color:#1e293b;font-weight:normal;line-height:1.5;&quot;&gt;企业物理机房 / 本地控制&lt;/span&gt;" vertex="1">
+          <mxGeometry x="1000" y="194" width="360" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="c1011" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#e2e8f0;strokeWidth=0.8;arcSize=0;fontSize=12;fontColor=#0f172a;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=left;spacingTop=4;spacingLeft=8;spacingRight=8;spacingLeft=14;spacingRight=10;" value="&lt;b style=&quot;font-size:13px;color:#0f172a;&quot;&gt;租户隔离&lt;/b&gt;" vertex="1">
+          <mxGeometry x="60" y="250" width="220" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="c1012" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#e2e8f0;strokeWidth=0.8;arcSize=0;fontSize=11.5;fontColor=#0f172a;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;spacingLeft=8;spacingRight=8;" value="&lt;span style=&quot;font-size:12px;color:#1e293b;font-weight:normal;line-height:1.5;&quot;&gt;Multi-tenant · 共享&lt;/span&gt;" vertex="1">
+          <mxGeometry x="280" y="250" width="360" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="c1013" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#e2e8f0;strokeWidth=0.8;arcSize=0;fontSize=11.5;fontColor=#0f172a;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;spacingLeft=8;spacingRight=8;" value="&lt;span style=&quot;font-size:12px;color:#1e293b;font-weight:normal;line-height:1.5;&quot;&gt;Dedicated · 独占租户&lt;/span&gt;" vertex="1">
+          <mxGeometry x="640" y="250" width="360" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="c1014" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#e2e8f0;strokeWidth=0.8;arcSize=0;fontSize=11.5;fontColor=#0f172a;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;spacingLeft=8;spacingRight=8;" value="&lt;span style=&quot;font-size:12px;color:#1e293b;font-weight:normal;line-height:1.5;&quot;&gt;完全物理隔离&lt;/span&gt;" vertex="1">
+          <mxGeometry x="1000" y="250" width="360" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="c1015" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e2e8f0;strokeWidth=0.8;arcSize=0;fontSize=12;fontColor=#0f172a;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=left;spacingTop=4;spacingLeft=8;spacingRight=8;spacingLeft=14;spacingRight=10;" value="&lt;b style=&quot;font-size:13px;color:#0f172a;&quot;&gt;合规成本&lt;/b&gt;" vertex="1">
+          <mxGeometry x="60" y="306" width="220" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="c1016" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e2e8f0;strokeWidth=0.8;arcSize=0;fontSize=11.5;fontColor=#0f172a;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;spacingLeft=8;spacingRight=8;" value="&lt;span style=&quot;font-size:12px;color:#1e293b;font-weight:normal;line-height:1.5;&quot;&gt;高 · 需严格三方审计&lt;/span&gt;" vertex="1">
+          <mxGeometry x="280" y="306" width="360" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="c1017" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e2e8f0;strokeWidth=0.8;arcSize=0;fontSize=11.5;fontColor=#0f172a;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;spacingLeft=8;spacingRight=8;" value="&lt;span style=&quot;font-size:12px;color:#1e293b;font-weight:normal;line-height:1.5;&quot;&gt;中 · 复用企业云安全架构&lt;/span&gt;" vertex="1">
+          <mxGeometry x="640" y="306" width="360" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="c1018" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e2e8f0;strokeWidth=0.8;arcSize=0;fontSize=11.5;fontColor=#0f172a;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;spacingLeft=8;spacingRight=8;" value="&lt;span style=&quot;font-size:12px;color:#1e293b;font-weight:normal;line-height:1.5;&quot;&gt;最低 · 全栈自主受控&lt;/span&gt;" vertex="1">
+          <mxGeometry x="1000" y="306" width="360" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="c1019" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#e2e8f0;strokeWidth=0.8;arcSize=0;fontSize=12;fontColor=#0f172a;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=left;spacingTop=4;spacingLeft=8;spacingRight=8;spacingLeft=14;spacingRight=10;" value="&lt;b style=&quot;font-size:13px;color:#0f172a;&quot;&gt;基础设施成本&lt;/b&gt;" vertex="1">
+          <mxGeometry x="60" y="362" width="220" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="c1020" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#e2e8f0;strokeWidth=0.8;arcSize=0;fontSize=11.5;fontColor=#0f172a;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;spacingLeft=8;spacingRight=8;" value="&lt;span style=&quot;font-size:12px;color:#1e293b;font-weight:normal;line-height:1.5;&quot;&gt;$15-40 / 人 / 月&lt;/span&gt;" vertex="1">
+          <mxGeometry x="280" y="362" width="360" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="c1021" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#e2e8f0;strokeWidth=0.8;arcSize=0;fontSize=11.5;fontColor=#0f172a;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;spacingLeft=8;spacingRight=8;" value="&lt;span style=&quot;font-size:12px;color:#1e293b;font-weight:normal;line-height:1.5;&quot;&gt;$25-60 / 人 / 月&lt;/span&gt;" vertex="1">
+          <mxGeometry x="640" y="362" width="360" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="c1022" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#e2e8f0;strokeWidth=0.8;arcSize=0;fontSize=11.5;fontColor=#0f172a;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;spacingLeft=8;spacingRight=8;" value="&lt;span style=&quot;font-size:12px;color:#1e293b;font-weight:normal;line-height:1.5;&quot;&gt;$80-150 / 人 / 月&lt;/span&gt;" vertex="1">
+          <mxGeometry x="1000" y="362" width="360" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="c1023" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e2e8f0;strokeWidth=0.8;arcSize=0;fontSize=12;fontColor=#0f172a;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=left;spacingTop=4;spacingLeft=8;spacingRight=8;spacingLeft=14;spacingRight=10;" value="&lt;b style=&quot;font-size:13px;color:#0f172a;&quot;&gt;维护负担&lt;/b&gt;" vertex="1">
+          <mxGeometry x="60" y="418" width="220" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="c1024" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e2e8f0;strokeWidth=0.8;arcSize=0;fontSize=11.5;fontColor=#0f172a;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;spacingLeft=8;spacingRight=8;" value="&lt;span style=&quot;font-size:12px;color:#1e293b;font-weight:normal;line-height:1.5;&quot;&gt;最低 · 厂商负责&lt;/span&gt;" vertex="1">
+          <mxGeometry x="280" y="418" width="360" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="c1025" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e2e8f0;strokeWidth=0.8;arcSize=0;fontSize=11.5;fontColor=#0f172a;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;spacingLeft=8;spacingRight=8;" value="&lt;span style=&quot;font-size:12px;color:#1e293b;font-weight:normal;line-height:1.5;&quot;&gt;中低 · 云商负责硬件&lt;/span&gt;" vertex="1">
+          <mxGeometry x="640" y="418" width="360" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="c1026" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e2e8f0;strokeWidth=0.8;arcSize=0;fontSize=11.5;fontColor=#0f172a;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;spacingLeft=8;spacingRight=8;" value="&lt;span style=&quot;font-size:12px;color:#1e293b;font-weight:normal;line-height:1.5;&quot;&gt;最高 · 企业团队全责&lt;/span&gt;" vertex="1">
+          <mxGeometry x="1000" y="418" width="360" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="c1027" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#e2e8f0;strokeWidth=0.8;arcSize=0;fontSize=12;fontColor=#0f172a;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=left;spacingTop=4;spacingLeft=8;spacingRight=8;spacingLeft=14;spacingRight=10;" value="&lt;b style=&quot;font-size:13px;color:#0f172a;&quot;&gt;设置时间&lt;/b&gt;" vertex="1">
+          <mxGeometry x="60" y="474" width="220" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="c1028" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#e2e8f0;strokeWidth=0.8;arcSize=0;fontSize=11.5;fontColor=#0f172a;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;spacingLeft=8;spacingRight=8;" value="&lt;span style=&quot;font-size:12px;color:#1e293b;font-weight:normal;line-height:1.5;&quot;&gt;数天&lt;/span&gt;" vertex="1">
+          <mxGeometry x="280" y="474" width="360" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="c1029" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#e2e8f0;strokeWidth=0.8;arcSize=0;fontSize=11.5;fontColor=#0f172a;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;spacingLeft=8;spacingRight=8;" value="&lt;span style=&quot;font-size:12px;color:#1e293b;font-weight:normal;line-height:1.5;&quot;&gt;2-4 周&lt;/span&gt;" vertex="1">
+          <mxGeometry x="640" y="474" width="360" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="c1030" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#e2e8f0;strokeWidth=0.8;arcSize=0;fontSize=11.5;fontColor=#0f172a;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;spacingLeft=8;spacingRight=8;" value="&lt;span style=&quot;font-size:12px;color:#1e293b;font-weight:normal;line-height:1.5;&quot;&gt;2-6 个月&lt;/span&gt;" vertex="1">
+          <mxGeometry x="1000" y="474" width="360" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="c1031" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e2e8f0;strokeWidth=0.8;arcSize=0;fontSize=12;fontColor=#0f172a;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=left;spacingTop=4;spacingLeft=8;spacingRight=8;spacingLeft=14;spacingRight=10;" value="&lt;b style=&quot;font-size:13px;color:#0f172a;&quot;&gt;气隙隔离&lt;/b&gt;" vertex="1">
+          <mxGeometry x="60" y="530" width="220" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="c1032" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e2e8f0;strokeWidth=0.8;arcSize=0;fontSize=11.5;fontColor=#0f172a;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;spacingLeft=8;spacingRight=8;" value="&lt;span style=&quot;font-size:12px;color:#dc2626;font-weight:bold;line-height:1.5;&quot;&gt;✗  不支持&lt;/span&gt;" vertex="1">
+          <mxGeometry x="280" y="530" width="360" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="c1033" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e2e8f0;strokeWidth=0.8;arcSize=0;fontSize=11.5;fontColor=#0f172a;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;spacingLeft=8;spacingRight=8;" value="&lt;span style=&quot;font-size:12px;color:#c2410c;font-weight:bold;line-height:1.5;&quot;&gt;部分 · 逻辑隔离&lt;/span&gt;" vertex="1">
+          <mxGeometry x="640" y="530" width="360" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="c1034" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e2e8f0;strokeWidth=0.8;arcSize=0;fontSize=11.5;fontColor=#0f172a;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;spacingLeft=8;spacingRight=8;" value="&lt;span style=&quot;font-size:12px;color:#047857;font-weight:bold;line-height:1.5;&quot;&gt;✓  支持 · 完全物理隔离&lt;/span&gt;" vertex="1">
+          <mxGeometry x="1000" y="530" width="360" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="c1035" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#e2e8f0;strokeWidth=0.8;arcSize=0;fontSize=12;fontColor=#0f172a;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=left;spacingTop=4;spacingLeft=8;spacingRight=8;spacingLeft=14;spacingRight=10;" value="&lt;b style=&quot;font-size:13px;color:#0f172a;&quot;&gt;典型场景&lt;/b&gt;" vertex="1">
+          <mxGeometry x="60" y="586" width="220" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="c1036" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#e2e8f0;strokeWidth=0.8;arcSize=0;fontSize=11.5;fontColor=#0f172a;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;spacingLeft=8;spacingRight=8;" value="&lt;span style=&quot;font-size:12px;color:#1e293b;font-weight:normal;line-height:1.5;&quot;&gt;非管制业务 · 敏捷实验&lt;/span&gt;" vertex="1">
+          <mxGeometry x="280" y="586" width="360" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="c1037" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#e2e8f0;strokeWidth=0.8;arcSize=0;fontSize=11.5;fontColor=#0f172a;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;spacingLeft=8;spacingRight=8;" value="&lt;span style=&quot;font-size:12px;color:#1e293b;font-weight:normal;line-height:1.5;&quot;&gt;金融 · 医疗 · 受监管企业&lt;/span&gt;" vertex="1">
+          <mxGeometry x="640" y="586" width="360" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="c1038" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#e2e8f0;strokeWidth=0.8;arcSize=0;fontSize=11.5;fontColor=#0f172a;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;spacingLeft=8;spacingRight=8;" value="&lt;span style=&quot;font-size:12px;color:#1e293b;font-weight:normal;line-height:1.5;&quot;&gt;国防 · 机密政府 · 主权安全&lt;/span&gt;" vertex="1">
+          <mxGeometry x="1000" y="586" width="360" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="c1039" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef2f2;strokeColor=#fca5a5;strokeWidth=1.4;arcSize=10;opacity=95;" value="" vertex="1">
+          <mxGeometry x="60" y="670" width="1300" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="c1040" parent="1" style="text;html=1;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=14;fontColor=#b91c1c;fontFamily=PingFang SC,Helvetica,sans-serif;fontStyle=1;" value="&lt;b&gt;⚠ 供应商稳定性风险 · 解耦数据与算力&lt;/b&gt;" vertex="1">
+          <mxGeometry x="82" y="684" width="700" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="c1041" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dc2626;strokeColor=none;fontColor=#ffffff;fontSize=10;fontStyle=1;fontFamily=PingFang SC,Helvetica,sans-serif;arcSize=50;verticalAlign=middle;align=center;" value="2025-06" vertex="1">
+          <mxGeometry x="82" y="716" width="70" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="c1042" parent="1" style="text;html=1;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=11.5;fontColor=#1e293b;fontFamily=PingFang SC,Helvetica,sans-serif;" value="&lt;span style=&quot;color:#1e293b;font-size:11.5px;&quot;&gt;Meta 注资 143 亿美元，取得 Scale AI 49% 股权 · 可能改变供应商中立性&lt;/span&gt;" vertex="1">
+          <mxGeometry x="160" y="716" width="1180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="c1043" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dc2626;strokeColor=none;fontColor=#ffffff;fontSize=10;fontStyle=1;fontFamily=PingFang SC,Helvetica,sans-serif;arcSize=50;verticalAlign=middle;align=center;" value="2026-Q1" vertex="1">
+          <mxGeometry x="82" y="740" width="70" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="c1044" parent="1" style="text;html=1;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=11.5;fontColor=#1e293b;fontFamily=PingFang SC,Helvetica,sans-serif;" value="&lt;span style=&quot;color:#1e293b;font-size:11.5px;&quot;&gt;原 CFO Dennis Cinelli 离职 · 财务治理稳定性出现波动&lt;/span&gt;" vertex="1">
+          <mxGeometry x="160" y="740" width="1180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="c1045" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dc2626;strokeColor=none;fontColor=#ffffff;fontSize=10;fontStyle=1;fontFamily=PingFang SC,Helvetica,sans-serif;arcSize=50;verticalAlign=middle;align=center;" value="策略" vertex="1">
+          <mxGeometry x="82" y="764" width="70" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="c1046" parent="1" style="text;html=1;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=11.5;fontColor=#1e293b;fontFamily=PingFang SC,Helvetica,sans-serif;" value="&lt;span style=&quot;color:#1e293b;font-size:11.5px;&quot;&gt;将「数据管理」与「底层算力」解耦 · 保留 Snorkel / Surge / Labelbox 等备份方案&lt;/span&gt;" vertex="1">
+          <mxGeometry x="160" y="764" width="1180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="c1047" parent="1" style="text;html=1;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=12;fontColor=#64748b;fontFamily=PingFang SC,Helvetica,sans-serif;fontStyle=1;" value="&lt;b&gt;关键术语&lt;/b&gt;" vertex="1">
+          <mxGeometry x="60" y="820" width="200" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="c1048" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1d4ed8;strokeWidth=1.2;fontColor=#1d4ed8;fontSize=11;fontStyle=1;fontFamily=PingFang SC,Helvetica,sans-serif;arcSize=50;verticalAlign=middle;align=center;" value="Private VPC" vertex="1">
+          <mxGeometry x="168" y="818" width="117" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="c1049" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#334155;strokeWidth=1.2;fontColor=#334155;fontSize=11;fontStyle=1;fontFamily=PingFang SC,Helvetica,sans-serif;arcSize=50;verticalAlign=middle;align=center;" value="Sovereign AI" vertex="1">
+          <mxGeometry x="297" y="818" width="125" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="c1050" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#c2410c;strokeWidth=1.2;fontColor=#c2410c;fontSize=11;fontStyle=1;fontFamily=PingFang SC,Helvetica,sans-serif;arcSize=50;verticalAlign=middle;align=center;" value="Shadow AI" vertex="1">
+          <mxGeometry x="434" y="818" width="102" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="c1051" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#047857;strokeWidth=1.2;fontColor=#047857;fontSize=11;fontStyle=1;fontFamily=PingFang SC,Helvetica,sans-serif;arcSize=50;verticalAlign=middle;align=center;" value="Data Residency" vertex="1">
+          <mxGeometry x="548" y="818" width="141" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="c1052" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#4338ca;strokeWidth=1.2;fontColor=#4338ca;fontSize=11;fontStyle=1;fontFamily=PingFang SC,Helvetica,sans-serif;arcSize=50;verticalAlign=middle;align=center;" value="RBAC" vertex="1">
+          <mxGeometry x="701" y="818" width="63" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="c1053" parent="1" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=10.5;fontColor=#64748b;fontFamily=PingFang SC,Helvetica,sans-serif;fontStyle=2;" value="Truefoundry Gateway Plane · Red Hat Secure Model Factory · Sigstore 签名 + Tekton Chains" vertex="1">
+          <mxGeometry x="0" y="1018" width="1440" height="22" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

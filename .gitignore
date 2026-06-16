@@ -17,6 +17,7 @@ test-output/
 # Backup files
 *.backup
 *.bak
+*.bkp
 *~
 
 # Temporary/broken files
@@ -26,6 +27,7 @@ temlass.svg
 agentloture.svg
 
 # IDE
+.cursor/
 .vscode/
 .idea/
 *.swp

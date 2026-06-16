@@ -1,0 +1,256 @@
+<mxfile host="app.diagrams.net" type="device" version="24.0.0">
+  <diagram name="全客存量 · 三智能体 × 五层记忆 · 总架构" id="layered-arch">
+    <mxGraphModel dx="1600" dy="1100" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1440" pageHeight="1050" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="title" value="全客存量 · 三智能体 × 五层记忆 · 总架构" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=22;fontStyle=1;fontFamily=PingFang SC,Helvetica,sans-serif;fontColor=#0f172a;" parent="1" vertex="1">
+          <mxGeometry x="0" y="18" width="1440" height="32" as="geometry"/>
+        </mxCell>
+        <mxCell id="subtitle" value="Decision / Planning / Execution  ·  RAG + Neo4j  ·  MCP 工具链  ·  效果闭环" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=13;fontColor=#64748b;fontFamily=PingFang SC,Helvetica,sans-serif;" parent="1" vertex="1">
+          <mxGeometry x="0" y="50" width="1440" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="band_0" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eff6ff;strokeColor=#93c5fd;strokeWidth=1.3;arcSize=3;opacity=90;" parent="1" vertex="1">
+          <mxGeometry x="30" y="86" width="1380" height="168" as="geometry"/>
+        </mxCell>
+        <mxCell id="strip_0" value="&lt;b style=&quot;font-size:24px;&quot;&gt;01&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1d4ed8;strokeColor=none;arcSize=6;fontColor=#ffffff;fontSize=22;fontStyle=1;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="40" y="100" width="62" height="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="name_0" value="&lt;b&gt;触点与输入层&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=17;fontStyle=1;fontColor=#1d4ed8;fontFamily=PingFang SC,Helvetica,sans-serif;" parent="1" vertex="1">
+          <mxGeometry x="112" y="100" width="258" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="en_0" value="Channels &amp; Inputs" style="text;html=1;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=11;fontColor=#64748b;fontStyle=2;fontFamily=Helvetica,sans-serif;" parent="1" vertex="1">
+          <mxGeometry x="112" y="126" width="258" height="16" as="geometry"/>
+        </mxCell>
+        <mxCell id="hl_0" value="&lt;b style=&quot;font-size:10px;color:#64748b;&quot;&gt;技术亮点&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:11px;color:#1e293b;line-height:1.6;&quot;&gt;CB智慧弹窗 · 10010来话ASR · 全客对话策划 · 标签集市实时画像 · 会话上下文&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#93c5fd;strokeWidth=1;arcSize=8;fontSize=11;fontColor=#1e293b;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=top;align=left;spacingTop=4;spacingLeft=8;spacingRight=8;" parent="1" vertex="1">
+          <mxGeometry x="112" y="148" width="258" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="comp_0_0" value="&lt;b style=&quot;font-size:13px;color:#1d4ed8;&quot;&gt;INPUT / 触点&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:10.5px;color:#475569;line-height:1.4;&quot;&gt;弹窗事件 · 语音文本 · 运营自然语言&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1d4ed8;strokeWidth=1.4;arcSize=12;fontSize=12;fontColor=#1e293b;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="390.0" y="106" width="330.6666666666667" height="62" as="geometry"/>
+        </mxCell>
+        <mxCell id="comp_0_1" value="&lt;b style=&quot;font-size:13px;color:#1d4ed8;&quot;&gt;画像快照&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:10.5px;color:#475569;line-height:1.4;&quot;&gt;能开接口 · 标签集市 · 实时特征&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1d4ed8;strokeWidth=1.4;arcSize=12;fontSize=12;fontColor=#1e293b;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="734.6666666666667" y="106" width="330.6666666666667" height="62" as="geometry"/>
+        </mxCell>
+        <mxCell id="comp_0_2" value="&lt;b style=&quot;font-size:13px;color:#1d4ed8;&quot;&gt;会话状态&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:10.5px;color:#475569;line-height:1.4;&quot;&gt;多轮槽位 · 澄清问句 · 采纳标记&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1d4ed8;strokeWidth=1.4;arcSize=12;fontSize=12;fontColor=#1e293b;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="1079.3333333333335" y="106" width="330.6666666666667" height="62" as="geometry"/>
+        </mxCell>
+        <mxCell id="ts_label_0" value="&lt;b&gt;技术栈&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=10;fontColor=#64748b;fontStyle=1;fontFamily=PingFang SC,Helvetica,sans-serif;" parent="1" vertex="1">
+          <mxGeometry x="390" y="216" width="60" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="chip_0_0" value="CB弹窗" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1d4ed8;strokeColor=none;fontColor=#ffffff;fontSize=10.5;fontStyle=1;fontFamily=PingFang SC,Helvetica,sans-serif;arcSize=50;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="446" y="218" width="66" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="chip_0_1" value="10010" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1d4ed8;strokeColor=none;fontColor=#ffffff;fontSize=10.5;fontStyle=1;fontFamily=PingFang SC,Helvetica,sans-serif;arcSize=50;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="520" y="218" width="58" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="chip_0_2" value="全客NLU" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1d4ed8;strokeColor=none;fontColor=#ffffff;fontSize=10.5;fontStyle=1;fontFamily=PingFang SC,Helvetica,sans-serif;arcSize=50;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="586" y="218" width="74" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="chip_0_3" value="Redis" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1d4ed8;strokeColor=none;fontColor=#ffffff;fontSize=10.5;fontStyle=1;fontFamily=PingFang SC,Helvetica,sans-serif;arcSize=50;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="668" y="218" width="58" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="chip_0_4" value="Kafka" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1d4ed8;strokeColor=none;fontColor=#ffffff;fontSize=10.5;fontStyle=1;fontFamily=PingFang SC,Helvetica,sans-serif;arcSize=50;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="734" y="218" width="58" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="band_1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff7ed;strokeColor=#fdba74;strokeWidth=1.3;arcSize=3;opacity=90;" parent="1" vertex="1">
+          <mxGeometry x="30" y="268" width="1380" height="168" as="geometry"/>
+        </mxCell>
+        <mxCell id="strip_1" value="&lt;b style=&quot;font-size:24px;&quot;&gt;02&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c2410c;strokeColor=none;arcSize=6;fontColor=#ffffff;fontSize=22;fontStyle=1;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="40" y="282" width="62" height="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="name_1" value="&lt;b&gt;三智能体编排层&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=17;fontStyle=1;fontColor=#c2410c;fontFamily=PingFang SC,Helvetica,sans-serif;" parent="1" vertex="1">
+          <mxGeometry x="112" y="282" width="258" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="en_1" value="Decision · Planning · Execution" style="text;html=1;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=11;fontColor=#64748b;fontStyle=2;fontFamily=Helvetica,sans-serif;" parent="1" vertex="1">
+          <mxGeometry x="112" y="308" width="258" height="16" as="geometry"/>
+        </mxCell>
+        <mxCell id="hl_1" value="&lt;b style=&quot;font-size:10px;color:#64748b;&quot;&gt;技术亮点&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:11px;color:#1e293b;line-height:1.6;&quot;&gt;意图/场景/槽位 · Top-K RAG + Neo4j 路径 · MCP 调用与策略落库&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#fdba74;strokeWidth=1;arcSize=8;fontSize=11;fontColor=#1e293b;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=top;align=left;spacingTop=4;spacingLeft=8;spacingRight=8;" parent="1" vertex="1">
+          <mxGeometry x="112" y="330" width="258" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="comp_1_0" value="&lt;b style=&quot;font-size:13px;color:#c2410c;&quot;&gt;决策智能体&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:10.5px;color:#475569;line-height:1.4;&quot;&gt;INT-01~04 · L1/L2 场景 · StrategyConfig 路由&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#c2410c;strokeWidth=1.4;arcSize=12;fontSize=12;fontColor=#1e293b;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="390.0" y="288" width="330.6666666666667" height="62" as="geometry"/>
+        </mxCell>
+        <mxCell id="comp_1_1" value="&lt;b style=&quot;font-size:13px;color:#c2410c;&quot;&gt;规划智能体&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:10.5px;color:#475569;line-height:1.4;&quot;&gt;客群/产品/触点/话术组装 · 档位排序 · 约束校验&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#c2410c;strokeWidth=1.4;arcSize=12;fontSize=12;fontColor=#1e293b;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="734.6666666666667" y="288" width="330.6666666666667" height="62" as="geometry"/>
+        </mxCell>
+        <mxCell id="comp_1_2" value="&lt;b style=&quot;font-size:13px;color:#c2410c;&quot;&gt;执行智能体&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:10.5px;color:#475569;line-height:1.4;&quot;&gt;客群创建 · 策略写入 · 触点下发 · W/C/O 回流&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#c2410c;strokeWidth=1.4;arcSize=12;fontSize=12;fontColor=#1e293b;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="1079.3333333333335" y="288" width="330.6666666666667" height="62" as="geometry"/>
+        </mxCell>
+        <mxCell id="ts_label_1" value="&lt;b&gt;技术栈&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=10;fontColor=#64748b;fontStyle=1;fontFamily=PingFang SC,Helvetica,sans-serif;" parent="1" vertex="1">
+          <mxGeometry x="390" y="398" width="60" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="chip_1_0" value="DeepSeek" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c2410c;strokeColor=none;fontColor=#ffffff;fontSize=10.5;fontStyle=1;fontFamily=PingFang SC,Helvetica,sans-serif;arcSize=50;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="446" y="400" width="77" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="chip_1_1" value="Qwen" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c2410c;strokeColor=none;fontColor=#ffffff;fontSize=10.5;fontStyle=1;fontFamily=PingFang SC,Helvetica,sans-serif;arcSize=50;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="531" y="400" width="58" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="chip_1_2" value="FunctionCall" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c2410c;strokeColor=none;fontColor=#ffffff;fontSize=10.5;fontStyle=1;fontFamily=PingFang SC,Helvetica,sans-serif;arcSize=50;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="597" y="400" width="103" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="chip_1_3" value="MCP" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c2410c;strokeColor=none;fontColor=#ffffff;fontSize=10.5;fontStyle=1;fontFamily=PingFang SC,Helvetica,sans-serif;arcSize=50;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="708" y="400" width="58" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="chip_1_4" value="HITL" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c2410c;strokeColor=none;fontColor=#ffffff;fontSize=10.5;fontStyle=1;fontFamily=PingFang SC,Helvetica,sans-serif;arcSize=50;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="774" y="400" width="58" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="band_2" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ecfdf5;strokeColor=#6ee7b7;strokeWidth=1.3;arcSize=3;opacity=90;" parent="1" vertex="1">
+          <mxGeometry x="30" y="450" width="1380" height="168" as="geometry"/>
+        </mxCell>
+        <mxCell id="strip_2" value="&lt;b style=&quot;font-size:24px;&quot;&gt;03&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#047857;strokeColor=none;arcSize=6;fontColor=#ffffff;fontSize=22;fontStyle=1;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="40" y="464" width="62" height="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="name_2" value="&lt;b&gt;MCP 工具执行层&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=17;fontStyle=1;fontColor=#047857;fontFamily=PingFang SC,Helvetica,sans-serif;" parent="1" vertex="1">
+          <mxGeometry x="112" y="464" width="258" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="en_2" value="Toolchain" style="text;html=1;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=11;fontColor=#64748b;fontStyle=2;fontFamily=Helvetica,sans-serif;" parent="1" vertex="1">
+          <mxGeometry x="112" y="490" width="258" height="16" as="geometry"/>
+        </mxCell>
+        <mxCell id="hl_2" value="&lt;b style=&quot;font-size:10px;color:#64748b;&quot;&gt;技术亮点&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:11px;color:#1e293b;line-height:1.6;&quot;&gt;可组合原子工具：圈选、生成客群、推荐、话术、方案构建、写全客&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6ee7b7;strokeWidth=1;arcSize=8;fontSize=11;fontColor=#1e293b;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=top;align=left;spacingTop=4;spacingLeft=8;spacingRight=8;" parent="1" vertex="1">
+          <mxGeometry x="112" y="512" width="258" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="comp_2_0" value="&lt;b style=&quot;font-size:13px;color:#047857;&quot;&gt;客群工具&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:10.5px;color:#475569;line-height:1.4;&quot;&gt;圈选 · 生成 · 规模预估&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#047857;strokeWidth=1.4;arcSize=12;fontSize=12;fontColor=#1e293b;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="390.0" y="470" width="330.6666666666667" height="62" as="geometry"/>
+        </mxCell>
+        <mxCell id="comp_2_1" value="&lt;b style=&quot;font-size:13px;color:#047857;&quot;&gt;推荐工具&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:10.5px;color:#475569;line-height:1.4;&quot;&gt;产品 · 触点 · 卖点标题&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#047857;strokeWidth=1.4;arcSize=12;fontSize=12;fontColor=#1e293b;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="734.6666666666667" y="470" width="330.6666666666667" height="62" as="geometry"/>
+        </mxCell>
+        <mxCell id="comp_2_2" value="&lt;b style=&quot;font-size:13px;color:#047857;&quot;&gt;交付工具&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:10.5px;color:#475569;line-height:1.4;&quot;&gt;话术生成 · 策略JSON · 发布接口&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#047857;strokeWidth=1.4;arcSize=12;fontSize=12;fontColor=#1e293b;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="1079.3333333333335" y="470" width="330.6666666666667" height="62" as="geometry"/>
+        </mxCell>
+        <mxCell id="ts_label_2" value="&lt;b&gt;技术栈&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=10;fontColor=#64748b;fontStyle=1;fontFamily=PingFang SC,Helvetica,sans-serif;" parent="1" vertex="1">
+          <mxGeometry x="390" y="580" width="60" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="chip_2_0" value="MCP Server" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#047857;strokeColor=none;fontColor=#ffffff;fontSize=10.5;fontStyle=1;fontFamily=PingFang SC,Helvetica,sans-serif;arcSize=50;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="446" y="582" width="93" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="chip_2_1" value="全客API" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#047857;strokeColor=none;fontColor=#ffffff;fontSize=10.5;fontStyle=1;fontFamily=PingFang SC,Helvetica,sans-serif;arcSize=50;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="547" y="582" width="74" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="chip_2_2" value="标签库API" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#047857;strokeColor=none;fontColor=#ffffff;fontSize=10.5;fontStyle=1;fontFamily=PingFang SC,Helvetica,sans-serif;arcSize=50;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="629" y="582" width="88" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="chip_2_3" value="工单" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#047857;strokeColor=none;fontColor=#ffffff;fontSize=10.5;fontStyle=1;fontFamily=PingFang SC,Helvetica,sans-serif;arcSize=50;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="725" y="582" width="58" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="chip_2_4" value="弹窗" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#047857;strokeColor=none;fontColor=#ffffff;fontSize=10.5;fontStyle=1;fontFamily=PingFang SC,Helvetica,sans-serif;arcSize=50;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="791" y="582" width="58" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="band_3" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eef2ff;strokeColor=#a5b4fc;strokeWidth=1.3;arcSize=3;opacity=90;" parent="1" vertex="1">
+          <mxGeometry x="30" y="632" width="1380" height="168" as="geometry"/>
+        </mxCell>
+        <mxCell id="strip_3" value="&lt;b style=&quot;font-size:24px;&quot;&gt;04&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4338ca;strokeColor=none;arcSize=6;fontColor=#ffffff;fontSize=22;fontStyle=1;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="40" y="646" width="62" height="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="name_3" value="&lt;b&gt;五层记忆系统&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=17;fontStyle=1;fontColor=#4338ca;fontFamily=PingFang SC,Helvetica,sans-serif;" parent="1" vertex="1">
+          <mxGeometry x="112" y="646" width="258" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="en_3" value="Layered Memory" style="text;html=1;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=11;fontColor=#64748b;fontStyle=2;fontFamily=Helvetica,sans-serif;" parent="1" vertex="1">
+          <mxGeometry x="112" y="672" width="258" height="16" as="geometry"/>
+        </mxCell>
+        <mxCell id="hl_3" value="&lt;b style=&quot;font-size:10px;color:#64748b;&quot;&gt;技术亮点&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:11px;color:#1e293b;line-height:1.6;&quot;&gt;感知→工作→情景→语义→程序 · 读写分流 · 支撑检索与闭环&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a5b4fc;strokeWidth=1;arcSize=8;fontSize=11;fontColor=#1e293b;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=top;align=left;spacingTop=4;spacingLeft=8;spacingRight=8;" parent="1" vertex="1">
+          <mxGeometry x="112" y="694" width="258" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="comp_3_0" value="&lt;b style=&quot;font-size:13px;color:#4338ca;&quot;&gt;L1 感知&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:10.5px;color:#475569;line-height:1.4;&quot;&gt;原始事件·ASR·Token&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#4338ca;strokeWidth=1.4;arcSize=12;fontSize=12;fontColor=#1e293b;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="390.0" y="652" width="192.8" height="62" as="geometry"/>
+        </mxCell>
+        <mxCell id="comp_3_1" value="&lt;b style=&quot;font-size:13px;color:#4338ca;&quot;&gt;L2 工作&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:10.5px;color:#475569;line-height:1.4;&quot;&gt;上下文·草稿·槽位&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#4338ca;strokeWidth=1.4;arcSize=12;fontSize=12;fontColor=#1e293b;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="596.8" y="652" width="192.8" height="62" as="geometry"/>
+        </mxCell>
+        <mxCell id="comp_3_2" value="&lt;b style=&quot;font-size:13px;color:#4338ca;&quot;&gt;L3 情景&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:10.5px;color:#475569;line-height:1.4;&quot;&gt;触达接触订购·A/B&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#4338ca;strokeWidth=1.4;arcSize=12;fontSize=12;fontColor=#1e293b;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="803.6" y="652" width="192.8" height="62" as="geometry"/>
+        </mxCell>
+        <mxCell id="comp_3_3" value="&lt;b style=&quot;font-size:13px;color:#4338ca;&quot;&gt;L4 语义&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:10.5px;color:#475569;line-height:1.4;&quot;&gt;标签·KG·意图库&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#4338ca;strokeWidth=1.4;arcSize=12;fontSize=12;fontColor=#1e293b;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="1010.4000000000001" y="652" width="192.8" height="62" as="geometry"/>
+        </mxCell>
+        <mxCell id="comp_3_4" value="&lt;b style=&quot;font-size:13px;color:#4338ca;&quot;&gt;L5 程序&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:10.5px;color:#475569;line-height:1.4;&quot;&gt;工具Schema·Prompt·规则&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#4338ca;strokeWidth=1.4;arcSize=12;fontSize=12;fontColor=#1e293b;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="1217.2" y="652" width="192.8" height="62" as="geometry"/>
+        </mxCell>
+        <mxCell id="ts_label_3" value="&lt;b&gt;技术栈&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=10;fontColor=#64748b;fontStyle=1;fontFamily=PingFang SC,Helvetica,sans-serif;" parent="1" vertex="1">
+          <mxGeometry x="390" y="762" width="60" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="chip_3_0" value="VectorDB" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4338ca;strokeColor=none;fontColor=#ffffff;fontSize=10.5;fontStyle=1;fontFamily=PingFang SC,Helvetica,sans-serif;arcSize=50;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="446" y="764" width="78" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="chip_3_1" value="Neo4j" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4338ca;strokeColor=none;fontColor=#ffffff;fontSize=10.5;fontStyle=1;fontFamily=PingFang SC,Helvetica,sans-serif;arcSize=50;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="532" y="764" width="58" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="chip_3_2" value="MySQL" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4338ca;strokeColor=none;fontColor=#ffffff;fontSize=10.5;fontStyle=1;fontFamily=PingFang SC,Helvetica,sans-serif;arcSize=50;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="598" y="764" width="60" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="chip_3_3" value="Observability" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4338ca;strokeColor=none;fontColor=#ffffff;fontSize=10.5;fontStyle=1;fontFamily=PingFang SC,Helvetica,sans-serif;arcSize=50;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="666" y="764" width="108" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="band_4" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#94a3b8;strokeWidth=1.3;arcSize=3;opacity=90;" parent="1" vertex="1">
+          <mxGeometry x="30" y="814" width="1380" height="168" as="geometry"/>
+        </mxCell>
+        <mxCell id="strip_4" value="&lt;b style=&quot;font-size:24px;&quot;&gt;05&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#334155;strokeColor=none;arcSize=6;fontColor=#ffffff;fontSize=22;fontStyle=1;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="40" y="828" width="62" height="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="name_4" value="&lt;b&gt;数据与知识底座&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=17;fontStyle=1;fontColor=#334155;fontFamily=PingFang SC,Helvetica,sans-serif;" parent="1" vertex="1">
+          <mxGeometry x="112" y="828" width="258" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="en_4" value="Data &amp; Knowledge Base" style="text;html=1;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=11;fontColor=#64748b;fontStyle=2;fontFamily=Helvetica,sans-serif;" parent="1" vertex="1">
+          <mxGeometry x="112" y="854" width="258" height="16" as="geometry"/>
+        </mxCell>
+        <mxCell id="hl_4" value="&lt;b style=&quot;font-size:10px;color:#64748b;&quot;&gt;技术亮点&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:11px;color:#1e293b;line-height:1.6;&quot;&gt;全客历史策略与效果 · 省分产品规则语料 · 双引擎：向量切片 + 图谱关系&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#94a3b8;strokeWidth=1;arcSize=8;fontSize=11;fontColor=#1e293b;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=top;align=left;spacingTop=4;spacingLeft=8;spacingRight=8;" parent="1" vertex="1">
+          <mxGeometry x="112" y="876" width="258" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="comp_4_0" value="&lt;b style=&quot;font-size:13px;color:#334155;&quot;&gt;全客侧&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:10.5px;color:#475569;line-height:1.4;&quot;&gt;策略配置·W/C/O/D_CREATE·原子字段Schema&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#334155;strokeWidth=1.4;arcSize=12;fontSize=12;fontColor=#1e293b;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="390.0" y="834" width="330.6666666666667" height="62" as="geometry"/>
+        </mxCell>
+        <mxCell id="comp_4_1" value="&lt;b style=&quot;font-size:13px;color:#334155;&quot;&gt;省分侧&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:10.5px;color:#475569;line-height:1.4;&quot;&gt;产品特征·场景预设·热门话术·100+对话&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#334155;strokeWidth=1.4;arcSize=12;fontSize=12;fontColor=#1e293b;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="734.6666666666667" y="834" width="330.6666666666667" height="62" as="geometry"/>
+        </mxCell>
+        <mxCell id="comp_4_2" value="&lt;b style=&quot;font-size:13px;color:#334155;&quot;&gt;双引擎&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:10.5px;color:#475569;line-height:1.4;&quot;&gt;Embedding+RAG · 意图-场景-产品-约束图&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#334155;strokeWidth=1.4;arcSize=12;fontSize=12;fontColor=#1e293b;fontFamily=PingFang SC,Helvetica,sans-serif;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="1079.3333333333335" y="834" width="330.6666666666667" height="62" as="geometry"/>
+        </mxCell>
+        <mxCell id="ts_label_4" value="&lt;b&gt;技术栈&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=10;fontColor=#64748b;fontStyle=1;fontFamily=PingFang SC,Helvetica,sans-serif;" parent="1" vertex="1">
+          <mxGeometry x="390" y="944" width="60" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="chip_4_0" value="标签元数据" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#334155;strokeColor=none;fontColor=#ffffff;fontSize=10.5;fontStyle=1;fontFamily=PingFang SC,Helvetica,sans-serif;arcSize=50;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="446" y="946" width="92" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="chip_4_1" value="场景最优库" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#334155;strokeColor=none;fontColor=#ffffff;fontSize=10.5;fontStyle=1;fontFamily=PingFang SC,Helvetica,sans-serif;arcSize=50;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="546" y="946" width="92" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="chip_4_2" value="同义词" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#334155;strokeColor=none;fontColor=#ffffff;fontSize=10.5;fontStyle=1;fontFamily=PingFang SC,Helvetica,sans-serif;arcSize=50;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="646" y="946" width="64" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="chip_4_3" value="合规审计" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#334155;strokeColor=none;fontColor=#ffffff;fontSize=10.5;fontStyle=1;fontFamily=PingFang SC,Helvetica,sans-serif;arcSize=50;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="718" y="946" width="78" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="arr_0" value="触点事件 / NLU / 画像快照 → 决策路由" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#475569;strokeWidth=2;fontSize=10.5;fontColor=#334155;fontFamily=PingFang SC,Helvetica,sans-serif;labelBackgroundColor=#ffffff;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="720.0" y="253" as="sourcePoint"/>
+            <mxPoint x="720.0" y="269" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arr_1" value="结构化意图 → RAG·图谱召回 → 可执行 StrategyPlan" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#475569;strokeWidth=2;fontSize=10.5;fontColor=#334155;fontFamily=PingFang SC,Helvetica,sans-serif;labelBackgroundColor=#ffffff;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="720.0" y="435" as="sourcePoint"/>
+            <mxPoint x="720.0" y="451" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arr_2" value="方案确认 → MCP 工具链 → 全客写入 / 触点推送" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#475569;strokeWidth=2;fontSize=10.5;fontColor=#334155;fontFamily=PingFang SC,Helvetica,sans-serif;labelBackgroundColor=#ffffff;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="720.0" y="617" as="sourcePoint"/>
+            <mxPoint x="720.0" y="633" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arr_3" value="记忆 ⇄ 底座：向量切片 + Neo4j + 标签元数据 + 历史效果回流" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#475569;strokeWidth=2;fontSize=10.5;fontColor=#334155;fontFamily=PingFang SC,Helvetica,sans-serif;labelBackgroundColor=#ffffff;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="720.0" y="799" as="sourcePoint"/>
+            <mxPoint x="720.0" y="815" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="footer_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f1f5f9;strokeColor=#cbd5e1;strokeWidth=1;arcSize=6;" parent="1" vertex="1">
+          <mxGeometry x="30" y="1006" width="1380" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="footer" value="语义箭头图例：紫=控制流 · 青=检索 · 绿虚线=效果写入 · 橙=重规划回路 · 白=触点原始数据  |  材料依据：《A计划存量客户智能策略生成》+ 业务流程(3).pptx" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=11;fontColor=#475569;fontFamily=PingFang SC,Helvetica,sans-serif;" parent="1" vertex="1">
+          <mxGeometry x="30" y="1006" width="1380" height="30" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,88 @@
+<mxfile host="app.diagrams.net" type="device" version="24.0.0">
+  <diagram name="全客智能体上下游流程" id="quanke-agent-flow">
+    <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1520" pageHeight="920" math="0" shadow="0" background="#0a1628">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0a1628;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="0" y="0" width="1520" height="920" as="geometry"/>
+        </mxCell>
+        <mxCell id="title" value="&lt;b style=&quot;font-size:17px;color:#ffffff;letter-spacing:0.06em&quot;&gt;全客存量 · 智能体上下游流程图&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size:10px;color:#48cae4&quot;&gt;1×决策 · 1×规划 · 3×执行 · 语义箭头与记忆闭环&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Courier New;fontSize=16;fontColor=#ffffff;resizable=0;" parent="1" vertex="1">
+          <mxGeometry x="260" y="12" width="1000" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="lane_up" value="UPSTREAM / 上游" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0d1f3c;fillOpacity=15;strokeColor=#00b4d8;strokeWidth=0.6;dashed=1;dashPattern=8 4;fontFamily=Courier New;fontSize=9;fontColor=#00b4d8;fontStyle=1;verticalAlign=top;spacingTop=6;spacingLeft=8;align=left;opacity=55;" parent="1" vertex="1">
+          <mxGeometry x="32" y="68" width="1456" height="118" as="geometry"/>
+        </mxCell>
+        <mxCell id="lane_core" value="CORE / 决策 → 规划" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0d1f3c;fillOpacity=15;strokeColor=#00b4d8;strokeWidth=0.6;dashed=1;dashPattern=8 4;fontFamily=Courier New;fontSize=9;fontColor=#00b4d8;fontStyle=1;verticalAlign=top;spacingTop=6;spacingLeft=8;align=left;opacity=55;" parent="1" vertex="1">
+          <mxGeometry x="32" y="198" width="1456" height="132" as="geometry"/>
+        </mxCell>
+        <mxCell id="lane_exec" value="EXECUTION / 三执行智能体（串行交付链）" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0d1f3c;fillOpacity=15;strokeColor=#00b4d8;strokeWidth=0.6;dashed=1;dashPattern=8 4;fontFamily=Courier New;fontSize=9;fontColor=#00b4d8;fontStyle=1;verticalAlign=top;spacingTop=6;spacingLeft=8;align=left;opacity=55;" parent="1" vertex="1">
+          <mxGeometry x="32" y="342" width="1456" height="128" as="geometry"/>
+        </mxCell>
+        <mxCell id="lane_mem" value="MEMORY &amp; KNOWLEDGE / 下游底座 · 双向读写" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0d1f3c;fillOpacity=15;strokeColor=#00b4d8;strokeWidth=0.6;dashed=1;dashPattern=8 4;fontFamily=Courier New;fontSize=9;fontColor=#00b4d8;fontStyle=1;verticalAlign=top;spacingTop=6;spacingLeft=8;align=left;opacity=55;" parent="1" vertex="1">
+          <mxGeometry x="32" y="488" width="1456" height="118" as="geometry"/>
+        </mxCell>
+        <mxCell id="v_in" value="&lt;b style=&quot;font-size:12px;color:#caf0f8&quot;&gt;上游输入&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size:9px;color:#48cae4&quot;&gt;触点事件 · NLU/ASR · 实时画像 · 会话&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0d1f3c;strokeWidth=1.3;fontFamily=Courier New;fontSize=11;fontColor=#caf0f8;arcSize=6;align=center;verticalAlign=middle;strokeColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="52" y="102" width="168" height="64" as="geometry"/>
+        </mxCell>
+        <mxCell id="v_dec" value="&lt;b style=&quot;font-size:12px;color:#caf0f8&quot;&gt;决策智能体&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size:9px;color:#48cae4&quot;&gt;意图INT · 场景L1/L2 · 槽位 · 路由&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0d1f3c;strokeWidth=1.3;fontFamily=Courier New;fontSize=11;fontColor=#caf0f8;arcSize=6;align=center;verticalAlign=middle;strokeColor=#a78bfa;" parent="1" vertex="1">
+          <mxGeometry x="268" y="96" width="188" height="76" as="geometry"/>
+        </mxCell>
+        <mxCell id="v_plan" value="&lt;b style=&quot;font-size:12px;color:#caf0f8&quot;&gt;规划智能体&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size:9px;color:#48cae4&quot;&gt;RAG · Neo4j · MCP编排 · StrategyPlan&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0d1f3c;strokeWidth=1.3;fontFamily=Courier New;fontSize=11;fontColor=#caf0f8;arcSize=6;align=center;verticalAlign=middle;strokeColor=#f77f00;" parent="1" vertex="1">
+          <mxGeometry x="504" y="96" width="200" height="76" as="geometry"/>
+        </mxCell>
+        <mxCell id="v_ex1" value="&lt;b style=&quot;font-size:12px;color:#caf0f8&quot;&gt;执行智能体① 策略落库&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size:9px;color:#48cae4&quot;&gt;客群创建 · 策略写入全客 · 校验回执&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0d1f3c;strokeWidth=1.3;fontFamily=Courier New;fontSize=11;fontColor=#caf0f8;arcSize=6;align=center;verticalAlign=middle;strokeColor=#06d6a0;" parent="1" vertex="1">
+          <mxGeometry x="60" y="374" width="220" height="72" as="geometry"/>
+        </mxCell>
+        <mxCell id="v_ex2" value="&lt;b style=&quot;font-size:12px;color:#caf0f8&quot;&gt;执行智能体② 触点触达&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size:9px;color:#48cae4&quot;&gt;CB弹窗 · 外呼 · 工单/派单 · 二次确认&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0d1f3c;strokeWidth=1.3;fontFamily=Courier New;fontSize=11;fontColor=#caf0f8;arcSize=6;align=center;verticalAlign=middle;strokeColor=#06d6a0;" parent="1" vertex="1">
+          <mxGeometry x="320" y="374" width="220" height="72" as="geometry"/>
+        </mxCell>
+        <mxCell id="v_ex3" value="&lt;b style=&quot;font-size:12px;color:#caf0f8&quot;&gt;执行智能体③ 观测回流&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size:9px;color:#48cae4&quot;&gt;W/C/O漏斗 · 后评价 · 写入情景记忆&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0d1f3c;strokeWidth=1.3;fontFamily=Courier New;fontSize=11;fontColor=#caf0f8;arcSize=6;align=center;verticalAlign=middle;strokeColor=#06d6a0;" parent="1" vertex="1">
+          <mxGeometry x="580" y="374" width="240" height="72" as="geometry"/>
+        </mxCell>
+        <mxCell id="v_out" value="&lt;b style=&quot;font-size:12px;color:#caf0f8&quot;&gt;下游交付&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size:9px;color:#48cae4&quot;&gt;可观测策略实例 · 一线话术 · 复盘指标&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0d1f3c;strokeWidth=1.3;fontFamily=Courier New;fontSize=11;fontColor=#caf0f8;arcSize=6;align=center;verticalAlign=middle;strokeColor=#00b4d8;" parent="1" vertex="1">
+          <mxGeometry x="880" y="374" width="168" height="72" as="geometry"/>
+        </mxCell>
+        <mxCell id="v_mem" value="&lt;b style=&quot;font-size:12px;color:#caf0f8&quot;&gt;分层记忆 &amp;amp; 知识底座&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size:9px;color:#48cae4&quot;&gt;L3情景 · L4语义(KG/标签) · 向量RAG · L5工具/Prompt&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0d1f3c;strokeWidth=1.3;fontFamily=Courier New;fontSize=11;fontColor=#caf0f8;arcSize=6;align=center;verticalAlign=middle;strokeColor=#48cae4;align=left;spacingLeft=10;" parent="1" vertex="1">
+          <mxGeometry x="52" y="520" width="1416" height="64" as="geometry"/>
+        </mxCell>
+        <mxCell id="legend" value="&lt;b&gt;LEGEND&lt;/b&gt;  &lt;font color=&quot;#a78bfa&quot;&gt;■&lt;/font&gt;决策  &lt;font color=&quot;#f77f00&quot;&gt;■&lt;/font&gt;规划  &lt;font color=&quot;#06d6a0&quot;&gt;■&lt;/font&gt;执行  &lt;font color=&quot;#00b4d8&quot;&gt;—&lt;/font&gt;主链路  &lt;font color=&quot;#48cae4&quot;&gt;- -&lt;/font&gt;检索  &lt;font color=&quot;#06d6a0&quot;&gt;- -&lt;/font&gt;写入  &lt;font color=&quot;#f77f00&quot;&gt;—&lt;/font&gt;重规划" style="text;html=1;align=left;verticalAlign=middle;strokeColor=#00b4d8;fillColor=#081426;fontFamily=Courier New;fontSize=9;fontColor=#90e0ef;rounded=1;spacingLeft=10;" parent="1" vertex="1">
+          <mxGeometry x="52" y="628" width="1416" height="36" as="geometry"/>
+        </mxCell>
+        <mxCell id="e1" value="原始数据" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#ffffff;strokeWidth=1.4;fontFamily=Courier New;fontSize=9;fontColor=#90e0ef;labelBackgroundColor=#0a1628;endArrow=block;endFill=1;" parent="1" source="v_in" target="v_dec" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e2" value="结构化意图+槽位" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#a78bfa;strokeWidth=1.6;fontFamily=Courier New;fontSize=9;fontColor=#90e0ef;labelBackgroundColor=#0a1628;endArrow=block;endFill=1;" parent="1" source="v_dec" target="v_plan" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e3" value="StrategyPlan" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#f77f00;strokeWidth=1.6;fontFamily=Courier New;fontSize=9;fontColor=#90e0ef;labelBackgroundColor=#0a1628;endArrow=block;endFill=1;" parent="1" source="v_plan" target="v_ex1" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e4" value="strategy_id·发布态" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#00b4d8;strokeWidth=1.4;fontFamily=Courier New;fontSize=9;fontColor=#90e0ef;labelBackgroundColor=#0a1628;endArrow=block;endFill=1;" parent="1" source="v_ex1" target="v_ex2" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e5" value="触达回执·工单号" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#00b4d8;strokeWidth=1.4;fontFamily=Courier New;fontSize=9;fontColor=#90e0ef;labelBackgroundColor=#0a1628;endArrow=block;endFill=1;" parent="1" source="v_ex2" target="v_ex3" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e6" value="闭环交付物" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#00b4d8;strokeWidth=1.4;fontFamily=Courier New;fontSize=9;fontColor=#90e0ef;labelBackgroundColor=#0a1628;endArrow=block;endFill=1;" parent="1" source="v_ex3" target="v_out" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_r1" value="标签·意图库·历史片段" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#48cae4;strokeWidth=1.4;fontFamily=Courier New;fontSize=9;fontColor=#90e0ef;labelBackgroundColor=#0a1628;endArrow=block;endFill=1;dashed=1;dashPattern=6 4;" parent="1" source="v_mem" target="v_dec" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_r2" value="RAG切片·KG子图·最优策略" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#48cae4;strokeWidth=1.4;fontFamily=Courier New;fontSize=9;fontColor=#90e0ef;labelBackgroundColor=#0a1628;endArrow=block;endFill=1;dashed=1;dashPattern=6 4;" parent="1" source="v_mem" target="v_plan" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_w1" value="效果明细·A/B·后评价" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#06d6a0;strokeWidth=1.4;fontFamily=Courier New;fontSize=9;fontColor=#90e0ef;labelBackgroundColor=#0a1628;endArrow=block;endFill=1;dashed=1;dashPattern=6 4;" parent="1" source="v_ex3" target="v_mem" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_f1" value="劣化/无匹配→重规划" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#f77f00;strokeWidth=1.2;fontFamily=Courier New;fontSize=9;fontColor=#90e0ef;labelBackgroundColor=#0a1628;endArrow=block;endFill=1;" parent="1" source="v_ex3" target="v_dec" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_f2" value="槽位不足·澄清" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#f77f00;strokeWidth=1.4;fontFamily=Courier New;fontSize=9;fontColor=#90e0ef;labelBackgroundColor=#0a1628;endArrow=block;endFill=1;dashed=1;dashPattern=6 4;" parent="1" source="v_plan" target="v_dec" edge="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

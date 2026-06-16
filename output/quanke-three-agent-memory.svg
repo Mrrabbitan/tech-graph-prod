@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 1050" width="1440" height="1050">
+<style>text { font-family: 'Courier New', 'Lucida Console', monospace; }</style>
+
+  <defs>
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#112240" stroke-width="0.5"/>
+    </pattern>
+    <marker id="m_ctl" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a78bfa"/>
+    </marker>
+    <marker id="m_read" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#00b4d8"/>
+    </marker>
+    <marker id="m_write" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06d6a0"/>
+    </marker>
+    <marker id="m_fb" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f77f00"/>
+    </marker>
+    <marker id="m_data" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+<rect width="1440" height="1050" fill="#0a1628"/>
+<rect width="1440" height="1050" fill="url(#grid)" opacity="0.55"/>
+<text x="720.0" y="38" font-size="20" fill="#caf0f8" text-anchor="middle" font-weight="700" font-family="Courier New,monospace">全客存量 · 三智能体 × 五层记忆 · 总架构</text>
+<text x="720.0" y="58" font-size="11" fill="#90e0ef" text-anchor="middle" font-family="Courier New,monospace">Decision / Planning / Execution  ·  Sensory→Working→Episodic→Semantic→Procedural</text>
+<rect x="28" y="88" width="220" height="200" rx="4" ry="4" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1.2"/>
+<text x="38" y="110" font-size="11" fill="#48cae4" font-weight="700" font-family="Courier New,monospace">INPUT / 触点</text>
+<text x="38" y="128" font-size="10" fill="#caf0f8" font-weight="normal" font-family="Courier New,monospace">· CB智慧推荐弹窗事件</text>
+<text x="38" y="142" font-size="10" fill="#caf0f8" font-weight="normal" font-family="Courier New,monospace">· 10010来话 / 新客服ASR</text>
+<text x="38" y="156" font-size="10" fill="#caf0f8" font-weight="normal" font-family="Courier New,monospace">· 全客对话式策划(NLU)</text>
+<text x="38" y="170" font-size="10" fill="#caf0f8" font-weight="normal" font-family="Courier New,monospace">· 标签集市+能开实时画像</text>
+<text x="38" y="184" font-size="10" fill="#caf0f8" font-weight="normal" font-family="Courier New,monospace">· 会话上下文 session</text>
+<rect x="268" y="88" width="292" height="168" rx="4" ry="4" fill="#0d1f3c" stroke="#a78bfa" stroke-width="1.6"/>
+<text x="278" y="106" font-size="10" fill="#48cae4" font-weight="700" font-family="Courier New,monospace">DECISION</text>
+<text x="278" y="124" font-size="13" fill="#caf0f8" font-weight="700" font-family="Courier New,monospace">决策智能体</text>
+<text x="278" y="140" font-size="10" fill="#caf0f8" font-weight="normal" font-family="Courier New,monospace">意图识别 INT-01~04</text>
+<text x="278" y="154" font-size="10" fill="#caf0f8" font-weight="normal" font-family="Courier New,monospace">场景判定 L1/L2</text>
+<text x="278" y="168" font-size="10" fill="#caf0f8" font-weight="normal" font-family="Courier New,monospace">槽位抽取 StrategyConfig</text>
+<text x="278" y="182" font-size="10" fill="#caf0f8" font-weight="normal" font-family="Courier New,monospace">路由 planning|exec|clarify</text>
+<rect x="578" y="88" width="292" height="168" rx="4" ry="4" fill="#0d1f3c" stroke="#a78bfa" stroke-width="1.6"/>
+<text x="588" y="106" font-size="10" fill="#48cae4" font-weight="700" font-family="Courier New,monospace">PLANNING</text>
+<text x="588" y="124" font-size="13" fill="#caf0f8" font-weight="700" font-family="Courier New,monospace">规划智能体</text>
+<text x="588" y="140" font-size="10" fill="#caf0f8" font-weight="normal" font-family="Courier New,monospace">RAG 场景最优策略Top-K</text>
+<text x="588" y="154" font-size="10" fill="#caf0f8" font-weight="normal" font-family="Courier New,monospace">Neo4j 场景→特征→产品</text>
+<text x="588" y="168" font-size="10" fill="#caf0f8" font-weight="normal" font-family="Courier New,monospace">客群/产品/触点/话术组装</text>
+<text x="588" y="182" font-size="10" fill="#caf0f8" font-weight="normal" font-family="Courier New,monospace">档位排序·约束校验</text>
+<rect x="888" y="88" width="292" height="168" rx="4" ry="4" fill="#0d1f3c" stroke="#a78bfa" stroke-width="1.6"/>
+<text x="898" y="106" font-size="10" fill="#48cae4" font-weight="700" font-family="Courier New,monospace">EXECUTION</text>
+<text x="898" y="124" font-size="13" fill="#caf0f8" font-weight="700" font-family="Courier New,monospace">执行智能体</text>
+<text x="898" y="140" font-size="10" fill="#caf0f8" font-weight="normal" font-family="Courier New,monospace">MCP工具链调用</text>
+<text x="898" y="154" font-size="10" fill="#caf0f8" font-weight="normal" font-family="Courier New,monospace">客群创建·策略写入全客</text>
+<text x="898" y="168" font-size="10" fill="#caf0f8" font-weight="normal" font-family="Courier New,monospace">触点下发·工单/弹窗</text>
+<text x="898" y="182" font-size="10" fill="#caf0f8" font-weight="normal" font-family="Courier New,monospace">效果回流 W/C/O 漏斗</text>
+<rect x="268" y="284" width="1192" height="72" rx="4" ry="4" fill="#0b2238" stroke="#00b4d8" stroke-width="1.2"/>
+<text x="280" y="306" font-size="11" fill="#48cae4" font-weight="700" font-family="Courier New,monospace">MCP TOOLCHAIN / 工具执行层</text>
+<text x="280" y="328" font-size="10" fill="#90e0ef" font-family="Courier New,monospace">客群圈选 · 客群生成 · 产品推荐 · 触点推荐 · 话术生成 · 策略方案构建 · 策略配置写入</text>
+<text x="28" y="374" font-size="11" fill="#48cae4" font-weight="700" font-family="Courier New,monospace">LAYERED MEMORY / 五层记忆</text>
+<rect x="28" y="380" width="270" height="86" rx="4" ry="4" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<text x="36" y="398" font-size="10" fill="#48cae4" font-family="Courier New,monospace">L1</text>
+<text x="36" y="414" font-size="11" fill="#caf0f8" font-weight="700" font-family="Courier New,monospace">感知 Sensory</text>
+<text x="36" y="432" font-size="9" fill="#90e0ef" font-family="Courier New,monospace">事件流·ASR·原始Token</text>
+<rect x="306" y="380" width="270" height="86" rx="4" ry="4" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<text x="314" y="398" font-size="10" fill="#48cae4" font-family="Courier New,monospace">L2</text>
+<text x="314" y="414" font-size="11" fill="#caf0f8" font-weight="700" font-family="Courier New,monospace">工作 Working</text>
+<text x="314" y="432" font-size="9" fill="#90e0ef" font-family="Courier New,monospace">多轮上下文·槽位草稿</text>
+<rect x="584" y="380" width="270" height="86" rx="4" ry="4" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<text x="592" y="398" font-size="10" fill="#48cae4" font-family="Courier New,monospace">L3</text>
+<text x="592" y="414" font-size="11" fill="#caf0f8" font-weight="700" font-family="Courier New,monospace">情景 Episodic</text>
+<text x="592" y="432" font-size="9" fill="#90e0ef" font-family="Courier New,monospace">触达/接触/订购·A/B</text>
+<rect x="862" y="380" width="270" height="86" rx="4" ry="4" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<text x="870" y="398" font-size="10" fill="#48cae4" font-family="Courier New,monospace">L4</text>
+<text x="870" y="414" font-size="11" fill="#caf0f8" font-weight="700" font-family="Courier New,monospace">语义 Semantic</text>
+<text x="870" y="432" font-size="9" fill="#90e0ef" font-family="Courier New,monospace">标签库·KG·意图库·同义词</text>
+<rect x="1140" y="380" width="270" height="86" rx="4" ry="4" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<text x="1148" y="398" font-size="10" fill="#48cae4" font-family="Courier New,monospace">L5</text>
+<text x="1148" y="414" font-size="11" fill="#caf0f8" font-weight="700" font-family="Courier New,monospace">程序 Procedural</text>
+<text x="1148" y="432" font-size="9" fill="#90e0ef" font-family="Courier New,monospace">工具Schema·Prompt·档位规则</text>
+<rect x="28" y="486" width="1384" height="112" rx="4" ry="4" fill="#081426" stroke="#00b4d8" stroke-width="1.2"/>
+<text x="40" y="508" font-size="11" fill="#48cae4" font-weight="700" font-family="Courier New,monospace">DATA &amp; KNOWLEDGE BASE / 数据底座</text>
+<text x="40" y="524" font-size="10" fill="#caf0f8" font-weight="normal" font-family="Courier New,monospace">全客：历史策略配置·策略效果(W/C/O/D_CREATE)·原子配置项Schema</text>
+<text x="40" y="538" font-size="10" fill="#caf0f8" font-weight="normal" font-family="Courier New,monospace">省分：产品特征·场景预设产品/触点·热门话术·标签/档位/激励/约束·对话语料100+</text>
+<text x="40" y="552" font-size="10" fill="#caf0f8" font-weight="normal" font-family="Courier New,monospace">双引擎：向量库(RAG切片) + Neo4j(意图-场景-产品-约束)</text>
+<rect x="1192" y="88" width="220" height="200" rx="4" ry="4" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1.2"/>
+<text x="1202" y="110" font-size="11" fill="#48cae4" font-weight="700" font-family="Courier New,monospace">OUTPUT / 交付</text>
+<text x="1202" y="128" font-size="10" fill="#caf0f8" font-weight="normal" font-family="Courier New,monospace">结构化 StrategyPlan</text>
+<text x="1202" y="142" font-size="10" fill="#caf0f8" font-weight="normal" font-family="Courier New,monospace">策略画布可发布JSON</text>
+<text x="1202" y="156" font-size="10" fill="#caf0f8" font-weight="normal" font-family="Courier New,monospace">弹窗卖点/话术/跳转</text>
+<text x="1202" y="170" font-size="10" fill="#caf0f8" font-weight="normal" font-family="Courier New,monospace">触点后评价回流</text>
+<line x1="248" y1="238" x2="262" y2="238" stroke="#ffffff" stroke-width="2"  marker-end="url(#m_data)" fill="none"/><rect x="213.0" y="224.0" width="84" height="16" fill="#0a1628" opacity="0.92"/><text x="255.0" y="236.0" font-size="9" fill="#90e0ef" text-anchor="middle" font-family="Courier New,monospace">事件/文本</text>
+<line x1="560" y1="238" x2="576" y2="238" stroke="#a78bfa" stroke-width="2"  marker-end="url(#m_ctl)" fill="none"/><rect x="526.0" y="224.0" width="84" height="16" fill="#0a1628" opacity="0.92"/><text x="568.0" y="236.0" font-size="9" fill="#90e0ef" text-anchor="middle" font-family="Courier New,monospace">结构化意图</text>
+<line x1="870" y1="238" x2="886" y2="238" stroke="#a78bfa" stroke-width="2"  marker-end="url(#m_ctl)" fill="none"/><rect x="836.0" y="224.0" width="84" height="16" fill="#0a1628" opacity="0.92"/><text x="878.0" y="236.0" font-size="9" fill="#90e0ef" text-anchor="middle" font-family="Courier New,monospace">方案草案</text>
+<line x1="414.0" y1="256" x2="414.0" y2="423" stroke="#00b4d8" stroke-width="2"  marker-end="url(#m_read)" fill="none"/><rect x="372.0" y="325.5" width="84" height="16" fill="#0a1628" opacity="0.92"/><text x="414.0" y="337.5" font-size="9" fill="#90e0ef" text-anchor="middle" font-family="Courier New,monospace">检索</text>
+<line x1="724.0" y1="256" x2="724.0" y2="423" stroke="#00b4d8" stroke-width="2"  marker-end="url(#m_read)" fill="none"/><rect x="682.0" y="325.5" width="84" height="16" fill="#0a1628" opacity="0.92"/><text x="724.0" y="337.5" font-size="9" fill="#90e0ef" text-anchor="middle" font-family="Courier New,monospace">检索</text>
+<line x1="1034.0" y1="256" x2="1034.0" y2="423" stroke="#00b4d8" stroke-width="2"  marker-end="url(#m_read)" fill="none"/><rect x="992.0" y="325.5" width="84" height="16" fill="#0a1628" opacity="0.92"/><text x="1034.0" y="337.5" font-size="9" fill="#90e0ef" text-anchor="middle" font-family="Courier New,monospace">检索</text>
+<line x1="1034.0" y1="260" x2="1172" y2="423" stroke="#06d6a0" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#m_write)" fill="none"/><rect x="1061.0" y="327.5" width="84" height="16" fill="#0a1628" opacity="0.92"/><text x="1103.0" y="339.5" font-size="9" fill="#90e0ef" text-anchor="middle" font-family="Courier New,monospace">效果写入</text>
+<polyline points="1302.0,288 1302.0,612 138.0,612 138.0,280" fill="none" stroke="#f77f00" stroke-width="2" marker-end="url(#m_fb)"/>
+<text x="720.0" y="606" font-size="10" fill="#f77f00" text-anchor="middle" font-family="Courier New,monospace">重规划·澄清·下次会话个性化</text>
+<line x1="720.0" y1="486" x2="724.0" y2="358" stroke="#00b4d8" stroke-width="2"  marker-end="url(#m_read)" fill="none"/><rect x="680.0" y="408.0" width="84" height="16" fill="#0a1628" opacity="0.92"/><text x="722.0" y="420.0" font-size="9" fill="#90e0ef" text-anchor="middle" font-family="Courier New,monospace">RAG+KG</text>
+<rect x="28" y="1010" width="1384" height="42" rx="4" ry="4" fill="#081426" stroke="#00b4d8" stroke-width="0.8"/>
+<text x="40" y="1024" font-size="10" fill="#caf0f8" font-weight="700" font-family="Courier New,monospace">LEGEND</text>
+<rect x="120" y="1018" width="18" height="10" fill="#a78bfa"/>
+<text x="144" y="1027" font-size="9" fill="#90e0ef" font-family="Courier New,monospace">控制流 orchestrate</text>
+<rect x="368" y="1018" width="18" height="10" fill="#00b4d8"/>
+<text x="392" y="1027" font-size="9" fill="#90e0ef" font-family="Courier New,monospace">读记忆/知识 retrieve</text>
+<rect x="616" y="1018" width="18" height="10" fill="#06d6a0"/>
+<text x="640" y="1027" font-size="9" fill="#90e0ef" font-family="Courier New,monospace">写情景记忆 feedback</text>
+<rect x="864" y="1018" width="18" height="10" fill="#f77f00"/>
+<text x="888" y="1027" font-size="9" fill="#90e0ef" font-family="Courier New,monospace">重规划 loop</text>
+<rect x="1112" y="1018" width="18" height="10" fill="#ffffff"/>
+<text x="1136" y="1027" font-size="9" fill="#90e0ef" font-family="Courier New,monospace">原始数据 ingest</text>
+</svg>
