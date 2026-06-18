@@ -1,0 +1,99 @@
+{
+  "title": "智能采集决策中枢系统 — 五层技术架构",
+  "subtitle": "五层松耦合架构  ·  MCP 协议标准化交互  ·  端到端自动化执行  ·  全链路可观测",
+  "page": { "width": 1440, "height": 1050 },
+  "footer": "横向能力（贯穿全层）　幂等保障　·　分布式锁（Redis）　·　异步事件驱动（Spring Event）　·　全链路追踪（SkyWalking）　·　分级异常处理　·　配置化参数映射　·　插件化扩展",
+  "arrows": [
+    "REST API · HTTPS",
+    "统一接入 · 鉴权透传",
+    "MCP 协议 · 双向调用",
+    "持久化 · 事件 / 日志"
+  ],
+  "layers": [
+    {
+      "idx": "01",
+      "name": "前端展示层",
+      "en": "Presentation Layer",
+      "highlights": "可视化流程编排  ·  实时进度滚动  ·  全链路日志检索  ·  任务监控看板",
+      "bg": "#eff6ff",
+      "border": "#93c5fd",
+      "accent": "#1d4ed8",
+      "components": [
+        { "title": "任务中心", "subtitle": "任务创建 · 编辑 · 启停 · 重试" },
+        { "title": "需求录入工作台", "subtitle": "文档上传 · 接口规范录入" },
+        { "title": "流程进度大盘", "subtitle": "6 步骤可视化 · 实时滚动" },
+        { "title": "日志检索面板", "subtitle": "全链路日志 · 在线查看 · 下载" },
+        { "title": "监控告警中心", "subtitle": "指标看板 · 弹窗告警" }
+      ],
+      "chips": ["Vue 3", "TypeScript", "Element Plus", "ECharts", "WebSocket", "Pinia"]
+    },
+    {
+      "idx": "02",
+      "name": "API 网关 / 安全层",
+      "en": "API Gateway & Security",
+      "highlights": "RESTful 路由  ·  MD5 签名鉴权  ·  JWT/OAuth2  ·  限流熔断  ·  敏感参数加密",
+      "bg": "#eef2ff",
+      "border": "#a5b4fc",
+      "accent": "#4338ca",
+      "components": [
+        { "title": "REST API 网关", "subtitle": "统一入口 · 路由聚合" },
+        { "title": "统一鉴权中心", "subtitle": "MD5 签名 · 时间窗口校验" },
+        { "title": "流量熔断降级", "subtitle": "限流 · 降级 · 黑白名单" },
+        { "title": "会话 & 令牌", "subtitle": "Session · AccessToken" },
+        { "title": "安全传输", "subtitle": "HTTPS · AES 加密 · 审计留痕" }
+      ],
+      "chips": ["Spring Cloud Gateway", "Spring Security", "JWT / OAuth2", "Sentinel", "Nginx"]
+    },
+    {
+      "idx": "03",
+      "name": "决策中枢层（核心智能体）",
+      "en": "Decision Hub — Core Orchestration Agent",
+      "highlights": "状态机驱动  ·  智能流程编排  ·  任务全生命周期  ·  智能决策与异常分级处理",
+      "bg": "#fff7ed",
+      "border": "#fdba74",
+      "accent": "#c2410c",
+      "components": [
+        { "title": "任务生命周期管理", "subtitle": "新建·编辑·启停·版本·RBAC" },
+        { "title": "智能流程编排引擎", "subtitle": "状态机 · 依赖跳转 · 多场景模板" },
+        { "title": "参数解析与转换", "subtitle": "结构化提取 · 校验 · 人机补全" },
+        { "title": "执行调度 & 状态管控", "subtitle": "幂等 · 断点续跑 · 进度追踪" },
+        { "title": "异常处理决策", "subtitle": "分级识别 · 重试 · 熔断 · 根因" }
+      ],
+      "chips": ["Spring Boot 3", "Flowable", "Spring AI", "Spring StateMachine", "Hutool", "MapStruct"]
+    },
+    {
+      "idx": "04",
+      "name": "MCP 协议适配与能力接入层",
+      "en": "MCP Protocol Adaptation & Capability Bus",
+      "highlights": "MCP 双向协议转换  ·  服务注册发现  ·  原子工具 + 组合流程  ·  健康检查动态上下线",
+      "bg": "#ecfdf5",
+      "border": "#6ee7b7",
+      "accent": "#047857",
+      "components": [
+        { "title": "MCP Server / Client", "subtitle": "标准 MCP 运行时" },
+        { "title": "协议双向转换器", "subtitle": "HTTP ⇄ MCP · 流式适配" },
+        { "title": "上游 AI 解析适配", "subtitle": "能开平台 · Qwen2.5-32B" },
+        { "title": "下游 BDI 执行适配", "subtitle": "资源注册→建模→映射→流程" },
+        { "title": "能力注册发现", "subtitle": "工具元数据 · 健康检查" }
+      ],
+      "chips": ["Spring AI MCP", "Nacos", "OpenFeign", "Qwen2.5-32B", "BDI Agent", "WebFlux SSE"]
+    },
+    {
+      "idx": "05",
+      "name": "基础设施与运维保障层",
+      "en": "Infrastructure & Observability",
+      "highlights": "分布式锁  ·  异步事件驱动  ·  全链路追踪  ·  敏感加密存储  ·  幂等 & 高可用保障",
+      "bg": "#f8fafc",
+      "border": "#94a3b8",
+      "accent": "#334155",
+      "components": [
+        { "title": "关系存储", "subtitle": "任务元数据 · 执行记录" },
+        { "title": "缓存 & 分布式锁", "subtitle": "Redis 锁 · 幂等 Key · 限流" },
+        { "title": "消息 & 事件总线", "subtitle": "长时任务异步回调 · 事件推送" },
+        { "title": "日志与检索", "subtitle": "全链路日志采集 · 聚合检索" },
+        { "title": "监控 & APM", "subtitle": "链路追踪 · 指标 · 告警" }
+      ],
+      "chips": ["MySQL 8", "Redis 7", "Kafka 3", "Spring Event", "Elasticsearch 8", "SkyWalking", "Prometheus"]
+    }
+  ]
+}

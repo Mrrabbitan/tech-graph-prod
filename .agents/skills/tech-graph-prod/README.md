@@ -138,13 +138,13 @@ Keep the look minimal, white, precise, and modern with clean green-accented arro
 ## Installation
 
 ```bash
-npx skills add anzpnavy/tech-graph-prod
+npx skills add yizhiyanhua-ai/fireworks-tech-graph
 ```
 
 This skill is installed from the GitHub repository. The npm package page is the public package/distribution page:
 
 ```text
-https://www.npmjs.com/package/tech-graph-prod
+https://www.npmjs.com/package/@yizhiyanhua-ai/fireworks-tech-graph
 ```
 
 Do not use the npm package name with `skills add`, because the CLI resolves install sources as GitHub/local paths.
@@ -152,7 +152,7 @@ Do not use the npm package name with `skills add`, because the CLI resolves inst
 ## Update
 
 ```bash
-npx skills add anzpnavy/tech-graph-prod --force -g -y
+npx skills add yizhiyanhua-ai/fireworks-tech-graph --force -g -y
 ```
 
 Re-run `add --force` to pull the latest version of this skill.
@@ -160,7 +160,7 @@ Re-run `add --force` to pull the latest version of this skill.
 Or clone directly:
 
 ```bash
-git clone https://github.com/anzpnavy/tech-graph-prod.git ~/.claude/skills/tech-graph-prod
+git clone https://github.com/yizhiyanhua-ai/fireworks-tech-graph.git ~/.claude/skills/fireworks-tech-graph
 ```
 
 ---
@@ -525,4 +525,4 @@ fireworks-tech-graph/
 
 ## License
 
-MIT © 2025 anzpnavy <anzpnavy@163.com>
+MIT © 2025 fireworks-tech-graph contributors

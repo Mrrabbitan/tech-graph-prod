@@ -1,0 +1,479 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 1680" width="1280" height="1680">
+  <style>
+    .mono { font-family: 'Courier New', 'Lucida Console', 'Noto Sans Mono CJK SC', monospace; }
+    .han  { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; }
+    text  { fill: #caf0f8; }
+    .title-main  { font-size: 18px; font-weight: 700; letter-spacing: 0.12em; fill: #caf0f8; }
+    .title-sub   { font-size: 12px; letter-spacing: 0.06em; fill: #90e0ef; }
+    .section     { font-size: 11px; letter-spacing: 0.14em; fill: #48cae4; text-transform: uppercase; }
+    .phase-num   { font-size: 22px; font-weight: 700; fill: #00b4d8; letter-spacing: 0.1em; }
+    .phase-en    { font-size: 10px; letter-spacing: 0.2em; fill: #48cae4; }
+    .phase-zh    { font-size: 12px; fill: #caf0f8; }
+    .node-en     { font-size: 10px; font-weight: 700; letter-spacing: 0.06em; fill: #caf0f8; }
+    .node-zh     { font-size: 12px; fill: #caf0f8; }
+    .node-note   { font-size: 9px; fill: #48cae4; opacity: 0.9; }
+    .formula     { font-size: 11px; fill: #06d6a0; font-weight: 700; }
+    .edge-label  { font-size: 9px; fill: #48cae4; letter-spacing: 0.04em; }
+    .tb-label    { font-size: 9px; letter-spacing: 0.18em; fill: #48cae4; }
+    .tb-value    { font-size: 11px; fill: #caf0f8; }
+    .badge       { font-size: 11px; font-weight: 700; fill: #0a1628; }
+    .warn        { fill: #f77f00; }
+    .ok          { fill: #06d6a0; }
+  </style>
+
+  <defs>
+    <pattern id="grid-fine" width="15" height="15" patternUnits="userSpaceOnUse">
+      <path d="M 15 0 L 0 0 0 15" fill="none" stroke="#0f1d3a" stroke-width="0.4"/>
+    </pattern>
+    <pattern id="grid-bold" width="75" height="75" patternUnits="userSpaceOnUse">
+      <path d="M 75 0 L 0 0 0 75" fill="none" stroke="#15315c" stroke-width="0.7"/>
+    </pattern>
+
+    <marker id="arr-cyan" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <polygon points="0 0, 10 4, 0 8" fill="#00b4d8"/>
+    </marker>
+    <marker id="arr-orange" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <polygon points="0 0, 10 4, 0 8" fill="#f77f00"/>
+    </marker>
+    <marker id="arr-green" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <polygon points="0 0, 10 4, 0 8" fill="#06d6a0"/>
+    </marker>
+  </defs>
+
+  <!-- background -->
+  <rect width="1280" height="1680" fill="#0a1628"/>
+  <rect width="1280" height="1680" fill="url(#grid-fine)" opacity="0.9"/>
+  <rect width="1280" height="1680" fill="url(#grid-bold)" opacity="0.7"/>
+
+  <!-- frame -->
+  <rect x="20" y="20" width="1240" height="1640" fill="none" stroke="#1c3f6e" stroke-width="0.8"/>
+  <rect x="26" y="26" width="1228" height="1628" fill="none" stroke="#0d2548" stroke-width="0.6"/>
+
+  <!-- ================= HEADER ================= -->
+  <g>
+    <text x="40"  y="52"  class="mono section">PATENT FLOWCHART / BLUEPRINT v1.0</text>
+    <text x="40"  y="78"  class="mono title-main">ONTOLOGY-DRIVEN KG + RISK · PROCESS FLOW</text>
+    <text x="40"  y="98"  class="han  title-sub">基于可编辑本体的运营知识图谱构建与多因子风险评估 — 技术流程图</text>
+    <line x1="40" y1="110" x2="1240" y2="110" stroke="#00b4d8" stroke-width="0.8"/>
+  </g>
+
+  <!-- ============================================================
+       PHASE I : 本体配置加载与管理
+       band y = 130..310
+       ============================================================ -->
+  <g>
+    <!-- phase band / corner brackets -->
+    <path d="M 40 130 L 40 310 M 40 130 L 100 130 M 40 310 L 100 310" stroke="#00b4d8" stroke-width="1" fill="none"/>
+    <text x="50" y="162" class="mono phase-num">I</text>
+    <text x="72" y="152" class="mono phase-en">PHASE · CONFIG</text>
+    <text x="72" y="166" class="han  phase-zh">本体配置加载与管理</text>
+
+    <!-- start capsule -->
+    <rect x="190" y="140" width="220" height="44" rx="22" fill="#0d2a4f" stroke="#00b4d8" stroke-width="1.4"/>
+    <text x="300" y="160" text-anchor="middle" class="mono node-en" style="fill:#06d6a0;">START</text>
+    <text x="300" y="176" text-anchor="middle" class="han node-zh">用户上传本体 JSON 配置</text>
+
+    <!-- arrow -->
+    <line x1="410" y1="162" x2="470" y2="162" stroke="#00b4d8" stroke-width="1.2" marker-end="url(#arr-cyan)"/>
+
+    <!-- process: ① 接入 -->
+    <rect x="470" y="140" width="200" height="44" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1" rx="2"/>
+    <circle cx="484" cy="152" r="9" fill="#00b4d8"/>
+    <text x="484" y="156" text-anchor="middle" class="mono badge">1</text>
+    <text x="575" y="160" text-anchor="middle" class="mono node-en">CONFIG-IN</text>
+    <text x="575" y="176" text-anchor="middle" class="han node-zh">接入模块 · 读取 JSON</text>
+
+    <line x1="670" y1="162" x2="730" y2="162" stroke="#00b4d8" stroke-width="1.2" marker-end="url(#arr-cyan)"/>
+
+    <!-- process: ④ 合并 -->
+    <rect x="730" y="140" width="240" height="44" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1" rx="2"/>
+    <circle cx="744" cy="152" r="9" fill="#00b4d8"/>
+    <text x="744" y="156" text-anchor="middle" class="mono badge">4</text>
+    <text x="855" y="160" text-anchor="middle" class="mono node-en">CONFIG-MGR · MERGE</text>
+    <text x="855" y="176" text-anchor="middle" class="han node-zh">与默认本体合并 · 补全</text>
+
+    <!-- vertical arrow down from ④ -->
+    <line x1="850" y1="184" x2="850" y2="216" stroke="#00b4d8" stroke-width="1.2" marker-end="url(#arr-cyan)"/>
+
+    <!-- diamond: 校验通过? -->
+    <polygon points="850,220 940,250 850,280 760,250" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+    <text x="850" y="247" text-anchor="middle" class="mono node-en" style="font-size:9px;">VALIDATE</text>
+    <text x="850" y="263" text-anchor="middle" class="han node-zh" style="font-size:11px;">校验通过?</text>
+
+    <!-- YES arrow down -->
+    <line x1="850" y1="280" x2="850" y2="298" stroke="#06d6a0" stroke-width="1.2" marker-end="url(#arr-green)"/>
+    <text x="862" y="292" class="mono edge-label ok">YES</text>
+
+    <!-- NO arrow right to terminal -->
+    <line x1="940" y1="250" x2="1012" y2="250" stroke="#f77f00" stroke-width="1.2" marker-end="url(#arr-orange)"/>
+    <text x="960" y="243" class="mono edge-label warn">NO / 错误</text>
+    <rect x="1012" y="228" width="200" height="44" rx="22" fill="#0d1f3c" stroke="#f77f00" stroke-width="1.2"/>
+    <text x="1112" y="248" text-anchor="middle" class="mono node-en warn">ABORT · ERROR</text>
+    <text x="1112" y="264" text-anchor="middle" class="han node-zh warn">拒绝加载 / 回执错误</text>
+
+    <!-- process: enabled 裁剪 -->
+    <rect x="730" y="298" width="240" height="44" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1" rx="2"/>
+    <text x="850" y="316" text-anchor="middle" class="mono node-en">RUNTIME TRIM · enabled</text>
+    <text x="850" y="332" text-anchor="middle" class="han node-zh">按 enabled 动态裁剪活跃子图</text>
+  </g>
+
+  <!-- big vertical spine arrow between phases -->
+  <line x1="620" y1="350" x2="620" y2="392" stroke="#00b4d8" stroke-width="1.4" marker-end="url(#arr-cyan)"/>
+  <text x="632" y="376" class="mono edge-label">active ontology</text>
+
+  <!-- connector from Phase I output (enabled trim) into spine -->
+  <polyline points="730,320 700,320 700,360 620,360" fill="none" stroke="#00b4d8" stroke-width="1.2"/>
+
+  <!-- ============================================================
+       PHASE II : 运营数据聚合
+       band y = 380..560
+       ============================================================ -->
+  <g>
+    <path d="M 40 380 L 40 560 M 40 380 L 100 380 M 40 560 L 100 560" stroke="#00b4d8" stroke-width="1" fill="none"/>
+    <text x="50" y="412" class="mono phase-num">II</text>
+    <text x="85" y="402" class="mono phase-en">PHASE · AGGREGATE</text>
+    <text x="85" y="416" class="han  phase-zh">运营数据聚合</text>
+
+    <!-- ② pulls -->
+    <rect x="190" y="390" width="260" height="44" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1" rx="2"/>
+    <circle cx="204" cy="402" r="9" fill="#00b4d8"/>
+    <text x="204" y="406" text-anchor="middle" class="mono badge">2</text>
+    <text x="325" y="410" text-anchor="middle" class="mono node-en">SQLITE PULL · TIME-SERIES</text>
+    <text x="325" y="426" text-anchor="middle" class="han node-zh">拉取告警全量时序数据</text>
+
+    <line x1="450" y1="412" x2="510" y2="412" stroke="#00b4d8" stroke-width="1.2" marker-end="url(#arr-cyan)"/>
+
+    <!-- artifact: raw set -->
+    <path d="M 515 390 L 700 390 L 720 412 L 700 434 L 515 434 Z" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1" stroke-dasharray="3,2"/>
+    <text x="610" y="410" text-anchor="middle" class="mono node-en">RAW ALERT SET</text>
+    <text x="610" y="426" text-anchor="middle" class="han node-zh">原始告警时序</text>
+
+    <!-- ⑤ fork header -->
+    <line x1="610" y1="434" x2="610" y2="456" stroke="#00b4d8" stroke-width="1.2" marker-end="url(#arr-cyan)"/>
+
+    <!-- fork bar -->
+    <rect x="140" y="458" width="950" height="4" fill="#00b4d8"/>
+    <circle cx="140" cy="460" r="4" fill="#00b4d8"/>
+    <circle cx="1090" cy="460" r="4" fill="#00b4d8"/>
+    <text x="1100" y="456" class="mono edge-label">FORK · parallel aggregate</text>
+
+    <!-- four parallel aggregations from ⑤ -->
+    <g>
+      <rect x="140" y="478" width="210" height="62" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1" rx="2"/>
+      <circle cx="154" cy="490" r="9" fill="#00b4d8"/>
+      <text x="154" y="494" text-anchor="middle" class="mono badge">5</text>
+      <text x="245" y="498" text-anchor="middle" class="mono node-en">HOT-REGION</text>
+      <text x="245" y="514" text-anchor="middle" class="han node-zh">热点区域聚合</text>
+      <text x="245" y="530" text-anchor="middle" class="mono node-note">count() group by area</text>
+      <line x1="245" y1="478" x2="245" y2="462" stroke="#00b4d8" stroke-width="1.2"/>
+    </g>
+    <g>
+      <rect x="380" y="478" width="210" height="62" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1" rx="2"/>
+      <circle cx="394" cy="490" r="9" fill="#00b4d8"/>
+      <text x="394" y="494" text-anchor="middle" class="mono badge">5</text>
+      <text x="485" y="498" text-anchor="middle" class="mono node-en">TOP-N DEVICES</text>
+      <text x="485" y="514" text-anchor="middle" class="han node-zh">设备 Top-N</text>
+      <text x="485" y="530" text-anchor="middle" class="mono node-note">order by alert_cnt desc</text>
+      <line x1="485" y1="478" x2="485" y2="462" stroke="#00b4d8" stroke-width="1.2"/>
+    </g>
+    <g>
+      <rect x="620" y="478" width="210" height="62" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1" rx="2"/>
+      <circle cx="634" cy="490" r="9" fill="#00b4d8"/>
+      <text x="634" y="494" text-anchor="middle" class="mono badge">5</text>
+      <text x="725" y="498" text-anchor="middle" class="mono node-en">LOW-CONF EVENTS</text>
+      <text x="725" y="514" text-anchor="middle" class="han node-zh">低置信事件筛选</text>
+      <text x="725" y="530" text-anchor="middle" class="mono node-note">filter conf &lt; threshold</text>
+      <line x1="725" y1="478" x2="725" y2="462" stroke="#00b4d8" stroke-width="1.2"/>
+    </g>
+    <g>
+      <rect x="860" y="478" width="230" height="62" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1" rx="2"/>
+      <circle cx="874" cy="490" r="9" fill="#00b4d8"/>
+      <text x="874" y="494" text-anchor="middle" class="mono badge">5</text>
+      <text x="975" y="498" text-anchor="middle" class="mono node-en">FREQ · AVG CONF</text>
+      <text x="975" y="514" text-anchor="middle" class="han node-zh">频次 · 平均置信度</text>
+      <text x="975" y="530" text-anchor="middle" class="mono node-note">freq , mean(conf)</text>
+      <line x1="975" y1="478" x2="975" y2="462" stroke="#00b4d8" stroke-width="1.2"/>
+    </g>
+
+    <!-- merge bar -->
+    <rect x="140" y="556" width="950" height="4" fill="#00b4d8"/>
+    <circle cx="140" cy="558" r="4" fill="#00b4d8"/>
+    <circle cx="1090" cy="558" r="4" fill="#00b4d8"/>
+    <line x1="245" y1="540" x2="245" y2="556" stroke="#00b4d8" stroke-width="1.2"/>
+    <line x1="485" y1="540" x2="485" y2="556" stroke="#00b4d8" stroke-width="1.2"/>
+    <line x1="725" y1="540" x2="725" y2="556" stroke="#00b4d8" stroke-width="1.2"/>
+    <line x1="975" y1="540" x2="975" y2="556" stroke="#00b4d8" stroke-width="1.2"/>
+    <text x="1100" y="554" class="mono edge-label">JOIN</text>
+  </g>
+
+  <!-- spine -->
+  <line x1="620" y1="568" x2="620" y2="598" stroke="#00b4d8" stroke-width="1.4" marker-end="url(#arr-cyan)"/>
+
+  <!-- standardized artifact feeding phase III -->
+  <path d="M 430 602 L 790 602 L 810 624 L 790 646 L 430 646 L 410 624 Z" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="610" y="620" text-anchor="middle" class="mono node-en">STANDARDIZED METRICS SET</text>
+  <text x="610" y="636" text-anchor="middle" class="han node-zh">标准化统计指标（区域/设备/事件/置信）</text>
+
+  <line x1="620" y1="646" x2="620" y2="678" stroke="#00b4d8" stroke-width="1.4" marker-end="url(#arr-cyan)"/>
+
+  <!-- ============================================================
+       PHASE III : 自动化图谱构建
+       band y = 660..890
+       ============================================================ -->
+  <g>
+    <path d="M 40 660 L 40 890 M 40 660 L 100 660 M 40 890 L 100 890" stroke="#00b4d8" stroke-width="1" fill="none"/>
+    <text x="50" y="692" class="mono phase-num">III</text>
+    <text x="98" y="682" class="mono phase-en">PHASE · GRAPH BUILD</text>
+    <text x="98" y="696" class="han  phase-zh">自动化图谱构建（两步式）</text>
+
+    <!-- outer container highlighting ⑥ core -->
+    <rect x="140" y="678" width="950" height="200" fill="#0d2a4f" stroke="#00b4d8" stroke-width="1.4" rx="2"/>
+    <rect x="146" y="684" width="938" height="188" fill="none" stroke="#00b4d8" stroke-width="0.5" stroke-dasharray="2,2"/>
+    <circle cx="160" cy="696" r="11" fill="#00b4d8"/>
+    <text x="160" y="700" text-anchor="middle" class="mono badge">6</text>
+    <text x="200" y="700" class="mono node-en">GRAPH AUTO-BUILDER ★</text>
+    <text x="410" y="700" class="han node-zh">两步式构建核心</text>
+
+    <!-- Step 1: nodes -->
+    <rect x="180" y="724" width="400" height="120" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1" rx="2"/>
+    <text x="380" y="746" text-anchor="middle" class="mono node-en">STEP 1 · NODE GENERATION</text>
+    <text x="380" y="762" text-anchor="middle" class="han node-zh">节点生成（按启用实体类型）</text>
+    <line x1="195" y1="772" x2="565" y2="772" stroke="#00b4d8" stroke-width="0.5" stroke-dasharray="3,2"/>
+    <text x="380" y="790" text-anchor="middle" class="mono node-note">• REGION · 区域节点        • DEVICE · 设备节点</text>
+    <text x="380" y="806" text-anchor="middle" class="mono node-note">• ALERT  · 告警事件节点    • ALGORITHM · 算法节点</text>
+    <text x="380" y="822" text-anchor="middle" class="mono node-note">• MEDIA  · 媒体处理节点    • SITE · 站址节点</text>
+    <text x="380" y="838" text-anchor="middle" class="mono node-note">map aggregated_fields → nodes[type]</text>
+
+    <!-- arrow step 1 → step 2 -->
+    <line x1="580" y1="784" x2="650" y2="784" stroke="#00b4d8" stroke-width="1.4" marker-end="url(#arr-cyan)"/>
+    <text x="615" y="778" text-anchor="middle" class="mono edge-label">then</text>
+
+    <!-- Step 2: edges -->
+    <rect x="650" y="724" width="400" height="120" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1" rx="2"/>
+    <text x="850" y="746" text-anchor="middle" class="mono node-en">STEP 2 · EDGE GENERATION</text>
+    <text x="850" y="762" text-anchor="middle" class="han node-zh">边生成（按启用关系类型）</text>
+    <line x1="665" y1="772" x2="1035" y2="772" stroke="#00b4d8" stroke-width="0.5" stroke-dasharray="3,2"/>
+    <text x="850" y="790" text-anchor="middle" class="mono node-note">device  — belongs_to →  region</text>
+    <text x="850" y="806" text-anchor="middle" class="mono node-note">event   — occurs_on   →  device</text>
+    <text x="850" y="822" text-anchor="middle" class="mono node-note">event   — uses        →  algorithm</text>
+    <text x="850" y="838" text-anchor="middle" class="mono node-note">advice  — targets     →  event</text>
+  </g>
+
+  <!-- feedback (⑨ → ⑥) orange dashed loop anchored on the container right edge -->
+  <path d="M 1090 740 Q 1180 740 1180 1160 Q 1180 1260 860 1260" fill="none" stroke="#f77f00" stroke-width="1.4" stroke-dasharray="6,3" marker-end="url(#arr-orange)"/>
+  <text x="1195" y="900" class="mono edge-label warn">feedback</text>
+  <text x="1195" y="914" class="mono edge-label warn">⑨ → ⑥</text>
+  <text x="1195" y="928" class="mono edge-label warn">write-back</text>
+
+  <!-- spine -->
+  <line x1="620" y1="890" x2="620" y2="920" stroke="#00b4d8" stroke-width="1.4" marker-end="url(#arr-cyan)"/>
+
+  <!-- artifact: Gₜ -->
+  <path d="M 470 922 L 750 922 L 770 944 L 750 966 L 470 966 L 450 944 Z" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="610" y="940" text-anchor="middle" class="mono node-en">OPERATIONAL KG · Gₜ</text>
+  <text x="610" y="956" text-anchor="middle" class="han node-zh">运营知识图谱（第 t 轮）</text>
+
+  <line x1="620" y1="966" x2="620" y2="996" stroke="#00b4d8" stroke-width="1.4" marker-end="url(#arr-cyan)"/>
+
+  <!-- ============================================================
+       PHASE IV : 多因子风险评分
+       band y = 980..1210
+       ============================================================ -->
+  <g>
+    <path d="M 40 980 L 40 1210 M 40 980 L 100 980 M 40 1210 L 100 1210" stroke="#00b4d8" stroke-width="1" fill="none"/>
+    <text x="50" y="1012" class="mono phase-num">IV</text>
+    <text x="85" y="1002" class="mono phase-en">PHASE · RISK SCORE</text>
+    <text x="85" y="1016" class="han  phase-zh">多因子风险评分（三级联动）</text>
+
+    <!-- fork bar -->
+    <rect x="140" y="1000" width="950" height="4" fill="#00b4d8"/>
+    <circle cx="140" cy="1002" r="4" fill="#00b4d8"/>
+    <circle cx="1090" cy="1002" r="4" fill="#00b4d8"/>
+    <text x="1100" y="998" class="mono edge-label">FORK</text>
+
+    <!-- 区域风险 -->
+    <g>
+      <rect x="170" y="1024" width="290" height="74" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1" rx="2"/>
+      <circle cx="184" cy="1036" r="9" fill="#00b4d8"/>
+      <text x="184" y="1040" text-anchor="middle" class="mono badge">7</text>
+      <text x="315" y="1044" text-anchor="middle" class="mono node-en">STEP 1 · REGION RISK</text>
+      <text x="315" y="1062" text-anchor="middle" class="han node-zh">区域风险分 R_area</text>
+      <text x="315" y="1082" text-anchor="middle" class="mono formula">= f(event_freq, 1 − avg_conf)</text>
+      <line x1="315" y1="1024" x2="315" y2="1004" stroke="#00b4d8" stroke-width="1.2"/>
+    </g>
+    <!-- 设备风险 -->
+    <g>
+      <rect x="490" y="1024" width="290" height="74" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1" rx="2"/>
+      <circle cx="504" cy="1036" r="9" fill="#00b4d8"/>
+      <text x="504" y="1040" text-anchor="middle" class="mono badge">7</text>
+      <text x="635" y="1044" text-anchor="middle" class="mono node-en">STEP 2 · DEVICE RISK</text>
+      <text x="635" y="1062" text-anchor="middle" class="han node-zh">设备风险分 R_dev</text>
+      <text x="635" y="1082" text-anchor="middle" class="mono formula">= f(event_freq, 1 − avg_conf)</text>
+      <line x1="635" y1="1024" x2="635" y2="1004" stroke="#00b4d8" stroke-width="1.2"/>
+    </g>
+    <!-- annotation column -->
+    <g>
+      <rect x="810" y="1024" width="280" height="74" fill="none" stroke="#00b4d8" stroke-width="0.8" stroke-dasharray="4,3" rx="2"/>
+      <text x="950" y="1044" text-anchor="middle" class="mono phase-en">NOTE · f()</text>
+      <text x="950" y="1062" text-anchor="middle" class="han node-note" style="font-size:10px;">加权融合：频次与置信互补项</text>
+      <text x="950" y="1082" text-anchor="middle" class="mono node-note">weighted_sum(α·freq, β·(1−conf))</text>
+    </g>
+
+    <!-- merge then sequential event risk (depends on both) -->
+    <line x1="315" y1="1098" x2="315" y2="1124" stroke="#00b4d8" stroke-width="1.2"/>
+    <line x1="635" y1="1098" x2="635" y2="1124" stroke="#00b4d8" stroke-width="1.2"/>
+    <rect x="140" y="1124" width="950" height="4" fill="#00b4d8"/>
+    <line x1="620" y1="1128" x2="620" y2="1144" stroke="#00b4d8" stroke-width="1.4" marker-end="url(#arr-cyan)"/>
+
+    <!-- 事件风险 -->
+    <rect x="350" y="1146" width="540" height="52" fill="#0d2a4f" stroke="#00b4d8" stroke-width="1.4" rx="2"/>
+    <circle cx="364" cy="1158" r="9" fill="#00b4d8"/>
+    <text x="364" y="1162" text-anchor="middle" class="mono badge">7</text>
+    <text x="620" y="1166" text-anchor="middle" class="mono node-en">STEP 3 · EVENT RISK (3-LEVEL LINKAGE)</text>
+    <text x="620" y="1184" text-anchor="middle" class="mono formula" style="fill:#06d6a0;">R_event = g(R_area, R_dev, event_self_conf)</text>
+  </g>
+
+  <line x1="620" y1="1198" x2="620" y2="1228" stroke="#00b4d8" stroke-width="1.4" marker-end="url(#arr-cyan)"/>
+
+  <!-- artifact: risk quantified -->
+  <path d="M 430 1230 L 790 1230 L 810 1252 L 790 1274 L 430 1274 L 410 1252 Z" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="610" y="1248" text-anchor="middle" class="mono node-en">RISK-QUANTIFIED ENTITY SET</text>
+  <text x="610" y="1264" text-anchor="middle" class="han node-zh">全量实体风险量化集</text>
+
+  <line x1="620" y1="1274" x2="620" y2="1302" stroke="#00b4d8" stroke-width="1.4" marker-end="url(#arr-cyan)"/>
+
+  <!-- ============================================================
+       PHASE V : 事件血缘 + 处置建议
+       band y = 1290..1500
+       ============================================================ -->
+  <g>
+    <path d="M 40 1290 L 40 1500 M 40 1290 L 100 1290 M 40 1500 L 100 1500" stroke="#00b4d8" stroke-width="1" fill="none"/>
+    <text x="50" y="1322" class="mono phase-num">V</text>
+    <text x="70" y="1312" class="mono phase-en">PHASE · LINEAGE + DISPOSE</text>
+    <text x="70" y="1326" class="han  phase-zh">事件血缘 + 处置建议生成</text>
+
+    <!-- lineage ⑧ (left) parallel to sort ⑨.1 (right) -->
+    <rect x="140" y="1308" width="440" height="64" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1" rx="2"/>
+    <circle cx="154" cy="1320" r="9" fill="#00b4d8"/>
+    <text x="154" y="1324" text-anchor="middle" class="mono badge">8</text>
+    <text x="360" y="1328" text-anchor="middle" class="mono node-en">EVENT LINEAGE · 5-STAGE TIMELINE</text>
+    <text x="360" y="1346" text-anchor="middle" class="han node-zh">接入 → 媒体处理 → 图谱关联 → 分析 → 处置</text>
+    <text x="360" y="1362" text-anchor="middle" class="mono node-note">evidence_fields mapped &amp; persisted</text>
+
+    <rect x="640" y="1308" width="450" height="64" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1" rx="2"/>
+    <circle cx="654" cy="1320" r="9" fill="#00b4d8"/>
+    <text x="654" y="1324" text-anchor="middle" class="mono badge">9</text>
+    <text x="865" y="1328" text-anchor="middle" class="mono node-en">STEP 1 · RANK BY RISK</text>
+    <text x="865" y="1346" text-anchor="middle" class="han node-zh">实体节点按风险分数降序排序</text>
+    <text x="865" y="1362" text-anchor="middle" class="mono node-note">order by risk_score desc</text>
+
+    <!-- merge to diamond -->
+    <line x1="360" y1="1372" x2="360" y2="1398" stroke="#00b4d8" stroke-width="1.2"/>
+    <line x1="865" y1="1372" x2="865" y2="1398" stroke="#00b4d8" stroke-width="1.2"/>
+    <rect x="140" y="1398" width="950" height="4" fill="#00b4d8"/>
+    <line x1="620" y1="1402" x2="620" y2="1420" stroke="#00b4d8" stroke-width="1.4" marker-end="url(#arr-cyan)"/>
+
+    <!-- diamond: risk level? -->
+    <polygon points="620,1424 740,1456 620,1488 500,1456" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+    <text x="620" y="1452" text-anchor="middle" class="mono node-en" style="font-size:10px;">RISK LEVEL ?</text>
+    <text x="620" y="1468" text-anchor="middle" class="han node-zh" style="font-size:11px;">风险等级</text>
+
+    <!-- three branches: high / medium / low -->
+    <line x1="500" y1="1456" x2="310" y2="1456" stroke="#00b4d8" stroke-width="1.2" marker-end="url(#arr-cyan)"/>
+    <text x="400" y="1450" text-anchor="middle" class="mono edge-label warn">HIGH</text>
+    <rect x="140" y="1434" width="170" height="44" fill="#0d1f3c" stroke="#f77f00" stroke-width="1.2" rx="2"/>
+    <text x="225" y="1454" text-anchor="middle" class="mono node-en warn">INSPECT</text>
+    <text x="225" y="1470" text-anchor="middle" class="han node-zh">巡检建议</text>
+
+    <line x1="620" y1="1488" x2="620" y2="1504" stroke="#00b4d8" stroke-width="1.2" marker-end="url(#arr-cyan)"/>
+    <text x="630" y="1500" class="mono edge-label">MEDIUM</text>
+
+    <line x1="740" y1="1456" x2="930" y2="1456" stroke="#00b4d8" stroke-width="1.2" marker-end="url(#arr-cyan)"/>
+    <text x="830" y="1450" text-anchor="middle" class="mono edge-label ok">LOW</text>
+    <rect x="930" y="1434" width="180" height="44" fill="#0d1f3c" stroke="#06d6a0" stroke-width="1.2" rx="2"/>
+    <text x="1020" y="1454" text-anchor="middle" class="mono node-en ok">SAMPLE-TUNING</text>
+    <text x="1020" y="1470" text-anchor="middle" class="han node-zh">样本治理建议</text>
+
+    <rect x="530" y="1504" width="180" height="44" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1.2" rx="2"/>
+    <text x="620" y="1524" text-anchor="middle" class="mono node-en">RE-REVIEW</text>
+    <text x="620" y="1540" text-anchor="middle" class="han node-zh">复核建议</text>
+  </g>
+
+  <!-- merge arrows back to write-back (feedback into ⑥) -->
+  <polyline points="225,1478 225,1560 620,1560 620,1560 1020,1560 1020,1478" fill="none" stroke="#00b4d8" stroke-width="1.0" stroke-dasharray="4,3"/>
+  <line x1="620" y1="1548" x2="620" y2="1560" stroke="#00b4d8" stroke-width="1.0" stroke-dasharray="4,3"/>
+  <line x1="860" y1="1560" x2="860" y2="1572" stroke="#f77f00" stroke-width="1.4" stroke-dasharray="6,3" marker-end="url(#arr-orange)"/>
+  <text x="870" y="1568" class="mono edge-label warn">⑨ write-back</text>
+
+  <!-- anchor point for feedback loop continuation (visually links to ⑨ → ⑥ long arrow drawn earlier) -->
+
+  <!-- ============================================================
+       PHASE VI : 子图检索 + 业务应用
+       band y = 1580..1640
+       ============================================================ -->
+  <g transform="translate(0,-1)">
+    <path d="M 40 1582 L 40 1640 M 40 1582 L 100 1582 M 40 1640 L 100 1640" stroke="#00b4d8" stroke-width="1" fill="none"/>
+    <text x="50" y="1610" class="mono phase-num">VI</text>
+    <text x="85" y="1600" class="mono phase-en">PHASE · SERVE</text>
+    <text x="85" y="1614" class="han  phase-zh">子图检索 + 业务应用</text>
+
+    <!-- start capsule: user input -->
+    <rect x="180" y="1592" width="180" height="40" rx="20" fill="#0d2a4f" stroke="#00b4d8" stroke-width="1.2"/>
+    <text x="270" y="1608" text-anchor="middle" class="mono node-en" style="fill:#06d6a0;">START · @③ API</text>
+    <text x="270" y="1624" text-anchor="middle" class="han node-zh" style="font-size:11px;">keyword + depth=N</text>
+
+    <line x1="360" y1="1612" x2="398" y2="1612" stroke="#00b4d8" stroke-width="1.2" marker-end="url(#arr-cyan)"/>
+
+    <rect x="400" y="1592" width="140" height="40" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1" rx="2"/>
+    <circle cx="412" cy="1604" r="9" fill="#00b4d8"/>
+    <text x="412" y="1608" text-anchor="middle" class="mono badge">10</text>
+    <text x="475" y="1608" text-anchor="middle" class="mono node-en" style="font-size:9px;">PREFILTER</text>
+    <text x="475" y="1624" text-anchor="middle" class="han node-zh" style="font-size:10px;">按 enabled 预过滤</text>
+
+    <line x1="540" y1="1612" x2="578" y2="1612" stroke="#00b4d8" stroke-width="1.2" marker-end="url(#arr-cyan)"/>
+
+    <rect x="580" y="1592" width="130" height="40" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1" rx="2"/>
+    <text x="645" y="1608" text-anchor="middle" class="mono node-en" style="font-size:9px;">BFS EXPAND</text>
+    <text x="645" y="1624" text-anchor="middle" class="han node-zh" style="font-size:10px;">N-跳无向扩展</text>
+
+    <line x1="710" y1="1612" x2="748" y2="1612" stroke="#00b4d8" stroke-width="1.2" marker-end="url(#arr-cyan)"/>
+
+    <rect x="750" y="1592" width="130" height="40" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1" rx="2"/>
+    <circle cx="762" cy="1604" r="9" fill="#00b4d8"/>
+    <text x="762" y="1608" text-anchor="middle" class="mono badge">11</text>
+    <text x="815" y="1608" text-anchor="middle" class="mono node-en" style="font-size:9px;">VISUALIZE</text>
+    <text x="815" y="1624" text-anchor="middle" class="han node-zh" style="font-size:10px;">子图可视化</text>
+
+    <line x1="880" y1="1612" x2="918" y2="1612" stroke="#00b4d8" stroke-width="1.2" marker-end="url(#arr-cyan)"/>
+
+    <!-- end capsule -->
+    <rect x="920" y="1592" width="200" height="40" rx="20" fill="#0d2a4f" stroke="#06d6a0" stroke-width="1.4"/>
+    <circle cx="934" cy="1604" r="9" fill="#06d6a0"/>
+    <text x="934" y="1608" text-anchor="middle" class="mono badge">12</text>
+    <text x="1025" y="1608" text-anchor="middle" class="mono node-en ok">END · BIZ ADAPTER</text>
+    <text x="1025" y="1624" text-anchor="middle" class="han node-zh" style="font-size:10px;">业务场景消费</text>
+  </g>
+
+  <!-- ================= LEGEND + TITLE BLOCK ================= -->
+  <g>
+    <!-- mini legend -->
+    <rect x="40" y="1082" width="70" height="88" fill="#0d1f3c" stroke="#00b4d8" stroke-width="0.6" rx="2"/>
+    <text x="75" y="1098" text-anchor="middle" class="mono section" style="font-size:8px;">SHAPES</text>
+    <line x1="40" y1="1103" x2="110" y2="1103" stroke="#00b4d8" stroke-width="0.3"/>
+
+    <rect x="54" y="1110" width="42" height="12" rx="6" fill="#0d2a4f" stroke="#00b4d8" stroke-width="0.8"/>
+    <text x="75" y="1133" text-anchor="middle" class="mono node-note">start/end</text>
+
+    <rect x="54" y="1140" width="42" height="12" rx="2" fill="#0d1f3c" stroke="#00b4d8" stroke-width="0.8"/>
+    <text x="75" y="1162" text-anchor="middle" class="mono node-note">process</text>
+
+    <polygon points="75,1170 92,1178 75,1186 58,1178" fill="#0d1f3c" stroke="#00b4d8" stroke-width="0.8"/>
+  </g>
+
+  <!-- North marker / orient badge -->
+  <g transform="translate(1200,130)">
+    <line x1="0" y1="0" x2="0" y2="22" stroke="#00b4d8" stroke-width="1"/>
+    <polygon points="-4,14 0,24 4,14" fill="#00b4d8"/>
+    <text x="0" y="-4" text-anchor="middle" class="mono" style="font-size:9px;fill:#48cae4;">FLOW ↓</text>
+  </g>
+</svg>

@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 920" width="1200" height="920">
+<style>
+  text { font-family: 'Courier New', 'Lucida Console', 'PingFang SC', monospace; }
+  .title { font-size: 18px; font-weight: 700; fill: #ffffff; letter-spacing: 0.06em; }
+  .subtitle { font-size: 10px; fill: #48cae4; letter-spacing: 0.05em; }
+  .phase-label { font-size: 9px; font-weight: 700; fill: #00b4d8; letter-spacing: 0.1em; }
+  .node-title { font-size: 12px; font-weight: 700; fill: #caf0f8; }
+  .node-sub { font-size: 9px; fill: #48cae4; opacity: 0.85; }
+  .node-num { font-size: 10px; font-weight: 700; fill: #0a1628; }
+  .arrow-label { font-size: 9px; fill: #90e0ef; letter-spacing: 0.04em; }
+  .path-label { font-size: 10px; font-weight: 700; fill: #06d6a0; letter-spacing: 0.04em; }
+  .legend-text { font-size: 9px; fill: #90e0ef; }
+  .tb-title { font-size: 9px; fill: #90e0ef; letter-spacing: 0.08em; }
+  .tb-main { font-size: 12px; font-weight: 700; fill: #00b4d8; }
+</style>
+<defs>
+  <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+    <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#112240" stroke-width="0.5"/>
+  </pattern>
+  <marker id="ac" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+    <polygon points="0 0, 8 3, 0 6" fill="#00b4d8"/>
+  </marker>
+  <marker id="ag" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+    <polygon points="0 0, 8 3, 0 6" fill="#06d6a0"/>
+  </marker>
+  <marker id="ao" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+    <polygon points="0 0, 8 3, 0 6" fill="#f77f00"/>
+  </marker>
+  <marker id="aw" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+    <polygon points="0 0, 8 3, 0 6" fill="#90e0ef"/>
+  </marker>
+  <filter id="glow" x="-10%" y="-10%" width="120%" height="120%">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur"/>
+    <feFlood flood-color="#00b4d8" flood-opacity="0.15" result="color"/>
+    <feComposite in="color" in2="blur" operator="in" result="glow"/>
+    <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<rect width="1200" height="920" fill="#0a1628"/>
+<rect width="1200" height="920" fill="url(#grid)" opacity="0.6"/>
+<text x="600" y="28" text-anchor="middle" class="title">SKILL 知识单元自动生成方法流程图</text>
+<text x="600" y="44" text-anchor="middle" class="subtitle">一种多格式文档的 Skill 知识单元自动生成方法与系统 — 专利技术交底</text>
+<rect x="68" y="55" width="1064" height="145" rx="2" fill="#0d1f3c" fill-opacity="0.3" stroke="#00b4d8" stroke-width="0.6" stroke-dasharray="8,4" opacity="0.5"/>
+<text x="80" y="69" class="phase-label">PHASE 1  文档接入与识别</text>
+<rect x="68" y="215" width="1064" height="225" rx="2" fill="#0d1f3c" fill-opacity="0.3" stroke="#00b4d8" stroke-width="0.6" stroke-dasharray="8,4" opacity="0.5"/>
+<text x="80" y="229" class="phase-label">PHASE 2  路由分发与分管道解析</text>
+<rect x="68" y="455" width="1064" height="195" rx="2" fill="#0d1f3c" fill-opacity="0.3" stroke="#00b4d8" stroke-width="0.6" stroke-dasharray="8,4" opacity="0.5"/>
+<text x="80" y="469" class="phase-label">PHASE 3  检查清单双路径生成</text>
+<rect x="68" y="665" width="1064" height="190" rx="2" fill="#0d1f3c" fill-opacity="0.3" stroke="#00b4d8" stroke-width="0.6" stroke-dasharray="8,4" opacity="0.5"/>
+<text x="80" y="679" class="phase-label">PHASE 4  Skill 草稿生成与落地联动</text>
+<rect x="420" y="70" width="320" height="46" rx="2" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<circle cx="436" cy="93" r="10" fill="#00b4d8"/>
+<text x="436" y="97" text-anchor="middle" class="node-num">1</text>
+<text x="454" y="89" class="node-title">多格式文档接入模块</text>
+<text x="454" y="103" class="node-sub">Markdown / Word / PDF / Excel</text>
+<rect x="420" y="145" width="320" height="46" rx="2" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<circle cx="436" cy="168" r="10" fill="#00b4d8"/>
+<text x="436" y="172" text-anchor="middle" class="node-num">2</text>
+<text x="454" y="164" class="node-title">文件扩展名识别模块</text>
+<text x="454" y="178" class="node-sub">识别校验文档格式类型</text>
+<path d="M 580,116 L 580,145" stroke="#00b4d8" stroke-width="1.2" fill="none" marker-end="url(#ac)"/>
+<rect x="578.0" y="124" width="36" height="13" rx="2" fill="#0a1628" opacity="0.85"/>
+<text x="596" y="133" text-anchor="middle" class="arrow-label">上传文档</text>
+<path d="M 580,191 L 580,222" stroke="#00b4d8" stroke-width="1.2" fill="none" marker-end="url(#ac)"/>
+<rect x="560.5" y="201" width="71" height="13" rx="2" fill="#0a1628" opacity="0.85"/>
+<text x="596" y="210" text-anchor="middle" class="arrow-label">格式信息+原始文档</text>
+<polygon points="580,227 720,255 580,283 440,255" fill="#0d1f3c" stroke="#f77f00" stroke-width="1.2"/>
+<circle cx="520" cy="255" r="10" fill="#f77f00"/>
+<text x="520" y="259" text-anchor="middle" class="node-num">3</text>
+<text x="590" y="259" text-anchor="middle" class="node-title" fill="#f77f00">格式路由分支</text>
+<rect x="82" y="320" width="210" height="68" rx="2" fill="#0d1f3c" stroke="#06d6a0" stroke-width="1.2"/>
+<rect x="82" y="320" width="210" height="3" rx="1" fill="#06d6a0" opacity="0.6"/>
+<circle cx="98" cy="342" r="10" fill="#06d6a0"/>
+<text x="98" y="346" text-anchor="middle" class="node-num">4</text>
+<text x="116" y="346" class="node-title" font-size="11">Excel 解析模块</text>
+<text x="94" y="364" class="node-sub">必备Sheet合规校验</text>
+<text x="94" y="376" class="node-sub">核心信息→Markdown</text>
+<rect x="322" y="320" width="210" height="68" rx="2" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1.2"/>
+<rect x="322" y="320" width="210" height="3" rx="1" fill="#00b4d8" opacity="0.6"/>
+<circle cx="338" cy="342" r="10" fill="#00b4d8"/>
+<text x="338" y="346" text-anchor="middle" class="node-num">5</text>
+<text x="356" y="346" class="node-title" font-size="11">Markdown 解析模块</text>
+<text x="334" y="364" class="node-sub">标题层级+标签映射</text>
+<text x="334" y="376" class="node-sub">结构化解析</text>
+<rect x="562" y="320" width="210" height="68" rx="2" fill="#0d1f3c" stroke="#48cae4" stroke-width="1.2"/>
+<rect x="562" y="320" width="210" height="3" rx="1" fill="#48cae4" opacity="0.6"/>
+<circle cx="578" cy="342" r="10" fill="#48cae4"/>
+<text x="578" y="346" text-anchor="middle" class="node-num">6</text>
+<text x="596" y="346" class="node-title" font-size="11">Word 解析模块</text>
+<text x="574" y="364" class="node-sub">版式还原→Markdown</text>
+<text x="574" y="376" class="node-sub">复用MD解析逻辑</text>
+<rect x="802" y="320" width="210" height="68" rx="2" fill="#0d1f3c" stroke="#90e0ef" stroke-width="1.2"/>
+<rect x="802" y="320" width="210" height="3" rx="1" fill="#90e0ef" opacity="0.6"/>
+<circle cx="818" cy="342" r="10" fill="#90e0ef"/>
+<text x="818" y="346" text-anchor="middle" class="node-num">7</text>
+<text x="836" y="346" class="node-title" font-size="11">PDF 解析模块</text>
+<text x="814" y="364" class="node-sub">文本提取→Markdown</text>
+<text x="814" y="376" class="node-sub">复用MD解析逻辑</text>
+<path d="M 580,283 L 580,295 L 187,295 L 187,320" stroke="#f77f00" stroke-width="1.2" fill="none" marker-end="url(#ac)"/>
+<path d="M 580,283 L 580,295 L 427,295 L 427,320" stroke="#f77f00" stroke-width="1.2" fill="none" marker-end="url(#ac)"/>
+<path d="M 580,283 L 580,295 L 667,295 L 667,320" stroke="#f77f00" stroke-width="1.2" fill="none" marker-end="url(#ac)"/>
+<path d="M 580,283 L 580,295 L 907,295 L 907,320" stroke="#f77f00" stroke-width="1.2" fill="none" marker-end="url(#ac)"/>
+<line x1="187" y1="405" x2="907" y2="405" stroke="#00b4d8" stroke-width="0.8" opacity="0.4"/>
+<line x1="187" y1="388" x2="187" y2="405" stroke="#00b4d8" stroke-width="1" opacity="0.6"/>
+<circle cx="187" cy="405" r="3" fill="#00b4d8" opacity="0.6"/>
+<line x1="427" y1="388" x2="427" y2="405" stroke="#00b4d8" stroke-width="1" opacity="0.6"/>
+<circle cx="427" cy="405" r="3" fill="#00b4d8" opacity="0.6"/>
+<line x1="667" y1="388" x2="667" y2="405" stroke="#00b4d8" stroke-width="1" opacity="0.6"/>
+<circle cx="667" cy="405" r="3" fill="#00b4d8" opacity="0.6"/>
+<line x1="907" y1="388" x2="907" y2="405" stroke="#00b4d8" stroke-width="1" opacity="0.6"/>
+<circle cx="907" cy="405" r="3" fill="#00b4d8" opacity="0.6"/>
+<circle cx="547" cy="405" r="5" fill="#00b4d8"/>
+<circle cx="547" cy="405" r="8" fill="none" stroke="#00b4d8" stroke-width="0.8" opacity="0.5"/>
+<rect x="100" y="425" width="120" height="16" rx="8" fill="#06d6a0" opacity="0.15" stroke="#06d6a0" stroke-width="0.6"/>
+<text x="160" y="436" text-anchor="middle" class="path-label" font-size="9">PATH-A 规则化抽取</text>
+<rect x="730" y="425" width="120" height="16" rx="8" fill="#f77f00" opacity="0.15" stroke="#f77f00" stroke-width="0.6"/>
+<text x="790" y="436" text-anchor="middle" font-size="9" font-weight="700" fill="#f77f00" letter-spacing="0.04em">PATH-B 结构化内容</text>
+<path d="M 547,405 L 270,405 L 270,475" stroke="#06d6a0" stroke-width="1.2" fill="none" marker-end="url(#ag)"/>
+<path d="M 547,405 L 790,405 L 790,560 L 730,560 L 730,672" stroke="#f77f00" stroke-width="1.2" fill="none" marker-end="url(#ao)"/>
+<rect x="100" y="480" width="320" height="46" rx="2" fill="#0d2847" stroke="#06d6a0" stroke-width="1.5" filter="url(#glow)"/>
+<circle cx="116" cy="503" r="10" fill="#06d6a0"/>
+<text x="116" y="507" text-anchor="middle" class="node-num">8</text>
+<text x="134" y="499" class="node-title">规则化标签抽取模块</text>
+<text x="134" y="513" class="node-sub">6类核心标签·逐行扫描匹配</text>
+<rect x="100" y="565" width="320" height="46" rx="2" fill="#0d2847" stroke="#06d6a0" stroke-width="1.5" filter="url(#glow)"/>
+<circle cx="116" cy="588" r="10" fill="#06d6a0"/>
+<text x="116" y="592" text-anchor="middle" class="node-num">9</text>
+<text x="134" y="584" class="node-title">大模型增强检查模块</text>
+<text x="134" y="598" class="node-sub">Kimi LLM·补全纠错·标准化</text>
+<path d="M 270,526 L 270,565" stroke="#06d6a0" stroke-width="1.2" fill="none" marker-end="url(#ag)"/>
+<rect x="268.0" y="539" width="36" height="13" rx="2" fill="#0a1628" opacity="0.85"/>
+<text x="286" y="548" text-anchor="middle" class="arrow-label">抽取结果</text>
+<path d="M 420,588 L 500,588 L 500,672" stroke="#06d6a0" stroke-width="1.2" fill="none" marker-end="url(#ag)"/>
+<rect x="440.0" y="626" width="50" height="13" rx="2" fill="#0a1628" opacity="0.85"/>
+<text x="465" y="635" text-anchor="middle" class="path-label">增强检查清单</text>
+<rect x="380" y="680" width="400" height="50" rx="2" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<circle cx="396" cy="705" r="10" fill="#00b4d8"/>
+<text x="396" y="709" text-anchor="middle" class="node-num">10</text>
+<text x="414" y="701" class="node-title">标准 Skill 草稿生成模块</text>
+<text x="414" y="715" class="node-sub">整合结构化信息+检查清单</text>
+<rect x="200" y="780" width="280" height="46" rx="2" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<circle cx="216" cy="803" r="10" fill="#00b4d8"/>
+<text x="216" y="807" text-anchor="middle" class="node-num">11</text>
+<text x="234" y="799" class="node-title">场景绑定模块</text>
+<text x="234" y="813" class="node-sub">绑定问数业务场景·Skill榜单</text>
+<rect x="680" y="780" width="280" height="46" rx="2" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<circle cx="696" cy="803" r="10" fill="#00b4d8"/>
+<text x="696" y="807" text-anchor="middle" class="node-num">12</text>
+<text x="714" y="799" class="node-title">知识库关联模块</text>
+<text x="714" y="813" class="node-sub">创建关联知识库·企业联动</text>
+<path d="M 480,730 L 480,750 L 340,750 L 340,780" stroke="#00b4d8" stroke-width="1.2" fill="none" marker-end="url(#ac)"/>
+<rect x="392.0" y="753" width="36" height="13" rx="2" fill="#0a1628" opacity="0.85"/>
+<text x="410" y="762" text-anchor="middle" class="arrow-label">场景绑定</text>
+<path d="M 680,730 L 680,750 L 820,750 L 820,780" stroke="#00b4d8" stroke-width="1.2" fill="none" marker-end="url(#ac)"/>
+<rect x="728.5" y="753" width="43" height="13" rx="2" fill="#0a1628" opacity="0.85"/>
+<text x="750" y="762" text-anchor="middle" class="arrow-label">知识库创建</text>
+<rect x="880" y="855" width="300" height="52" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1"/>
+<line x1="880" y1="873" x2="1180" y2="873" stroke="#00b4d8" stroke-width="0.5"/>
+<text x="1030" y="868" text-anchor="middle" class="tb-title">PATENT / 专利技术交底</text>
+<text x="1030" y="893" text-anchor="middle" class="tb-main">Skill 知识单元自动生成</text>
+<rect x="80" y="855" width="360" height="52" rx="2" fill="#0d1f3c" stroke="#00b4d8" stroke-width="0.6"/>
+<text x="90" y="869" class="phase-label">LEGEND</text>
+<line x1="90" y1="891" x2="115" y2="891" stroke="#00b4d8" stroke-width="1.5" marker-end="url(#ac)"/>
+<text x="120" y="894" class="legend-text">主流程 (Primary Flow)</text>
+<line x1="208" y1="891" x2="233" y2="891" stroke="#06d6a0" stroke-width="1.5" marker-end="url(#ag)"/>
+<text x="238" y="894" class="legend-text">PATH-A 规则化+LLM增强</text>
+<line x1="326" y1="891" x2="351" y2="891" stroke="#f77f00" stroke-width="1.5" marker-end="url(#ao)"/>
+<text x="356" y="894" class="legend-text">PATH-B 结构化直达</text>
+<path d="M 20,30 L 20,10 L 40,10" stroke="#00b4d8" stroke-width="1" fill="none" opacity="0.4"/>
+<path d="M 1180,30 L 1180,10 L 1160,10" stroke="#00b4d8" stroke-width="1" fill="none" opacity="0.4"/>
+<path d="M 20,890 L 20,910 L 40,910" stroke="#00b4d8" stroke-width="1" fill="none" opacity="0.4"/>
+<path d="M 1180,890 L 1180,910 L 1160,910" stroke="#00b4d8" stroke-width="1" fill="none" opacity="0.4"/>
+</svg>

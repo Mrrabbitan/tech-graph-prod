@@ -1,0 +1,298 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.1 Chrome/142.0.7444.265 Electron/39.8.0 Safari/537.36" version="29.6.1">
+  <diagram name="中国铁塔 · 工单质检网络拓扑图" id="tower-spec">
+    <mxGraphModel dx="1018" dy="690" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1440" pageHeight="1100" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c1001" parent="1" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=20;fontColor=#111827;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;fontStyle=1;" value="网络拓扑与信创部署" vertex="1">
+          <mxGeometry height="32" width="1440" y="18" as="geometry" />
+        </mxCell>
+        <mxCell id="c1002" parent="1" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=11.5;fontColor=#6b7280;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;" value="&lt;span style=&quot;font-style:italic;&quot;&gt;逻辑分区 · 等保 2.0 三级安全边界 · 信创 CPU/NPU 全链路适配&lt;/span&gt;" vertex="1">
+          <mxGeometry height="20" width="1440" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="c1003" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#dc2626;strokeWidth=2;arcSize=2;dashed=1;dashPattern=8 4;" value="" vertex="1">
+          <mxGeometry height="620" width="1170" x="250" y="68" as="geometry" />
+        </mxCell>
+        <mxCell id="c1004" parent="1" style="text;html=1;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=11;fontColor=#dc2626;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;fontStyle=1;" value="&lt;b style=&quot;color:#dc2626;font-size:11px;&quot;&gt;等保 2.0 三级 安全边界&lt;/b&gt;" vertex="1">
+          <mxGeometry height="18" width="300" x="258" y="72" as="geometry" />
+        </mxCell>
+        <mxCell id="c1005" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f9fafb;strokeColor=#d1d5db;strokeWidth=1.2;arcSize=6;dashed=1;dashPattern=4 3;" value="" vertex="1">
+          <mxGeometry height="500" width="200" x="20" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="c1006" parent="1" style="text;html=1;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=12;fontColor=#111827;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;fontStyle=1;" value="&lt;b&gt;外部源 · External&lt;/b&gt;" vertex="1">
+          <mxGeometry height="20" width="184" x="28" y="126" as="geometry" />
+        </mxCell>
+        <mxCell id="c1007" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eff6ff;strokeColor=#93c5fd;strokeWidth=1.2;arcSize=8;fontSize=11;fontColor=#111827;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;verticalAlign=top;align=left;spacingTop=4;spacingLeft=8;spacingRight=8;spacingTop=8;spacingLeft=8;" value="&lt;b style=&quot;font-size:12px;color:#1d4ed8;&quot;&gt;全国运维用户&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:10px;color:#6b7280;&quot;&gt;100 并发&lt;/span&gt;" vertex="1">
+          <mxGeometry height="76" width="176" x="32" y="156" as="geometry" />
+        </mxCell>
+        <mxCell id="c1008" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#6ee7b7;strokeWidth=1.2;arcSize=8;fontSize=11;fontColor=#111827;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;verticalAlign=top;align=left;spacingTop=4;spacingLeft=8;spacingRight=8;spacingTop=8;spacingLeft=8;" value="&lt;b style=&quot;font-size:12px;color:#047857;&quot;&gt;运营商主设备告警&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:10px;color:#6b7280;&quot;&gt;告警数据接入&lt;/span&gt;" vertex="1">
+          <mxGeometry height="76" width="176" x="32" y="244" as="geometry" />
+        </mxCell>
+        <mxCell id="c1009" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#6ee7b7;strokeWidth=1.2;arcSize=8;fontSize=11;fontColor=#111827;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;verticalAlign=top;align=left;spacingTop=4;spacingLeft=8;spacingRight=8;spacingTop=8;spacingLeft=8;" value="&lt;b style=&quot;font-size:12px;color:#047857;&quot;&gt;铁塔动环告警&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:10px;color:#6b7280;&quot;&gt;动环数据接入&lt;/span&gt;" vertex="1">
+          <mxGeometry height="76" width="176" x="32" y="332" as="geometry" />
+        </mxCell>
+        <mxCell id="c1010" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#94a3b8;strokeWidth=1.2;arcSize=8;fontSize=11;fontColor=#111827;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;verticalAlign=top;align=left;spacingTop=4;spacingLeft=8;spacingRight=8;spacingTop=8;spacingLeft=8;" value="&lt;b style=&quot;font-size:12px;color:#334155;&quot;&gt;气象 API&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:10px;color:#6b7280;&quot;&gt;环境数据&lt;/span&gt;" vertex="1">
+          <mxGeometry height="76" width="176" x="32" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="c1011" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#94a3b8;strokeWidth=1.2;arcSize=8;fontSize=11;fontColor=#111827;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;verticalAlign=top;align=left;spacingTop=4;spacingLeft=8;spacingRight=8;spacingTop=8;spacingLeft=8;" value="&lt;b style=&quot;font-size:12px;color:#334155;&quot;&gt;地理信息 API&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:10px;color:#6b7280;&quot;&gt;GIS 数据&lt;/span&gt;" vertex="1">
+          <mxGeometry height="76" width="176" x="32" y="508" as="geometry" />
+        </mxCell>
+        <mxCell id="c1012" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef2f2;strokeColor=#fca5a5;strokeWidth=1.4;arcSize=4;opacity=92;" value="" vertex="1">
+          <mxGeometry height="572" width="150" x="266" y="96" as="geometry" />
+        </mxCell>
+        <mxCell id="c1013" parent="1" style="text;html=1;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=12;fontColor=#b91c1c;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;fontStyle=1;" value="&lt;b style=&quot;font-size:12px;color:#b91c1c;&quot;&gt;DMZ 边界区&lt;/b&gt;" vertex="1">
+          <mxGeometry height="40" width="138" x="272" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="c1014" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#fca5a5;strokeWidth=1.0;arcSize=6;fontSize=11;fontColor=#111827;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;" value="&lt;span style=&quot;font-size:11px;color:#111827;line-height:1.5;&quot;&gt;防火墙 + WAF&lt;/span&gt;" vertex="1">
+          <mxGeometry height="58" width="130" x="276" y="152" as="geometry" />
+        </mxCell>
+        <mxCell id="c1015" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#fca5a5;strokeWidth=1.0;arcSize=6;fontSize=11;fontColor=#111827;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;" value="&lt;span style=&quot;font-size:11px;color:#111827;line-height:1.5;&quot;&gt;反向代理&lt;/span&gt;" vertex="1">
+          <mxGeometry height="58" width="130" x="276" y="222" as="geometry" />
+        </mxCell>
+        <mxCell id="c1016" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#fca5a5;strokeWidth=1.0;arcSize=6;fontSize=11;fontColor=#111827;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;" value="&lt;span style=&quot;font-size:11px;color:#111827;line-height:1.5;&quot;&gt;负载均衡（双活）&lt;/span&gt;" vertex="1">
+          <mxGeometry height="58" width="130" x="276" y="292" as="geometry" />
+        </mxCell>
+        <mxCell id="c1017" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eff6ff;strokeColor=#93c5fd;strokeWidth=1.4;arcSize=4;opacity=92;" value="" vertex="1">
+          <mxGeometry height="572" width="140" x="430" y="96" as="geometry" />
+        </mxCell>
+        <mxCell id="c1018" parent="1" style="text;html=1;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=12;fontColor=#1d4ed8;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;fontStyle=1;" value="&lt;b style=&quot;font-size:12px;color:#1d4ed8;&quot;&gt;接入与认证区&lt;/b&gt;" vertex="1">
+          <mxGeometry height="40" width="128" x="436" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="c1019" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#93c5fd;strokeWidth=1.0;arcSize=6;fontSize=11;fontColor=#111827;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;" value="&lt;span style=&quot;font-size:11px;color:#111827;line-height:1.5;&quot;&gt;4A 统一认证网关&lt;/span&gt;" vertex="1">
+          <mxGeometry height="58" width="120" x="440" y="152" as="geometry" />
+        </mxCell>
+        <mxCell id="c1020" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#93c5fd;strokeWidth=1.0;arcSize=6;fontSize=11;fontColor=#111827;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;" value="&lt;span style=&quot;font-size:11px;color:#111827;line-height:1.5;&quot;&gt;API 网关&lt;/span&gt;" vertex="1">
+          <mxGeometry height="58" width="120" x="440" y="222" as="geometry" />
+        </mxCell>
+        <mxCell id="c1021" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eef2ff;strokeColor=#a5b4fc;strokeWidth=1.4;arcSize=4;opacity=92;" value="" vertex="1">
+          <mxGeometry height="572" width="190" x="584" y="96" as="geometry" />
+        </mxCell>
+        <mxCell id="c1022" parent="1" style="text;html=1;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=12;fontColor=#4338ca;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;fontStyle=1;" value="&lt;b style=&quot;font-size:12px;color:#4338ca;&quot;&gt;应用区 信创 K8s 集群&lt;/b&gt;" vertex="1">
+          <mxGeometry height="40" width="178" x="590" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="c1023" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a5b4fc;strokeWidth=1.0;arcSize=6;fontSize=11;fontColor=#111827;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;" value="&lt;span style=&quot;font-size:11px;color:#111827;line-height:1.5;&quot;&gt;工单质检 Web/App&lt;/span&gt;" vertex="1">
+          <mxGeometry height="58" width="170" x="594" y="152" as="geometry" />
+        </mxCell>
+        <mxCell id="c1024" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a5b4fc;strokeWidth=1.0;arcSize=6;fontSize=11;fontColor=#111827;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;" value="&lt;span style=&quot;font-size:11px;color:#111827;line-height:1.5;&quot;&gt;微服务集群&lt;/span&gt;" vertex="1">
+          <mxGeometry height="58" width="170" x="594" y="222" as="geometry" />
+        </mxCell>
+        <mxCell id="c1025" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a5b4fc;strokeWidth=1.0;arcSize=6;fontSize=11;fontColor=#111827;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;" value="&lt;span style=&quot;font-size:11px;color:#111827;line-height:1.5;&quot;&gt;容器管理平台&lt;/span&gt;" vertex="1">
+          <mxGeometry height="58" width="170" x="594" y="292" as="geometry" />
+        </mxCell>
+        <mxCell id="c1026" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff7ed;strokeColor=#fdba74;strokeWidth=1.4;arcSize=4;opacity=92;" value="" vertex="1">
+          <mxGeometry height="572" width="210" x="788" y="96" as="geometry" />
+        </mxCell>
+        <mxCell id="c1027" parent="1" style="text;html=1;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=12;fontColor=#c2410c;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;fontStyle=1;" value="&lt;b style=&quot;font-size:12px;color:#c2410c;&quot;&gt;AI / 中台区 信创 + NPU&lt;/b&gt;" vertex="1">
+          <mxGeometry height="40" width="198" x="794" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="c1028" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#fdba74;strokeWidth=1.0;arcSize=6;fontSize=11;fontColor=#111827;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;" value="&lt;span style=&quot;font-size:11px;color:#111827;line-height:1.5;&quot;&gt;铁塔 AI 中台&lt;/span&gt;" vertex="1">
+          <mxGeometry height="58" width="190" x="798" y="152" as="geometry" />
+        </mxCell>
+        <mxCell id="c1029" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#fdba74;strokeWidth=1.0;arcSize=6;fontSize=11;fontColor=#111827;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;" value="&lt;span style=&quot;font-size:11px;color:#111827;line-height:1.5;&quot;&gt;(塔娃 + 数据集 + 训练推理)&lt;/span&gt;" vertex="1">
+          <mxGeometry height="58" width="190" x="798" y="222" as="geometry" />
+        </mxCell>
+        <mxCell id="c1030" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#fdba74;strokeWidth=1.0;arcSize=6;fontSize=11;fontColor=#111827;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;" value="&lt;span style=&quot;font-size:11px;color:#111827;line-height:1.5;&quot;&gt;铁塔数据中台&lt;/span&gt;" vertex="1">
+          <mxGeometry height="58" width="190" x="798" y="292" as="geometry" />
+        </mxCell>
+        <mxCell id="c1031" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#6ee7b7;strokeWidth=1.4;arcSize=4;opacity=92;" value="" vertex="1">
+          <mxGeometry height="572" width="190" x="1012" y="96" as="geometry" />
+        </mxCell>
+        <mxCell id="c1032" parent="1" style="text;html=1;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=12;fontColor=#047857;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;fontStyle=1;" value="&lt;b style=&quot;font-size:12px;color:#047857;&quot;&gt;数据存储区&lt;/b&gt;" vertex="1">
+          <mxGeometry height="40" width="178" x="1018" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="c1033" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6ee7b7;strokeWidth=1.0;arcSize=6;fontSize=11;fontColor=#111827;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;" value="&lt;span style=&quot;font-size:11px;color:#111827;line-height:1.5;&quot;&gt;信创关系库集群&lt;/span&gt;" vertex="1">
+          <mxGeometry height="58" width="170" x="1022" y="152" as="geometry" />
+        </mxCell>
+        <mxCell id="c1034" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6ee7b7;strokeWidth=1.0;arcSize=6;fontSize=11;fontColor=#111827;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;" value="&lt;span style=&quot;font-size:11px;color:#111827;line-height:1.5;&quot;&gt;对象存储（图片/数据集）&lt;/span&gt;" vertex="1">
+          <mxGeometry height="58" width="170" x="1022" y="222" as="geometry" />
+        </mxCell>
+        <mxCell id="c1035" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6ee7b7;strokeWidth=1.0;arcSize=6;fontSize=11;fontColor=#111827;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;" value="&lt;span style=&quot;font-size:11px;color:#111827;line-height:1.5;&quot;&gt;Kafka · 模型仓库&lt;/span&gt;" vertex="1">
+          <mxGeometry height="58" width="170" x="1022" y="292" as="geometry" />
+        </mxCell>
+        <mxCell id="c1036" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563eb;strokeWidth=2.0;endArrow=classic;endFill=1;endSize=8;startArrow=none;fontColor=#6b7280;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;fontSize=10;" target="c1012" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="220" y="370" as="sourcePoint" />
+            <mxPoint x="266" y="382" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c1037" edge="1" parent="1" source="c1012" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#ea580c;strokeWidth=1.6;endArrow=classic;endFill=1;endSize=8;startArrow=none;fontColor=#6b7280;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;fontSize=10;" target="c1017" value="&lt;span style=&quot;background:#fff;padding:1px 3px;font-size:9px;&quot;&gt;4A 鉴权&lt;/span&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c1038" edge="1" parent="1" source="c1017" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563eb;strokeWidth=2.0;endArrow=classic;endFill=1;endSize=8;startArrow=none;fontColor=#6b7280;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;fontSize=10;" target="c1021" value="&lt;span style=&quot;background:#fff;padding:1px 3px;font-size:9px;&quot;&gt;请求路由&lt;/span&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c1039" edge="1" parent="1" source="c1021" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563eb;strokeWidth=2.0;endArrow=classic;endFill=1;endSize=8;startArrow=none;fontColor=#6b7280;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;fontSize=10;" target="c1026" value="&lt;span style=&quot;background:#fff;padding:1px 3px;font-size:9px;&quot;&gt;模型调度&lt;/span&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c1040" edge="1" parent="1" source="c1026" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563eb;strokeWidth=2.0;endArrow=classic;endFill=1;endSize=8;startArrow=none;fontColor=#6b7280;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;fontSize=10;" target="c1031" value="&lt;span style=&quot;background:#fff;padding:1px 3px;font-size:9px;&quot;&gt;数据读写&lt;/span&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c1041" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#94a3b8;strokeWidth=1.2;arcSize=4;" value="" vertex="1">
+          <mxGeometry height="120" width="1170" x="250" y="706" as="geometry" />
+        </mxCell>
+        <mxCell id="c1042" parent="1" style="text;html=1;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=13;fontColor=#111827;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;fontStyle=1;" value="&lt;b&gt;运维管理区 · Operations Management&lt;/b&gt;" vertex="1">
+          <mxGeometry height="20" width="400" x="264" y="714" as="geometry" />
+        </mxCell>
+        <mxCell id="c1043" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#334155;strokeColor=none;fontColor=#ffffff;fontSize=10.5;fontStyle=1;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;arcSize=50;verticalAlign=middle;align=center;" value="统一监控告警" vertex="1">
+          <mxGeometry height="28" width="96" x="264" y="742" as="geometry" />
+        </mxCell>
+        <mxCell id="c1044" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#334155;strokeColor=none;fontColor=#ffffff;fontSize=10.5;fontStyle=1;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;arcSize=50;verticalAlign=middle;align=center;" value="统一日志平台" vertex="1">
+          <mxGeometry height="28" width="96" x="370" y="742" as="geometry" />
+        </mxCell>
+        <mxCell id="c1045" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#334155;strokeColor=none;fontColor=#ffffff;fontSize=10.5;fontStyle=1;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;arcSize=50;verticalAlign=middle;align=center;" value="ITSM" vertex="1">
+          <mxGeometry height="28" width="52" x="476" y="742" as="geometry" />
+        </mxCell>
+        <mxCell id="c1046" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#334155;strokeColor=none;fontColor=#ffffff;fontSize=10.5;fontStyle=1;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;arcSize=50;verticalAlign=middle;align=center;" value="CMDB" vertex="1">
+          <mxGeometry height="28" width="52" x="538" y="742" as="geometry" />
+        </mxCell>
+        <mxCell id="c1047" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#334155;strokeColor=none;fontColor=#ffffff;fontSize=10.5;fontStyle=1;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;arcSize=50;verticalAlign=middle;align=center;" value="SOC" vertex="1">
+          <mxGeometry height="28" width="45" x="600" y="742" as="geometry" />
+        </mxCell>
+        <mxCell id="c1048" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#334155;strokeColor=none;fontColor=#ffffff;fontSize=10.5;fontStyle=1;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;arcSize=50;verticalAlign=middle;align=center;" value="IT 研发流水线" vertex="1">
+          <mxGeometry height="28" width="120" x="655" y="742" as="geometry" />
+        </mxCell>
+        <mxCell id="c1049" parent="1" style="text;html=1;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=10;fontColor=#6b7280;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;" value="&lt;span style=&quot;color:#6b7280;font-size:10px;&quot;&gt;syslog / Filebeat → 日志转发 · Prometheus / 自定义 Exporter → 监控采集 · 全量运行日志 / 操作日志 / 审计日志&lt;/span&gt;" vertex="1">
+          <mxGeometry height="18" width="1142" x="264" y="782" as="geometry" />
+        </mxCell>
+        <mxCell id="c1050" edge="1" parent="1" source="c1021" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#9ca3af;strokeWidth=1.2;endArrow=classic;endFill=1;endSize=8;startArrow=none;fontColor=#6b7280;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;fontSize=10;dashed=1;dashPattern=6 4;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="835" y="706" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c1051" edge="1" parent="1" source="c1026" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#9ca3af;strokeWidth=1.2;endArrow=classic;endFill=1;endSize=8;startArrow=none;fontColor=#6b7280;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;fontSize=10;dashed=1;dashPattern=6 4;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="835" y="706" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c1052" edge="1" parent="1" source="c1031" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#9ca3af;strokeWidth=1.2;endArrow=classic;endFill=1;endSize=8;startArrow=none;fontColor=#6b7280;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;fontSize=10;dashed=1;dashPattern=6 4;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="835" y="706" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c1053" parent="1" style="text;html=1;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=14;fontColor=#111827;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;fontStyle=1;" value="&lt;b&gt;信创全链路适配&lt;/b&gt;" vertex="1">
+          <mxGeometry height="22" width="300" x="40" y="854" as="geometry" />
+        </mxCell>
+        <mxCell id="c1054" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#334155;strokeColor=#334155;strokeWidth=0;arcSize=2;fontSize=12;fontColor=#111827;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;fontColor=#ffffff;" value="&lt;b style=&quot;color:#fff;font-size:11px;&quot;&gt;组件层&lt;/b&gt;" vertex="1">
+          <mxGeometry height="28" width="100" x="40" y="882" as="geometry" />
+        </mxCell>
+        <mxCell id="c1055" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#334155;strokeColor=#334155;strokeWidth=0;arcSize=2;fontSize=12;fontColor=#111827;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;fontColor=#ffffff;" value="&lt;b style=&quot;color:#fff;font-size:11px;&quot;&gt;国产方案&lt;/b&gt;" vertex="1">
+          <mxGeometry height="28" width="250" x="140" y="882" as="geometry" />
+        </mxCell>
+        <mxCell id="c1056" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#334155;strokeColor=#334155;strokeWidth=0;arcSize=2;fontSize=12;fontColor=#111827;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;fontColor=#ffffff;" value="&lt;b style=&quot;color:#fff;font-size:11px;&quot;&gt;状态&lt;/b&gt;" vertex="1">
+          <mxGeometry height="28" width="60" x="390" y="882" as="geometry" />
+        </mxCell>
+        <mxCell id="c1057" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e5e7eb;strokeWidth=0.6;arcSize=0;fontSize=11;fontColor=#111827;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;" value="&lt;span style=&quot;font-size:11px;color:#111827;font-weight:normal;&quot;&gt;CPU&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="100" x="40" y="910" as="geometry" />
+        </mxCell>
+        <mxCell id="c1058" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e5e7eb;strokeWidth=0.6;arcSize=0;fontSize=11;fontColor=#111827;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;" value="&lt;span style=&quot;font-size:11px;color:#111827;font-weight:normal;&quot;&gt;国产 CPU (鲲鹏/飞腾/海光)&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="250" x="140" y="910" as="geometry" />
+        </mxCell>
+        <mxCell id="c1059" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e5e7eb;strokeWidth=0.6;arcSize=0;fontSize=11;fontColor=#111827;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;" value="&lt;span style=&quot;font-size:11px;color:#047857;font-weight:bold;&quot;&gt;✓&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="390" y="910" as="geometry" />
+        </mxCell>
+        <mxCell id="c1060" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#e5e7eb;strokeWidth=0.6;arcSize=0;fontSize=11;fontColor=#111827;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;" value="&lt;span style=&quot;font-size:11px;color:#111827;font-weight:normal;&quot;&gt;操作系统&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="100" x="40" y="940" as="geometry" />
+        </mxCell>
+        <mxCell id="c1061" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#e5e7eb;strokeWidth=0.6;arcSize=0;fontSize=11;fontColor=#111827;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;" value="&lt;span style=&quot;font-size:11px;color:#111827;font-weight:normal;&quot;&gt;银河麒麟 / 统信 UOS&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="250" x="140" y="940" as="geometry" />
+        </mxCell>
+        <mxCell id="c1062" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#e5e7eb;strokeWidth=0.6;arcSize=0;fontSize=11;fontColor=#111827;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;" value="&lt;span style=&quot;font-size:11px;color:#047857;font-weight:bold;&quot;&gt;✓&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="390" y="940" as="geometry" />
+        </mxCell>
+        <mxCell id="c1063" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e5e7eb;strokeWidth=0.6;arcSize=0;fontSize=11;fontColor=#111827;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;" value="&lt;span style=&quot;font-size:11px;color:#111827;font-weight:normal;&quot;&gt;数据库&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="100" x="40" y="970" as="geometry" />
+        </mxCell>
+        <mxCell id="c1064" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e5e7eb;strokeWidth=0.6;arcSize=0;fontSize=11;fontColor=#111827;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;" value="&lt;span style=&quot;font-size:11px;color:#111827;font-weight:normal;&quot;&gt;达梦 / openGauss / OceanBase&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="250" x="140" y="970" as="geometry" />
+        </mxCell>
+        <mxCell id="c1065" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e5e7eb;strokeWidth=0.6;arcSize=0;fontSize=11;fontColor=#111827;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;" value="&lt;span style=&quot;font-size:11px;color:#047857;font-weight:bold;&quot;&gt;✓&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="390" y="970" as="geometry" />
+        </mxCell>
+        <mxCell id="c1066" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#e5e7eb;strokeWidth=0.6;arcSize=0;fontSize=11;fontColor=#111827;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;" value="&lt;span style=&quot;font-size:11px;color:#111827;font-weight:normal;&quot;&gt;中间件&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="100" x="40" y="1000" as="geometry" />
+        </mxCell>
+        <mxCell id="c1067" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#e5e7eb;strokeWidth=0.6;arcSize=0;fontSize=11;fontColor=#111827;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;" value="&lt;span style=&quot;font-size:11px;color:#111827;font-weight:normal;&quot;&gt;东方通 / 宝兰德&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="250" x="140" y="1000" as="geometry" />
+        </mxCell>
+        <mxCell id="c1068" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#e5e7eb;strokeWidth=0.6;arcSize=0;fontSize=11;fontColor=#111827;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;verticalAlign=middle;align=center;spacingTop=4;spacingLeft=8;spacingRight=8;" value="&lt;span style=&quot;font-size:11px;color:#047857;font-weight:bold;&quot;&gt;✓&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="390" y="1000" as="geometry" />
+        </mxCell>
+        <mxCell id="c1069" parent="1" style="text;html=1;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=14;fontColor=#111827;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;fontStyle=1;" value="&lt;b&gt;容灾 / 可用性指标&lt;/b&gt;" vertex="1">
+          <mxGeometry height="22" width="300" x="500" y="854" as="geometry" />
+        </mxCell>
+        <mxCell id="c1070" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1d4ed8;strokeColor=none;fontColor=#ffffff;fontSize=10;fontStyle=1;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;arcSize=50;verticalAlign=middle;align=center;" value="RTO &amp;lt; 30 min" vertex="1">
+          <mxGeometry height="22" width="103" x="500" y="884" as="geometry" />
+        </mxCell>
+        <mxCell id="c1071" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1d4ed8;strokeColor=none;fontColor=#ffffff;fontSize=10;fontStyle=1;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;arcSize=50;verticalAlign=middle;align=center;" value="RPO &amp;lt; 24 h" vertex="1">
+          <mxGeometry height="22" width="90" x="611" y="884" as="geometry" />
+        </mxCell>
+        <mxCell id="c1072" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1d4ed8;strokeColor=none;fontColor=#ffffff;fontSize=10;fontStyle=1;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;arcSize=50;verticalAlign=middle;align=center;" value="99.5% SLA" vertex="1">
+          <mxGeometry height="22" width="83" x="709" y="884" as="geometry" />
+        </mxCell>
+        <mxCell id="c1073" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1d4ed8;strokeColor=none;fontColor=#ffffff;fontSize=10;fontStyle=1;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;arcSize=50;verticalAlign=middle;align=center;" value="3 次容灾演练" vertex="1">
+          <mxGeometry height="22" width="104" x="800" y="884" as="geometry" />
+        </mxCell>
+        <mxCell id="c1074" parent="1" style="text;html=1;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=13;fontColor=#111827;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;fontStyle=1;" value="&lt;b&gt;内部平台对接矩阵&lt;/b&gt;" vertex="1">
+          <mxGeometry height="22" width="300" x="500" y="922" as="geometry" />
+        </mxCell>
+        <mxCell id="c1075" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4338ca;strokeColor=none;fontColor=#ffffff;fontSize=10;fontStyle=1;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;arcSize=50;verticalAlign=middle;align=center;" value="4A" vertex="1">
+          <mxGeometry height="22" width="37" x="500" y="948" as="geometry" />
+        </mxCell>
+        <mxCell id="c1076" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4338ca;strokeColor=none;fontColor=#ffffff;fontSize=10;fontStyle=1;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;arcSize=50;verticalAlign=middle;align=center;" value="ITSM" vertex="1">
+          <mxGeometry height="22" width="50" x="545" y="948" as="geometry" />
+        </mxCell>
+        <mxCell id="c1077" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4338ca;strokeColor=none;fontColor=#ffffff;fontSize=10;fontStyle=1;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;arcSize=50;verticalAlign=middle;align=center;" value="CMDB" vertex="1">
+          <mxGeometry height="22" width="50" x="603" y="948" as="geometry" />
+        </mxCell>
+        <mxCell id="c1078" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4338ca;strokeColor=none;fontColor=#ffffff;fontSize=10;fontStyle=1;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;arcSize=50;verticalAlign=middle;align=center;" value="SOC" vertex="1">
+          <mxGeometry height="22" width="43" x="661" y="948" as="geometry" />
+        </mxCell>
+        <mxCell id="c1079" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4338ca;strokeColor=none;fontColor=#ffffff;fontSize=10;fontStyle=1;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;arcSize=50;verticalAlign=middle;align=center;" value="IT 网管" vertex="1">
+          <mxGeometry height="22" width="80" x="712" y="948" as="geometry" />
+        </mxCell>
+        <mxCell id="c1080" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4338ca;strokeColor=none;fontColor=#ffffff;fontSize=10;fontStyle=1;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;arcSize=50;verticalAlign=middle;align=center;" value="统一日志" vertex="1">
+          <mxGeometry height="22" width="68" x="800" y="948" as="geometry" />
+        </mxCell>
+        <mxCell id="c1081" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4338ca;strokeColor=none;fontColor=#ffffff;fontSize=10;fontStyle=1;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;arcSize=50;verticalAlign=middle;align=center;" value="统一监控" vertex="1">
+          <mxGeometry height="22" width="68" x="876" y="948" as="geometry" />
+        </mxCell>
+        <mxCell id="c1082" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4338ca;strokeColor=none;fontColor=#ffffff;fontSize=10;fontStyle=1;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;arcSize=50;verticalAlign=middle;align=center;" value="统一流程引擎" vertex="1">
+          <mxGeometry height="22" width="92" x="952" y="948" as="geometry" />
+        </mxCell>
+        <mxCell id="c1083" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f9fafb;strokeColor=#e5e7eb;strokeWidth=1;arcSize=6;" value="" vertex="1">
+          <mxGeometry height="108" width="260" x="1140" y="854" as="geometry" />
+        </mxCell>
+        <mxCell id="c1084" parent="1" style="text;html=1;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=10;fontColor=#6b7280;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;fontStyle=1;" value="&lt;b&gt;图例 Legend&lt;/b&gt;" vertex="1">
+          <mxGeometry height="18" width="200" x="1148" y="856" as="geometry" />
+        </mxCell>
+        <mxCell id="c1085" parent="1" style="shape=line;html=1;strokeColor=#2563eb;strokeWidth=2;fillColor=none;" value="" vertex="1">
+          <mxGeometry width="30" x="1150" y="884" as="geometry" />
+        </mxCell>
+        <mxCell id="c1086" parent="1" style="text;html=1;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=10;fontColor=#111827;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;" value="主请求路径 Main Flow" vertex="1">
+          <mxGeometry height="20" width="200" x="1186" y="876" as="geometry" />
+        </mxCell>
+        <mxCell id="c1087" parent="1" style="shape=line;html=1;strokeColor=#ea580c;strokeWidth=2;fillColor=none;" value="" vertex="1">
+          <mxGeometry width="30" x="1150" y="906" as="geometry" />
+        </mxCell>
+        <mxCell id="c1088" parent="1" style="text;html=1;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=10;fontColor=#111827;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;" value="认证拦截 4A Auth" vertex="1">
+          <mxGeometry height="20" width="200" x="1186" y="898" as="geometry" />
+        </mxCell>
+        <mxCell id="c1089" parent="1" style="shape=line;html=1;strokeColor=#16a34a;strokeWidth=2;fillColor=none;" value="" vertex="1">
+          <mxGeometry width="30" x="1150" y="928" as="geometry" />
+        </mxCell>
+        <mxCell id="c1090" parent="1" style="text;html=1;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=10;fontColor=#111827;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;" value="外部数据接入 Data In" vertex="1">
+          <mxGeometry height="20" width="200" x="1186" y="920" as="geometry" />
+        </mxCell>
+        <mxCell id="c1091" parent="1" style="shape=line;html=1;strokeColor=#9ca3af;strokeWidth=2;dashed=1;dashPattern=6 4;fillColor=none;" value="" vertex="1">
+          <mxGeometry width="30" x="1150" y="950" as="geometry" />
+        </mxCell>
+        <mxCell id="c1092" parent="1" style="text;html=1;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=10;fontColor=#111827;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;" value="日志/监控采集 Telemetry" vertex="1">
+          <mxGeometry height="20" width="200" x="1186" y="942" as="geometry" />
+        </mxCell>
+        <mxCell id="c1093" parent="1" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=10;fontColor=#6b7280;fontFamily=Helvetica Neue,Helvetica,PingFang SC,Microsoft YaHei,sans-serif;fontStyle=2;" value="中国铁塔 2026 · 标段 1 工单质检 · 等保 2.0 三级 · 信创全链路适配 · RTO&amp;lt;30min RPO&amp;lt;24h 99.5% SLA" vertex="1">
+          <mxGeometry height="20" width="1440" y="1072" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

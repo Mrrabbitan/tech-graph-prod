@@ -1,0 +1,112 @@
+{
+  "_meta": {
+    "description": "全客存量·五智能体上下游流程：1 决策 + 1 规划 + 3 执行；可编辑 drawio 由 layered-to-drawio.py 生成",
+    "agents": [
+      {"role": "DECISION", "zh": "决策智能体", "responsibility": "意图/场景/槽位/路由"},
+      {"role": "PLANNING", "zh": "规划智能体", "responsibility": "RAG+KG·客群/产品/触点/话术组装"},
+      {"role": "EXECUTION-1", "zh": "客群圈选执行", "responsibility": "MCP 圈选/生成客群·写客户群表"},
+      {"role": "EXECUTION-2", "zh": "策略写入与触点下发", "responsibility": "策略配置写入·CB弹窗/10010/外呼/工单"},
+      {"role": "EXECUTION-3", "zh": "效果回流与治理", "responsibility": "W/C/O 漏斗·10档归档·标签治理回流"}
+    ],
+    "arrow_semantics": [
+      {"id": "control", "color_hex": "#a78bfa", "label": "控制流"},
+      {"id": "route", "color_hex": "#fcd34d", "label": "决策路由"},
+      {"id": "read", "color_hex": "#00b4d8", "label": "读检索"},
+      {"id": "write", "color_hex": "#06d6a0", "label": "写治理"},
+      {"id": "feedback", "color_hex": "#f77f00", "label": "重规划/澄清"},
+      {"id": "data", "color_hex": "#ffffff", "label": "原始数据"}
+    ]
+  },
+  "title": "全客存量 · 五智能体上下游流程",
+  "subtitle": "Decision → Planning → (Audience Build · Strategy Publish & Push · Outcome & Governance)  ·  MCP 工具链 + 五层记忆 + 双引擎数据底座",
+  "page": {"width": 1640, "height": 1180},
+  "footer": "图例：紫=控制流 · 黄=决策路由 · 青=检索 · 绿虚线=写记忆/治理 · 橙=重规划回路 · 白=原始数据   |   依据：业务流程(3).pptx + A计划存量客户智能策略生成",
+  "arrows": [
+    "触点输入 → 决策（事件/文本/画像/会话）",
+    "决策路由 planning|execution|clarify → 规划",
+    "规划 → 三执行（StrategyPlan 扇出 + 顺序联动）",
+    "执行 → MCP 工具链与触点下发",
+    "记忆/底座 ⇄ 五智能体（RAG+KG / 写情景与治理）"
+  ],
+  "layers": [
+    {
+      "idx": "01",
+      "name": "触点 & 输入层",
+      "en": "Channels & Inputs",
+      "highlights": "CB智慧弹窗 · 10010来话ASR · 全客对话策划 · 标签集市实时画像 · 会话上下文 · HITL",
+      "bg": "#eff6ff",
+      "border": "#93c5fd",
+      "accent": "#1d4ed8",
+      "components": [
+        {"title": "INPUT 触点", "subtitle": "弹窗事件 · 语音文本 · 自然语言"},
+        {"title": "画像快照", "subtitle": "能开接口 · 标签集市 · 实时特征"},
+        {"title": "会话状态", "subtitle": "槽位 · 澄清 · 采纳标记"}
+      ],
+      "chips": ["CB弹窗", "10010", "全客NLU", "Redis", "Kafka", "HITL"]
+    },
+    {
+      "idx": "02",
+      "name": "决策智能体（AGENT-1）",
+      "en": "Decision Agent",
+      "highlights": "意图分类 · 场景判定 L1/L2 · 槽位抽取 · 路由（planning|execution|clarify）",
+      "bg": "#fef3c7",
+      "border": "#fcd34d",
+      "accent": "#b45309",
+      "components": [
+        {"title": "意图识别", "subtitle": "INT-01~04 · 置信度阈值 0.8"},
+        {"title": "场景判定", "subtitle": "FTTR · 单转融 · 宽带感知 · 控流失 …"},
+        {"title": "槽位抽取", "subtitle": "StrategyConfig · Schema 约束"},
+        {"title": "路由决策", "subtitle": "planning · execution · clarify"}
+      ],
+      "chips": ["DeepSeek", "Qwen", "Schema-JSON", "FewShot"]
+    },
+    {
+      "idx": "03",
+      "name": "规划智能体（AGENT-2）",
+      "en": "Planning Agent",
+      "highlights": "RAG 召回最优策略 Top-K · Neo4j 图谱推理 · 组装客群/产品/触点/话术 · 档位排序 · 约束校验",
+      "bg": "#fff7ed",
+      "border": "#fdba74",
+      "accent": "#c2410c",
+      "components": [
+        {"title": "RAG 召回", "subtitle": "场景最优 · 原子配置切片"},
+        {"title": "图谱推理", "subtitle": "意图→场景→特征→产品→约束"},
+        {"title": "策略组装", "subtitle": "客群+产品+触点+卖点+话术"},
+        {"title": "排序/校验", "subtitle": "档位排序 · 约束/互斥校验"}
+      ],
+      "chips": ["VectorDB", "Neo4j", "MCP", "ReRank", "RuleEngine"]
+    },
+    {
+      "idx": "04",
+      "name": "三执行智能体（AGENT-3a / 3b / 3c）",
+      "en": "Execution Agents",
+      "highlights": "客群圈选 → 策略写入与触点下发 → 效果回流与治理（顺序联动 + 各自闭环）",
+      "bg": "#ecfdf5",
+      "border": "#6ee7b7",
+      "accent": "#047857",
+      "components": [
+        {"title": "AGENT-3a 客群圈选", "subtitle": "MCP 圈选/生成 · 写客户群表 · custgroup_id"},
+        {"title": "AGENT-3b 策略写入与触点下发", "subtitle": "策略JSON 写全客 · 弹窗/10010/外呼/工单 · 推送回执"},
+        {"title": "AGENT-3c 效果回流与治理", "subtitle": "W/C/O · 10档归档 · 标签/Prompt 治理回流"}
+      ],
+      "chips": ["MCP-Server", "全客API", "标签库API", "效果库", "A/B 平台"]
+    },
+    {
+      "idx": "05",
+      "name": "记忆 + 数据 / 知识底座",
+      "en": "Layered Memory & Data Knowledge Base",
+      "highlights": "L1 感知 · L2 工作 · L3 情景 · L4 语义 · L5 程序  ⊕  全客历史 + 省分语料 + 双引擎(向量+图)",
+      "bg": "#f8fafc",
+      "border": "#94a3b8",
+      "accent": "#334155",
+      "components": [
+        {"title": "L1/L2 短期", "subtitle": "事件流·上下文·槽位草稿"},
+        {"title": "L3 情景", "subtitle": "W/C/O·A/B·历史方案向量"},
+        {"title": "L4 语义", "subtitle": "标签·Neo4j KG·意图·同义词"},
+        {"title": "L5 程序", "subtitle": "工具Schema·Prompt·档位/激励/约束"},
+        {"title": "数据底座", "subtitle": "全客历史 · 省分规则语料 · 合规审计"}
+      ],
+      "chips": ["Vector", "Neo4j", "MySQL", "Kafka", "ObservAbility"]
+    }
+  ]
+}
